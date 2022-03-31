@@ -989,7 +989,6 @@ p {
     opacity: 1;
     -webkit-opacity: 1;
     -moz-opacity: 1;
-    -0-opacity: 1;
 }
 .testimonial-slider {
     margin: 5px auto;
@@ -1896,4 +1895,22 @@ background-color: #f9f9f9;
 
 .lower-dropdown:hover .dropdown-content{
     display: block;
+}
+
+
+/* Sponsors */
+
+.sponsor {
+    height: 200px;
+    padding: 30px;
+}
+
+.sponsor img {
+    position: relative;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
 }
