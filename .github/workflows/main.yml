@@ -25,5 +25,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /var/www/statics/baja
+          git reset --hard
           git pull
           
