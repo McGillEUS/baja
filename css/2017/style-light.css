@@ -1941,3 +1941,18 @@ background-color: #f9f9f9;
 .baguetteBox-button {
     background-color: transparent !important;
 }
+
+/* General styles */
+
+.subtitle-paragraph {
+    margin-left: 5%; 
+    margin-right: 5%;
+}
+
+@media (min-width: 992px) {
+    .subtitle-paragraph {
+        margin-left: 10%; 
+        margin-right: 10%; 
+        line-height: 4.2rem !important;
+    }
+}
