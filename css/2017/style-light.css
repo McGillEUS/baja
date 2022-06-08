@@ -1914,3 +1914,30 @@ background-color: #f9f9f9;
     top: 50%;
     transform: translateY(-50%);
 }
+
+/* Gallery */
+
+.image-gallery {
+    padding: 40px;
+}
+
+.image-gallery .lightbox img {
+    width: 100%;
+    margin-bottom: 30px;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+
+.image-gallery .lightbox img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.image-gallery img {
+    border-radius: 4px;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
