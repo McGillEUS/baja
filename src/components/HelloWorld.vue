@@ -4,7 +4,7 @@ defineProps({
     type: String,
     required: true
   }
-})
+});
 </script>
 
 <template>
@@ -15,10 +15,16 @@ defineProps({
       <a target="_blank" href="https://vitejs.dev/">Vite</a> +
       <a target="_blank" href="https://vuejs.org/">Vue 3</a>.
     </h3>
+    <p>I should be primary</p>
+    <button type="button" class="btn btn-primary">Primary</button>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+p { 
+  color: $primary;
+}
+
 h1 {
   font-weight: 500;
   font-size: 2.6rem;

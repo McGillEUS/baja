@@ -20,7 +20,8 @@ import HelloWorld from '@/components/HelloWorld.vue'
   <RouterView />
 </template>
 
-<style>
+<style lang="scss">
+@import '@/assets/styles/global.scss';
 @import '@/assets/base.css';
 
 #app {

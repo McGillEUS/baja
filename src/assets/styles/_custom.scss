@@ -1,0 +1,21 @@
+// Pre-processed variables
+
+@import "bootstrap/scss/functions";
+
+// Variable overrides
+$primary: #e91b2f;
+$secondary: #39393A;
+$grid-gutter-width: 0;
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+$colorBackground: #39393A;
+$colorBackgroundDark: #1a1a18;
+$colorText: #fcf7f8;
+$colorMuted: #6c757d;
+
+$fontTitle: 'Montserrat', sans-serif;
+$font: 'Open Sans', sans-serif;
