@@ -4,18 +4,37 @@
 
 // Variable overrides
 $primary: #e91b2f;
-$secondary: #39393A;
 $grid-gutter-width: 0;
 
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/root";
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  max: 1920px
+);
 
-$colorBackground: #39393A;
-$colorBackgroundDark: #1a1a18;
-$colorText: #fcf7f8;
-$colorMuted: #6c757d;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  max: 1740px
+);
 
-$fontTitle: 'Montserrat', sans-serif;
-$font: 'Open Sans', sans-serif;
+$font-family-base: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-title: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+
+$body-color: #ffffff;
+$body-bg: #212529;
+
+$bgColor: $body-bg;
+$bgColorDark: #111519;
+
+$offcanvas-horizontal-width: 100vw;
+$offcanvas-bg-color: $bgColorDark;
+$offcanvas-color: $body-color;

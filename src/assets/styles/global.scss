@@ -4,7 +4,7 @@
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 200;
+  font-weight: 300;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/montserrat/v24/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Hw5aXo.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
@@ -23,9 +23,13 @@
 // Styles
 
 // The rest of Bootstrap 
-// see _custom.scss for functions, variables, maps, mixins, root
-// Other modules can be added here from node_modules folder
 
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// Other modules can be added here from node_modules folder
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/reboot";
 @import "bootstrap/scss/type";
@@ -37,21 +41,15 @@
 @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/offcanvas";
 
 @import "bootstrap/scss/utilities/_api";
 
 // End Bootstrap imports
 
-html, body {
-  padding: 0;
-  margin: 0;
-  font-family: $font;
-}
-
 h1, h2, h3, h4, h5, h6 {
-  padding: 0;
-  margin: 0;
-  font-family: $fontTitle;
+  font-family: $font-family-title;
 }
 
 ul {
@@ -62,5 +60,11 @@ ul {
 
 ::-moz-selection, ::selection {
   color: $primary;
-  background: $secondary;
+  background: $bgColor;
+}
+
+// Layout
+
+.full-height {
+  min-height: 100vh;
 }
