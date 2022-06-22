@@ -4,7 +4,7 @@
 <button type="button" class="btn btn-primary">I'm a bootstrap button</button>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 p {
   color: $primary;
 }

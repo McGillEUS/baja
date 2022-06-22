@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <nav id="header-navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-transparent">
       <div class="container">
         <RouterLink to="/" class="navbar-brand px-2">
           <img src="@/assets/images/McGill_Baja_Logo.svg" alt="McGill Baja Logo" width="150" />
@@ -42,6 +42,10 @@ import { RouterLink, RouterView } from "vue-router";
 @import "@/assets/styles/global.scss";
 
 // Header
+
+#header-navbar {
+  position: fixed;
+}
 
 #offcanvasNavbar .nav-item a {
   color: $primary;
