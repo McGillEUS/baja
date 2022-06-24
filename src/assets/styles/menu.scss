@@ -1,0 +1,53 @@
+// Menu styles
+
+#offcanvas-navbar .navbar-nav {
+  padding-top: 5vh;
+
+  .nav-item {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.navbar-toggler,
+.btn-close {
+  color: $primary;
+  border: 0 !important;
+  outline: 0 !important;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+#offcanvas-navbar .offcanvas-header {
+  border-top: 3px solid $primary;
+}
+
+// Responsiveness
+
+@include media-breakpoint-up(lg) {
+
+  #offcanvas-navbar .navbar-nav {
+    padding-top: 0;
+
+    .nav-item {
+      font-size: 1rem;
+      padding-top: 0;
+
+      a {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--bs-nav-link-color);
+
+      &:hover {
+        padding-bottom: calc(1rem - 1px);
+        border-bottom: 2px solid $primary;
+        transition: padding 0.3s, border-width 0.3s;
+      }
+    }
+    } 
+  } 
+}

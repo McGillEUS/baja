@@ -8,7 +8,7 @@ import Test from '@/components/Test.vue'
       <div class="full-height-overlay">
         <div class="full-height-content-center">
           <h1 class="display-1">McGill Baja Racing</h1>
-          <p class="lead">Take the dirt road home</p>
+          <p class="fs-5 pt-3">Take the dirt road home</p>
         </div>
       </div>
     </section>
@@ -19,6 +19,6 @@ import Test from '@/components/Test.vue'
 
 <style lang="scss">
 #landing-section {
-  background-image: url("@/assets/images/placeholders/pexels-pixabay-94272.jpg");
+  background-image: url("@/assets/images/placeholders/landing-bg.jpg");
 }
 </style>

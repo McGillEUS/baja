@@ -26,19 +26,18 @@ const onNavigate = () => {
   <header>
     <nav id="header-navbar" class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
       <div class="container">
-        <RouterLink to="/" class="navbar-brand px-2">
+        <!-- <RouterLink to="/" class="navbar-brand px-2">
           <img src="@/assets/images/McGill_Baja_Logo.svg" alt="McGill Baja Logo" width="150" />
-        </RouterLink>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
+        </RouterLink> -->
+        <button class="navbar-toggler mx-auto mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-navbar" aria-labelledby="offcanvas-navbar-label">
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvas-navbar">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvas-navbar-label">Menu</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white mx-auto mt-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1">
+            <ul class="navbar-nav justify-content-center flex-grow-1">
               <!-- Links for views defined in router > index.js -->
               <li class="nav-item">
                 <RouterLink to="/" class="nav-link px-md-3" active-class="active" @click="onNavigate">Home</RouterLink>
@@ -67,36 +66,10 @@ const onNavigate = () => {
 
 <style lang="scss">
 @import "@/assets/styles/global.scss";
-
-// Header
+@import "@/assets/styles/menu.scss";
 
 #header-navbar {
-  position: fixed;
-
-  .navbar-nav .nav-item a {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--bs-nav-link-color);
-
-    &:hover {
-      padding-bottom: calc(1rem - 2px);
-      border-bottom: 3px solid $primary;
-      transition: padding 0.3s, border-width 0.3s;
-    }
-  }
-}
-  
-#offcanvas-navbar .nav-item a {
-  text-transform: uppercase;
-}
-
-.navbar-toggler, .btn-close {
-  color: $primary;
-  border: 0 !important;
-  outline: 0 !important;
-
-  &:focus {
-    box-shadow: none;
-  }
+  position: fixed !important;
 }
 
 </style>
