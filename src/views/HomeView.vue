@@ -13,6 +13,24 @@ import Test from '@/components/Test.vue'
       </div>
     </section>
 
+    <section class="full-height container-fluid row">
+      <div class="col-md-6">
+        Test
+      </div>
+      <div class="col-md-6">
+        <RouterLink to="/#test">Test</RouterLink>
+      </div>
+    </section>
+
+    <section class="full-height container-fluid row">
+      <div class="col-md-6">
+        <p id="test">I'm the test</p>
+      </div>
+      <div class="col-md-6">
+        Ok
+      </div>
+    </section>
+
     <Test />
   </main>
 </template>
