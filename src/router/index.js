@@ -26,11 +26,6 @@ const router = createRouter({
       path: '/team',
       name: 'team',
       component: () => import('../views/TeamView.vue')
-    },
-    {
-      path: '/contact',
-      name: 'contact',
-      component: () => import('../views/ContactView.vue')
     }
   ],
   scrollBehavior (to, from, savedPosition) {

@@ -59,7 +59,7 @@ const onNavigate = () => {
               <RouterLink to="/team" class="nav-link px-md-3" active-class="active" @click="onNavigate">Our Team</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/contact" class="nav-link px-md-3" active-class="active" @click="onNavigate">Contact</RouterLink>
+              <RouterLink to="/#contact" class="nav-link px-md-3" active-class="active" @click="onNavigate">Contact</RouterLink>
             </li>
           </ul>
         </div>
