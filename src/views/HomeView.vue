@@ -1,7 +1,3 @@
-<script setup>
-import Test from "@/components/Test.vue";
-</script>
-
 <template>
   <main>
     <section id="landing-section" class="full-height full-height-image">
@@ -13,7 +9,7 @@ import Test from "@/components/Test.vue";
       </div>
     </section>
 
-    <section id="baja-short-desc" class="full-height container-fluid row">
+    <section id="baja-short-desc" class="full-height row">
       <div class="col-md-6 full-height-image"></div>
       <div class="col-md-6 position-relative">
         <div class="full-height-content offset-content">
@@ -28,7 +24,7 @@ import Test from "@/components/Test.vue";
       </div>
     </section>
 
-    <section id="team-short-desc" class="full-height container-fluid row">
+    <section id="team-short-desc" class="full-height row">
       <div class="col-md-6 position-relative">
         <div class="full-height-content offset-content">
           <h2 class="display-3">Our team</h2>
@@ -44,7 +40,7 @@ import Test from "@/components/Test.vue";
       <div class="col-md-6 full-height-image"></div>
     </section>
 
-    <section class="full-height container-fluid pt-3 pt-lg-5">
+    <section class="pt-3 pt-lg-5">
       <div class="text-center py-5">
         <h2 class="display-3">2022 Competitions</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
@@ -90,9 +86,30 @@ import Test from "@/components/Test.vue";
       </div>
     </section>
 
-    <Test />
+    <section id="sponsors" class="pt-3 pt-lg-5">
+      <div class="text-center py-5">
+        <h2 class="display-3">Sponsors</h2>
+        <div class="title-separator mt-3 mb-5 mx-auto"></div>
+        <div class="container">
+          <p class="fs-5 justified-p px-4">
+            We rely on sponsorships to help us get materials, manufacture parts, use specialized software and cover expenses.
+            Attending competitions wouldn't be possible without them.
+          </p>
+          <p class="fs-2 py-3 py-lg-5">Thank you to all our sponsors!</p>
+        </div>
+        <div id="sponsor-images">
+          *Insert images here*
+        </div>
+        <div class="container">
+          <p>Thinking about sponsoring us? Check out our <a href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf" target="_blank">sponsorship package</a> and learn how you can help by <RouterLink to="/#contact">contacting us</RouterLink> today!</p>
+          <div>
+            <a class="btn btn-primary my-3 my-lg-5" href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf" target="_blank">Sponsorship Package</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section id="contact">Contact maybe?</section>
+    <section id="contact">Contact us about stuff...</section>
   </main>
 </template>
 
