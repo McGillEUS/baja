@@ -36,9 +36,11 @@ const onNavigate = () => {
 <template>
   <header>
     <nav id="header-navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <button class="navbar-toggler mx-auto mt-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="menu-btn d-inline-block mx-auto p-2">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
       <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvas-navbar">
         <div class="offcanvas-header">
           <button type="button" class="btn-close btn-close-white mx-auto mt-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -59,7 +61,7 @@ const onNavigate = () => {
               <RouterLink to="/team" class="nav-link px-md-3" active-class="active" @click="onNavigate">Our Team</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/#contact" class="nav-link px-md-3" active-class="active" @click="onNavigate">Contact</RouterLink>
+              <RouterLink to="/#contact" class="nav-link px-md-3" @click="onNavigate">Contact</RouterLink>
             </li>
           </ul>
         </div>

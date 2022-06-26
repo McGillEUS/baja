@@ -3,10 +3,22 @@
 #header-navbar {
   position: fixed;
   background-color: transparent;
+
+  .menu-btn {
+    margin-top: 4vh;
+    transition: margin-top 0.2s;
+  }
+
+  &.scrolled .menu-btn {
+    background-color: $bgColorOpacity;
+    margin-top: 0;
+    transition: background-color 0.3s, margin-top 0.3s;
+    border-radius: 4rem;
+  }
 }
 
 #offcanvas-navbar .navbar-nav {
-  padding-top: 5vh;
+  padding-top: 4vh;
 
   .nav-item {
     text-align: center;
@@ -50,9 +62,7 @@
     }
 
     #offcanvas-navbar .navbar-nav {
-      padding-top: 1rem;
       transition: padding-top 0.3s;
-
 
       .nav-item {
         font-size: 1rem;
