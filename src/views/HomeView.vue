@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="home">
     <section id="landing-section" class="full-height full-height-image">
       <div class="full-height-overlay">
         <div class="full-height-content landing-content">
@@ -24,7 +24,7 @@
       </div>
     </section>
 
-    <section id="team-short-desc" class="full-height row">
+    <section id="team-short-desc" class="full-height row bg-darker">
       <div class="col-md-6 position-relative">
         <div class="full-height-content offset-content">
           <h2 class="display-3">Our team</h2>
@@ -92,24 +92,65 @@
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
         <div class="container">
           <p class="fs-5 justified-p px-4">
-            We rely on sponsorships to help us get materials, manufacture parts, use specialized software and cover expenses.
-            Attending competitions wouldn't be possible without them.
+            We rely on sponsorships to help us get materials, manufacture parts, use specialized software and cover
+            expenses. Attending competitions wouldn't be possible without them.
           </p>
           <p class="fs-2 py-3 py-lg-5">Thank you to all our sponsors!</p>
         </div>
-        <div id="sponsor-images">
-          *Insert images here*
-        </div>
+        <div id="sponsor-images">*Insert images here*</div>
         <div class="container">
-          <p>Thinking about sponsoring us? Check out our <a href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf" target="_blank">sponsorship package</a> and learn how you can help by <RouterLink to="/#contact">contacting us</RouterLink> today!</p>
+          <p>
+            Thinking about sponsoring us? Check out our
+            <a href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf" target="_blank">sponsorship package</a> and
+            learn how you can help by <RouterLink to="/#contact">contacting us</RouterLink> today!
+          </p>
           <div>
-            <a class="btn btn-primary my-3 my-lg-5" href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf" target="_blank">Sponsorship Package</a>
+            <a
+              class="btn btn-primary my-3 my-lg-5"
+              href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf"
+              target="_blank"
+              >Sponsorship Package</a
+            >
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">Contact us about stuff...</section>
+    <section id="contact" class="py-3 py-lg-5 bg-darker">
+      <div class="text-center py-5">
+        <h2 class="display-3">Contact Us</h2>
+        <div class="title-separator mt-3 mb-5 mx-auto"></div>
+        <div class="container">
+          <p class="fs-5 pb-3 pb-lg-5">Feel free to get in touch with us anytime!</p>
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="pb-2 pb-lg-3">Team Info</h3>
+              <p>Email: <a href="mailto:baja@mcgilleus.ca">baja@mcgilleus.ca</a></p>
+              <p>Address: <a href="https://goo.gl/maps/UQUaLrjRW4H1KXc56">McGill University</a></p>
+              <address>
+                817 Sherbooke Street West, <br />MacDonald Engineering Bldg Rm 270, <br />Montreal, QC, H3A 0C3
+              </address>
+            </div>
+            <div class="col-md-6">
+              <h3 class="pb-2 pb-lg-3">Captains' Info</h3>
+              <div class="row">
+                <div class="col-xl-6 pb-3">
+                  <p>Benjamin Jordan</p>
+                  <p><a href="mailto:benjamin.jordan@mail.mcgill.ca">benjamin.jordan@mail.mcgill.ca</a></p>
+                  <p><a href="tel:514-730-7078">(514) 730-7078</a></p>
+                </div>
+                <div class="col-xl-6 pb-3">
+                  <p>Zach Katz</p>
+                  <p><a href="mailto:benjamin.jordan@mail.mcgill.ca">benjamin.jordan@mail.mcgill.ca</a></p>
+                  <p><a href="tel:514-730-7078">(514) 730-7078</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="social-links" class="py-3 py-lg-5">socials</div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
