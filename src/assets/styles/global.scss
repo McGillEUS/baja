@@ -78,6 +78,21 @@ ul {
   background-color: $bgColorDark;
 }
 
+.scroll-down {
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 0;
+  transition: padding-bottom 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    padding-bottom: 0.5rem;
+    transition: padding-bottom 0.3s;
+  }
+}
+
 
 // Layout
 

@@ -36,11 +36,9 @@ const onNavigate = () => {
 <template>
   <header>
     <nav id="header-navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="menu-btn d-inline-block mx-auto p-2">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
+      <button class="navbar-toggler menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-navbar" aria-controls="offcanvas-navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvas-navbar">
         <div class="offcanvas-header">
           <button type="button" class="btn-close btn-close-white mx-auto mt-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>

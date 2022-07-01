@@ -6,6 +6,7 @@
           <h1 class="display-1">McGill Baja Racing</h1>
           <p class="fs-5 pt-3">Take the dirt road home</p>
         </div>
+        <RouterLink to="/#baja-short-desc" class="nav-link scroll-down"><i class="bi bi-chevron-compact-down fs-1 px-2"></i></RouterLink>
       </div>
     </section>
 
@@ -34,7 +35,7 @@
             and manufacture an off-road prototype vehicle. While the team consists mostly of engineering students, we
             have members from all faculties on campus.
           </p>
-          <RouterLink to="/team" class="btn btn-primary mt-3">Check us out</RouterLink>
+          <RouterLink to="/team" class="btn btn-primary mt-3">Check us out<i class="bi bi-arrow-right ps-2"></i></RouterLink>
         </div>
       </div>
       <div class="col-md-6 full-height-image"></div>
@@ -109,7 +110,7 @@
               class="btn btn-primary my-3 my-lg-5"
               href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf"
               target="_blank"
-              >Sponsorship Package</a
+              >Sponsorship Package<i class="bi bi-box-arrow-up-right ps-2"></i></a
             >
           </div>
         </div>
@@ -123,7 +124,7 @@
         <div class="container">
           <p class="fs-5 pb-3 pb-lg-5">Feel free to get in touch with us anytime!</p>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 col-xl-4 pb-4">
               <h3 class="pb-2 pb-lg-3">Team Info</h3>
               <p>Email: <a href="mailto:baja@mcgilleus.ca">baja@mcgilleus.ca</a></p>
               <p>Address: <a href="https://goo.gl/maps/UQUaLrjRW4H1KXc56">McGill University</a></p>
@@ -131,23 +132,28 @@
                 817 Sherbooke Street West, <br />MacDonald Engineering Bldg Rm 270, <br />Montreal, QC, H3A 0C3
               </address>
             </div>
-            <div class="col-md-6">
-              <h3 class="pb-2 pb-lg-3">Captains' Info</h3>
+            <div class="col-md-6 col-xl-8 pb-4">
+              <h3 class="pb-2 pb-lg-3 d-xl-none">Captains' Info</h3>
               <div class="row">
                 <div class="col-xl-6 pb-3">
+                  <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
                   <p>Benjamin Jordan</p>
                   <p><a href="mailto:benjamin.jordan@mail.mcgill.ca">benjamin.jordan@mail.mcgill.ca</a></p>
                   <p><a href="tel:514-730-7078">(514) 730-7078</a></p>
                 </div>
                 <div class="col-xl-6 pb-3">
+                  <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
                   <p>Zach Katz</p>
-                  <p><a href="mailto:benjamin.jordan@mail.mcgill.ca">benjamin.jordan@mail.mcgill.ca</a></p>
-                  <p><a href="tel:514-730-7078">(514) 730-7078</a></p>
+                  <p><a href="mailto:zach.katz@mail.mcgill.ca">zach.katz@mail.mcgill.ca</a></p>
+                  <p><a href="tel:514-261-8845">(514) 261-8845</a></p>
                 </div>
               </div>
             </div>
           </div>
-          <div id="social-links" class="py-3 py-lg-5">socials</div>
+          <div id="social-links" class="py-3 py-lg-5 d-flex justify-content-center">
+            <a href="https://www.facebook.com/mcgillbaja" class="nav-link bi bi-facebook"></a>
+            <a href="https://www.instagram.com/mcgill_baja/" class="nav-link bi bi-instagram"></a>
+          </div>
         </div>
       </div>
     </section>
@@ -190,5 +196,15 @@
 
 #comp-map4 {
   background-image: url("@/assets/images/maps/green-valley-AZ.png");
+}
+
+#social-links a {
+  background-color: $body-bg;
+  font-size: 3rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  margin: 0 1rem;
 }
 </style>
