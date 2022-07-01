@@ -29,7 +29,14 @@ const router = createRouter({
         el: to.hash,
         behavior: 'smooth',
       }
+    } else {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve({ top: 0 })
+        }, 100)
+      })
     }
+    
   }  
 })
 

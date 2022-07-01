@@ -47,7 +47,7 @@ const onNavigate = () => {
           <ul class="navbar-nav justify-content-center flex-grow-1">
             <!-- Links for views defined in router > index.js -->
             <li class="nav-item">
-              <RouterLink to="/#home" class="nav-link px-md-3" @click="onNavigate">Home</RouterLink>
+              <RouterLink to="/" class="nav-link px-md-3" @click="onNavigate">Home</RouterLink>
             </li>
             <li class="nav-item">
               <RouterLink to="/gallery" class="nav-link px-md-3" active-class="active" @click="onNavigate">Gallery</RouterLink>
