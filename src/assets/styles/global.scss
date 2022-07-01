@@ -127,10 +127,6 @@ ul {
     text-align: center;
     width: 80%;
   }
-
-  &.offset-content {
-    width: 60%;
-  }
 }
 
 .title-separator {
@@ -139,11 +135,14 @@ ul {
   background-color: $primary;
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(lg) {
 
   .justified-p {
     line-height: 1.6;
     text-align: justify;
   }
-
+  
+  .offset-content {
+    max-width: 60%;
+  }
 }

@@ -6,14 +6,15 @@
           <h1 class="display-1">McGill Baja Racing</h1>
           <p class="fs-5 pt-3">Take the dirt road home</p>
         </div>
-        <RouterLink to="/#baja-short-desc" class="nav-link scroll-down"><i class="bi bi-chevron-compact-down fs-1 px-2"></i></RouterLink>
+        <RouterLink to="/#baja-short-desc" class="nav-link scroll-down"
+          ><i class="bi bi-chevron-compact-down fs-1 px-2"></i
+        ></RouterLink>
       </div>
     </section>
 
     <section id="baja-short-desc" class="full-height row">
-      <div class="col-md-6 full-height-image"></div>
-      <div class="col-md-6 position-relative">
-        <div class="full-height-content offset-content">
+      <div class="col-md-6 d-flex justify-content-center align-items-center order-md-1">
+        <div class="offset-content px-3 px-sm-5 px-lg-0">
           <h2 class="display-3">What we do</h2>
           <div class="title-separator mt-3 mb-5"></div>
           <p class="fs-5 justified-p">
@@ -23,11 +24,12 @@
           </p>
         </div>
       </div>
+      <div class="col-md-6 full-height-image order-md-0"></div>
     </section>
 
     <section id="team-short-desc" class="full-height row bg-darker">
-      <div class="col-md-6 position-relative">
-        <div class="full-height-content offset-content">
+      <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <div class="offset-content px-3 px-sm-5 px-lg-0">
           <h2 class="display-3">Our team</h2>
           <div class="title-separator mt-3 mb-5"></div>
           <p class="fs-5 justified-p">
@@ -35,7 +37,9 @@
             and manufacture an off-road prototype vehicle. While the team consists mostly of engineering students, we
             have members from all faculties on campus.
           </p>
-          <RouterLink to="/team" class="btn btn-primary mt-3">Check us out<i class="bi bi-arrow-right ps-2"></i></RouterLink>
+          <RouterLink to="/team" class="btn btn-primary mt-3"
+            >Check us out<i class="bi bi-arrow-right ps-2"></i
+          ></RouterLink>
         </div>
       </div>
       <div class="col-md-6 full-height-image"></div>
@@ -87,7 +91,7 @@
       </div>
     </section>
 
-    <section id="sponsors" class="pt-3 pt-lg-5">
+    <section id="sponsors" class="p-3 pt-lg-5">
       <div class="text-center py-5">
         <h2 class="display-3">Sponsors</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
@@ -98,7 +102,7 @@
           </p>
           <p class="fs-2 py-3 py-lg-5">Thank you to all our sponsors!</p>
         </div>
-        <div id="sponsor-images">*Insert images here*</div>
+        <div id="sponsor-images" class="py-5">*Insert images here*</div>
         <div class="container">
           <p>
             Thinking about sponsoring us? Check out our
@@ -110,50 +114,48 @@
               class="btn btn-primary my-3 my-lg-5"
               href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf"
               target="_blank"
-              >Sponsorship Package<i class="bi bi-box-arrow-up-right ps-2"></i></a
-            >
+              >Sponsorship Package<i class="bi bi-box-arrow-up-right ps-2"></i
+            ></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="py-3 py-lg-5 bg-darker">
-      <div class="text-center py-5">
-        <h2 class="display-3">Contact Us</h2>
-        <div class="title-separator mt-3 mb-5 mx-auto"></div>
-        <div class="container">
-          <p class="fs-5 pb-3 pb-lg-5">Feel free to get in touch with us anytime!</p>
-          <div class="row">
-            <div class="col-md-6 col-xl-4 pb-4">
-              <h3 class="pb-2 pb-lg-3">Team Info</h3>
-              <p>Email: <a href="mailto:baja@mcgilleus.ca">baja@mcgilleus.ca</a></p>
-              <p>Address: <a href="https://goo.gl/maps/UQUaLrjRW4H1KXc56">McGill University</a></p>
-              <address>
-                817 Sherbooke Street West, <br />MacDonald Engineering Bldg Rm 270, <br />Montreal, QC, H3A 0C3
-              </address>
-            </div>
-            <div class="col-md-6 col-xl-8 pb-4">
-              <h3 class="pb-2 pb-lg-3 d-xl-none">Captains' Info</h3>
-              <div class="row">
-                <div class="col-xl-6 pb-3">
-                  <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
-                  <p>Benjamin Jordan</p>
-                  <p><a href="mailto:benjamin.jordan@mail.mcgill.ca">benjamin.jordan@mail.mcgill.ca</a></p>
-                  <p><a href="tel:514-730-7078">(514) 730-7078</a></p>
-                </div>
-                <div class="col-xl-6 pb-3">
-                  <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
-                  <p>Zach Katz</p>
-                  <p><a href="mailto:zach.katz@mail.mcgill.ca">zach.katz@mail.mcgill.ca</a></p>
-                  <p><a href="tel:514-261-8845">(514) 261-8845</a></p>
-                </div>
+    <section id="contact" class="p-3 py-lg-5 bg-darker text-center">
+      <h2 class="display-3 pt-5">Contact Us</h2>
+      <div class="title-separator mt-3 mb-5 mx-auto"></div>
+      <div class="container">
+        <p class="fs-5 pb-3 pb-lg-5">Feel free to get in touch with us anytime!</p>
+        <div class="row">
+          <div class="col-md-6 col-xl-4 pb-4">
+            <h3 class="pb-2 pb-lg-3">Team Info</h3>
+            <p>Email: <a href="mailto:baja@mcgilleus.ca">baja@mcgilleus.ca</a></p>
+            <p>Address: <a href="https://goo.gl/maps/UQUaLrjRW4H1KXc56">McGill University</a></p>
+            <address>
+              817 Sherbooke Street West, <br />MacDonald Engineering Bldg Rm 270, <br />Montreal, QC, H3A 0C3
+            </address>
+          </div>
+          <div class="col-md-6 col-xl-8 pb-4">
+            <h3 class="pb-2 pb-lg-3 d-xl-none">Captains' Info</h3>
+            <div class="row">
+              <div class="col-xl-6 pb-3">
+                <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
+                <p>Benjamin Jordan</p>
+                <p><a href="mailto:benjamin.jordan@mail.mcgill.ca">benjamin.jordan@mail.mcgill.ca</a></p>
+                <p><a href="tel:514-730-7078">(514) 730-7078</a></p>
+              </div>
+              <div class="col-xl-6 pb-3">
+                <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
+                <p>Zach Katz</p>
+                <p><a href="mailto:zach.katz@mail.mcgill.ca">zach.katz@mail.mcgill.ca</a></p>
+                <p><a href="tel:514-261-8845">(514) 261-8845</a></p>
               </div>
             </div>
           </div>
-          <div id="social-links" class="py-3 py-lg-5 d-flex justify-content-center">
-            <a href="https://www.facebook.com/mcgillbaja" class="nav-link bi bi-facebook"></a>
-            <a href="https://www.instagram.com/mcgill_baja/" class="nav-link bi bi-instagram"></a>
-          </div>
+        </div>
+        <div id="social-links" class="py-3 py-lg-5 d-flex justify-content-center">
+          <a href="https://www.facebook.com/mcgillbaja" class="nav-link bi bi-facebook"></a>
+          <a href="https://www.instagram.com/mcgill_baja/" class="nav-link bi bi-instagram"></a>
         </div>
       </div>
     </section>
