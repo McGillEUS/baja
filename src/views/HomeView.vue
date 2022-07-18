@@ -102,7 +102,163 @@
           </p>
           <p class="fs-2 py-3 py-lg-5">Thank you to all our sponsors!</p>
         </div>
-        <div id="sponsor-images" class="py-5">*Insert images here*</div>
+        <div id="sponsor-images" class="py-5 text-center">
+          <!-- Purple -->
+          <div class="row justify-content-center align-items-center pb-5">
+            <div class="col-md-6">
+              <a href="https://www.mcgill.ca/engineering/">
+                <img src="@/assets/images/sponsors/facaulty-of-engineering.png" alt="McGill Faculty of Engineering" />
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="https://monday.com/">
+                <img src="@/assets/images/sponsors/monday.com-logo.png" alt="Monday.com" />
+              </a>
+            </div>
+          </div>
+          <!-- Platinum -->
+          <div class="row justify-content-center align-items-center pb-5">
+            <div class="col-md-6">
+              <a href="https://mcgilleus.ca/">
+                <img src="@/assets/images/sponsors/eus_logo.png" alt="McGill EUS" />
+              </a>
+            </div>
+          </div>
+          <!-- Gold -->
+          <div class="row justify-content-center align-items-center pb-5">
+            <div class="col-md-4">
+              <a href="https://ssmu.ca/">
+                <img src="@/assets/images/sponsors/ssmu-logo.svg" alt="SSMU" />
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://aciervanguard.com/">
+                <img src="@/assets/images/sponsors/acier-vanguard-logo.png" alt="Acier Vanguard" />
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://www.kisssoft.com/">
+                <img src="@/assets/images/sponsors/kisssoft-logo.png" alt="KISSsoft" />
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://www.mantracourt.com/">
+                <img src="@/assets/images/sponsors/mantracourt-logo.png" alt="Mantracourt" />
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://www.skf.com/">
+                <img src="@/assets/images/sponsors/skf-logo.svg" alt="SKF" />
+              </a>
+            </div>
+          </div>
+          <!-- Silver -->
+          <div class="row justify-content-center align-items-center pb-5">
+            <div class="col-md-3">
+              <a href="https://a7integration.com/">
+                <img src="@/assets/images/sponsors/a7integration-logo.png" alt="A7 Integration" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://aciervulcan.com/">
+                <img src="@/assets/images/sponsors/acier-vulcan-logo.png" alt="Acier Vulcan" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="http://www.industrieshd.com/">
+                <img src="@/assets/images/sponsors/ateliers-mr-driveshaft-logo.png" alt="Ateliers Mr Driveshaft" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://www.elkasuspension.com/">
+                <img src="@/assets/images/sponsors/elka-logo.png" alt="Elka" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://www.guruenergy.com/">
+                <img src="@/assets/images/sponsors/guru-logo.png" alt="Guru" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://www.robustgear.com/">
+                <img src="@/assets/images/sponsors/robust-gear-logo.png" alt="Robust Gear" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://s4suspension.com/">
+                <img src="@/assets/images/sponsors/s4-suspension-logo.png" alt="S4 Suspension" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://www.st-hubertmachineshop.com/">
+                <img src="@/assets/images/sponsors/st-hubert-machine-shop-logo.png" alt="St Hubert Machine Shop" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://supalloy.com/">
+                <img src="@/assets/images/sponsors/superior-alloy-technology-logo.png" alt="Superior Alloy Technology" />
+              </a>
+            </div>
+          </div>
+          <!-- Bronze -->
+          <div class="row justify-content-center align-items-center pb-5">
+            <div class="col-md-2">
+              <a href="https://www.allballsracing.com/">
+                <img src="@/assets/images/sponsors/all-balls-logo.png" alt="All Balls Racing" />
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://www.aon3d.com/">
+                <img src="@/assets/images/sponsors/aon3d-logo.svg" alt="AON3D" />
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://www.emotorsdirect.ca/">
+                <img src="@/assets/images/sponsors/emotors-direct-logo.svg" alt="eMotors Direct" />
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://www.hoskin.ca/">
+                <img src="@/assets/images/sponsors/hoskin-scientific-logo.png" alt="Hoskin Scientific" />
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://www.polaris.com/">
+                <img src="@/assets/images/sponsors/polaris-logo.svg" alt="Polaris" />
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://www.thermetco.com/">
+                <img src="@/assets/images/sponsors/thermetco-logo.png" alt="Thermetco" />
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://www.equipeibs.com/">
+                <img src="@/assets/images/sponsors/tuboquip-logo.svg" alt="Tuboquip" />
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://www.ultraspec.ca/">
+                <img src="@/assets/images/sponsors/ultraspec-logo.png" alt="Ultraspec" />
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://www.wilwood.com/">
+                <img src="@/assets/images/sponsors/wilwood-logo.png" alt="Wilwood" />
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://www.libertyspring.com/">
+                <img src="@/assets/images/sponsors/liberty-spring-logo.png" alt="Libery Spring" />
+              </a>
+            </div>
+            <div class="col-md-2">
+              <a href="https://www.powersourcecanada.ca">
+                <img src="@/assets/images/sponsors/power-source-canada-logo.png" alt="Power Source Canada" />
+              </a>
+            </div>
+          </div>
+        </div>
         <div class="container">
           <p>
             Thinking about sponsoring us? Check out our
@@ -147,7 +303,7 @@
               <div class="col-xl-6 pb-3">
                 <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
                 <p>Zach Katz</p>
-                <p><a href="mailto:zach.katz@mail.mcgill.ca">zach.katz@mail.mcgill.ca</a></p>
+                <p><a href="mailto:zachary.katz@mail.mcgill.ca">zachary.katz@mail.mcgill.ca</a></p>
                 <p><a href="tel:514-261-8845">(514) 261-8845</a></p>
               </div>
             </div>
@@ -198,6 +354,12 @@
 
 #comp-map4 {
   background-image: url("@/assets/images/maps/green-valley-AZ.png");
+}
+
+#sponsor-images img {
+  max-width: 100%;
+  height: auto;
+  padding: 1rem;
 }
 
 #social-links a {

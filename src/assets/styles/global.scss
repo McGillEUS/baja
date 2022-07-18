@@ -57,7 +57,12 @@ ul {
   list-style-type: none;
 }
 
-::-moz-selection, ::selection {
+::-moz-selection {
+  color: $primary;
+  background: $bgColor;
+}
+
+::selection {
   color: $primary;
   background: $bgColor;
 }
