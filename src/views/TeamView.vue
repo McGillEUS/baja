@@ -5,7 +5,7 @@ import { cars } from '@/assets/automation/cars.json'
 
 <template>
   <main id="team">
-    <section id="team-landing-section" class="full-height full-height-image">
+    <section id="team-landing-section" class="min-vh-100 full-height-image">
       <div class="full-height-overlay">
         <div class="full-height-content landing-content">
           <h1 class="display-1">McGill Baja Racing</h1>
@@ -75,12 +75,43 @@ import { cars } from '@/assets/automation/cars.json'
 <style lang="scss">
 #team-landing-section {
   background-image: url("@/assets/images/placeholders/landing-bg2.jpg");
+  background-attachment: fixed;
 }
 
 #people .person > div, #cars .car > div {
+  position: relative;
   max-width: 400px;
   background-color: $bgColorDark;
   border-bottom: 2px solid $primary;
+  border-top: 2px solid transparent;
+  transition: border-top 0.1s ease;
+
+}
+
+#people .person > div {
+
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    height: 0;
+    width: 2px;
+    background-color: $primary;
+    transition: height 0.2s ease 0.1s;
+  }
+  
+  &::before { left: 0; }
+  &::after { right: 0; }
+  
+  &:hover {
+    border-top-color: $primary;
+    transition: border-top 0.1s ease 0.2s;
+    
+    &::before, &::after {
+      height: 100%;
+      transition: height 0.2s ease;
+    }
+  }
 }
 
 .person-img {

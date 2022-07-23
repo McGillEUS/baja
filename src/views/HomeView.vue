@@ -1,6 +1,6 @@
 <template>
   <main id="home">
-    <section id="landing-section" class="full-height full-height-image">
+    <section id="landing-section" class="min-vh-100 full-height-image">
       <div class="full-height-overlay">
         <div class="full-height-content landing-content">
           <h1 class="display-1">McGill Baja Racing</h1>
@@ -12,7 +12,7 @@
       </div>
     </section>
 
-    <section id="baja-short-desc" class="full-height row">
+    <section id="baja-short-desc" class="min-vh-100 row">
       <div class="col-md-6 d-flex justify-content-center align-items-center order-md-1">
         <div class="offset-content px-3 px-sm-5 px-lg-0">
           <h2 class="display-3">What we do</h2>
@@ -27,7 +27,7 @@
       <div class="col-md-6 full-height-image order-md-0"></div>
     </section>
 
-    <section id="team-short-desc" class="full-height row bg-darker">
+    <section id="team-short-desc" class="min-vh-100 row bg-darker">
       <div class="col-md-6 d-flex justify-content-center align-items-center">
         <div class="offset-content px-3 px-sm-5 px-lg-0">
           <h2 class="display-3">Our team</h2>
@@ -37,7 +37,7 @@
             and manufacture an off-road prototype vehicle. While the team consists mostly of engineering students, we
             have members from all faculties on campus.
           </p>
-          <RouterLink to="/team" class="btn btn-primary mt-3"
+          <RouterLink to="/team" class="btn btn-outline-primary btn-padded mt-3"
             >Check us out<i class="bi bi-arrow-right ps-2"></i
           ></RouterLink>
         </div>
@@ -105,12 +105,12 @@
         <div id="sponsor-images" class="py-5 text-center">
           <!-- Purple -->
           <div class="row justify-content-center align-items-center pb-5">
-            <div class="col-md-6">
+            <div class="col-6">
               <a href="https://www.mcgill.ca/engineering/">
                 <img src="@/assets/images/sponsors/facaulty-of-engineering.png" alt="McGill Faculty of Engineering" />
               </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-6">
               <a href="https://monday.com/">
                 <img src="@/assets/images/sponsors/monday.com-logo.png" alt="Monday.com" />
               </a>
@@ -118,7 +118,7 @@
           </div>
           <!-- Platinum -->
           <div class="row justify-content-center align-items-center pb-5">
-            <div class="col-md-5">
+            <div class="col-6 col-md-5">
               <a href="https://mcgilleus.ca/">
                 <img src="@/assets/images/sponsors/eus_logo.png" alt="McGill EUS" />
               </a>
@@ -126,27 +126,27 @@
           </div>
           <!-- Gold -->
           <div class="row justify-content-center align-items-center pb-5">
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <a href="https://ssmu.ca/">
                 <img src="@/assets/images/sponsors/ssmu-logo.svg" alt="SSMU" />
               </a>
             </div>
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <a href="https://aciervanguard.com/">
                 <img src="@/assets/images/sponsors/acier-vanguard-logo.png" alt="Acier Vanguard" />
               </a>
             </div>
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <a href="https://www.kisssoft.com/">
                 <img src="@/assets/images/sponsors/kisssoft-logo.png" alt="KISSsoft" />
               </a>
             </div>
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <a href="https://www.mantracourt.com/">
                 <img src="@/assets/images/sponsors/mantracourt-logo.png" alt="Mantracourt" />
               </a>
             </div>
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-6 col-lg-4">
               <a href="https://www.skf.com/">
                 <img src="@/assets/images/sponsors/skf-logo.svg" alt="SKF" />
               </a>
@@ -154,47 +154,47 @@
           </div>
           <!-- Silver -->
           <div class="row justify-content-center align-items-center pb-5">
-            <div class="col-sm-4 col-lg-3">
+            <div class="col-6 col-sm-4 col-lg-3">
               <a href="https://a7integration.com/">
                 <img src="@/assets/images/sponsors/a7integration-logo.png" alt="A7 Integration" />
               </a>
             </div>
-            <div class="col-sm-4 col-lg-3">
+            <div class="col-6 col-sm-4 col-lg-3">
               <a href="https://aciervulcan.com/">
                 <img src="@/assets/images/sponsors/acier-vulcan-logo.png" alt="Acier Vulcan" />
               </a>
             </div>
-            <div class="col-sm-4 col-lg-3">
+            <div class="col-6 col-sm-4 col-lg-3">
               <a href="http://www.industrieshd.com/">
                 <img src="@/assets/images/sponsors/ateliers-mr-driveshaft-logo.png" alt="Ateliers Mr Driveshaft" />
               </a>
             </div>
-            <div class="col-sm-4 col-lg-3">
+            <div class="col-6 col-sm-4 col-lg-3">
               <a href="https://www.elkasuspension.com/">
                 <img src="@/assets/images/sponsors/elka-logo.png" alt="Elka" />
               </a>
             </div>
-            <div class="col-sm-4 col-lg-3">
+            <div class="col-6 col-sm-4 col-lg-3">
               <a href="https://www.guruenergy.com/">
                 <img src="@/assets/images/sponsors/guru-logo.png" alt="Guru" />
               </a>
             </div>
-            <div class="col-sm-4 col-lg-3">
+            <div class="col-6 col-sm-4 col-lg-3">
               <a href="https://www.robustgear.com/">
                 <img src="@/assets/images/sponsors/robust-gear-logo.png" alt="Robust Gear" />
               </a>
             </div>
-            <div class="col-sm-4 col-lg-3">
+            <div class="col-6 col-sm-4 col-lg-3">
               <a href="https://s4suspension.com/">
                 <img src="@/assets/images/sponsors/s4-suspension-logo.png" alt="S4 Suspension" />
               </a>
             </div>
-            <div class="col-sm-4 col-lg-3">
+            <div class="col-6 col-sm-4 col-lg-3">
               <a href="https://www.st-hubertmachineshop.com/">
                 <img src="@/assets/images/sponsors/st-hubert-machine-shop-logo.png" alt="St Hubert Machine Shop" />
               </a>
             </div>
-            <div class="col-sm-4 col-lg-3">
+            <div class="col-6 col-sm-4 col-lg-3">
               <a href="https://supalloy.com/">
                 <img src="@/assets/images/sponsors/superior-alloy-technology-logo.png" alt="Superior Alloy Technology" />
               </a>
@@ -202,57 +202,57 @@
           </div>
           <!-- Bronze -->
           <div class="row justify-content-center align-items-center pb-5">
-            <div class="col-sm-3 col-lg-2">
+            <div class="col-6 col-sm-3 col-lg-2">
               <a href="https://www.allballsracing.com/">
                 <img src="@/assets/images/sponsors/all-balls-logo.png" alt="All Balls Racing" />
               </a>
             </div>
-            <div class="col-sm-3 col-lg-2">
+            <div class="col-6 col-sm-3 col-lg-2">
               <a href="https://www.aon3d.com/">
                 <img src="@/assets/images/sponsors/aon3d-logo.svg" alt="AON3D" />
               </a>
             </div>
-            <div class="col-sm-3 col-lg-2">
+            <div class="col-6 col-sm-3 col-lg-2">
               <a href="https://www.emotorsdirect.ca/">
                 <img src="@/assets/images/sponsors/emotors-direct-logo.svg" alt="eMotors Direct" />
               </a>
             </div>
-            <div class="col-sm-3 col-lg-2">
+            <div class="col-6 col-sm-3 col-lg-2">
               <a href="https://www.hoskin.ca/">
                 <img src="@/assets/images/sponsors/hoskin-scientific-logo.png" alt="Hoskin Scientific" />
               </a>
             </div>
-            <div class="col-sm-3 col-lg-2">
+            <div class="col-6 col-sm-3 col-lg-2">
               <a href="https://www.polaris.com/">
                 <img src="@/assets/images/sponsors/polaris-logo.svg" alt="Polaris" />
               </a>
             </div>
-            <div class="col-sm-3 col-lg-2">
+            <div class="col-6 col-sm-3 col-lg-2">
               <a href="https://www.thermetco.com/">
                 <img src="@/assets/images/sponsors/thermetco-logo.png" alt="Thermetco" />
               </a>
             </div>
-            <div class="col-sm-3 col-lg-2">
+            <div class="col-6 col-sm-3 col-lg-2">
               <a href="https://www.equipeibs.com/">
                 <img src="@/assets/images/sponsors/tuboquip-logo.svg" alt="Tuboquip" />
               </a>
             </div>
-            <div class="col-sm-3 col-lg-2">
+            <div class="col-6 col-sm-3 col-lg-2">
               <a href="https://www.ultraspec.ca/">
                 <img src="@/assets/images/sponsors/ultraspec-logo.png" alt="Ultraspec" />
               </a>
             </div>
-            <div class="col-sm-3 col-lg-2">
+            <div class="col-6 col-sm-3 col-lg-2">
               <a href="https://www.wilwood.com/">
                 <img src="@/assets/images/sponsors/wilwood-logo.png" alt="Wilwood" />
               </a>
             </div>
-            <div class="col-sm-3 col-lg-2">
+            <div class="col-6 col-sm-3 col-lg-2">
               <a href="https://www.libertyspring.com/">
                 <img src="@/assets/images/sponsors/liberty-spring-logo.png" alt="Libery Spring" />
               </a>
             </div>
-            <div class="col-sm-3 col-lg-2">
+            <div class="col-6 col-sm-3 col-lg-2">
               <a href="https://www.powersourcecanada.ca">
                 <img src="@/assets/images/sponsors/power-source-canada-logo.png" alt="Power Source Canada" />
               </a>
@@ -267,7 +267,7 @@
           </p>
           <div>
             <a
-              class="btn btn-primary my-3 my-lg-5"
+              class="btn btn-outline-primary btn-padded my-3 my-lg-5"
               href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf"
               target="_blank"
               >Sponsorship Package<i class="bi bi-box-arrow-up-right ps-2"></i
@@ -321,6 +321,7 @@
 <style lang="scss">
 #landing-section {
   background-image: url("@/assets/images/placeholders/landing-bg.jpg");
+  background-attachment: fixed;
 }
 
 #baja-short-desc .full-height-image {
