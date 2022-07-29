@@ -8,6 +8,7 @@ const props = defineProps({
 
 const currImg = ref(1);
 const dragStartX = ref(0);
+const imgFocused = ref(false);
 
 function nextImg() {
   currImg.value = currImg.value < props.numImages ? ++currImg.value : 1;
@@ -19,14 +20,19 @@ function prevImg() {
 
 function viewDragStart(e) {
   dragStartX.value = e.clientX;
+  imgFocused.value = true;
 }
 
 function viewDrag(e) {
   // Setup so user would do 360 twice across full screen
-  if (Math.abs(e.clientX - dragStartX.value) > innerWidth / (2 * props.numImages)) {
-    if (e.clientX - dragStartX.value > 0) prevImg();
-    else nextImg();
-    dragStartX.value = e.clientX;
+  if (imgFocused.value && Math.abs(e.clientX - dragStartX.value) > innerWidth / (2 * props.numImages)) {
+    if (e.clientX - dragStartX.value > 0) {
+      prevImg();
+      dragStartX.value += innerWidth / (2 * props.numImages);
+    } else {
+      nextImg();
+      dragStartX.value -= innerWidth / (2 * props.numImages);
+    }
   }
 }
 </script>
@@ -34,17 +40,24 @@ function viewDrag(e) {
 <template>
   <div>
     <div class="d-flex align-items-center justify-content-center position-relative">
+      <!-- <template v-for="n in props.numImages" :key="n">
+        <img v-show="n == currImg.value" :src="path + n + '.png'" alt="360 car view" class="d-block img-fluid" />
+      </template> -->
       <img :src="path + currImg + '.png'" alt="360 car view" class="d-block img-fluid" />
       <div
         class="view360"
         draggable="true"
         @drop.prevent
-        @dragstart="viewDragStart($event)"
-        @dragover.prevent="viewDrag($event)"
+        @dragstart.prevent
+        @dragover.prevent
+        @mousedown="viewDragStart($event)"
+        @mousemove="viewDrag($event)"
+        @mouseup="imgFocused = false"
+        @touchstart="viewDragStart($event)"
+        @touchmove="viewDrag($event)"
+        @touchend="imgFocused = false"
       ></div>
     </div>
-    <button @click="prevImg">Prev</button>
-    <button @click="nextImg">Next</button>
   </div>
 </template>
 
