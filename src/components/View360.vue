@@ -6,6 +6,7 @@ const props = defineProps({
   path: String,
 });
 
+const ROTATIONS = 2;
 const currImg = ref(1);
 const dragStartX = ref(0);
 const imgFocused = ref(false);
@@ -18,20 +19,30 @@ function prevImg() {
   currImg.value = currImg.value > 1 ? --currImg.value : props.numImages;
 }
 
+function getCoord(e) {
+  if (e.type == 'touchstart' || e.type == 'touchmove') {
+    let eTouch = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
+    let touch = eTouch.touches[0] || eTouch.changedTouches[0];
+    return touch.pageX;
+  } else return e.clientX;
+}
+
 function viewDragStart(e) {
-  dragStartX.value = e.clientX;
+  dragStartX.value = getCoord(e);
   imgFocused.value = true;
 }
 
 function viewDrag(e) {
   // Setup so user would do 360 twice across full screen
-  if (imgFocused.value && Math.abs(e.clientX - dragStartX.value) > innerWidth / (2 * props.numImages)) {
-    if (e.clientX - dragStartX.value > 0) {
+  let diff = getCoord(e) - dragStartX.value;
+  let rotationFraction = innerWidth / (ROTATIONS * props.numImages)
+  if (imgFocused.value && Math.abs(diff) > rotationFraction) {
+    if (diff > 0) {
       prevImg();
-      dragStartX.value += innerWidth / (2 * props.numImages);
+      dragStartX.value += rotationFraction;
     } else {
       nextImg();
-      dragStartX.value -= innerWidth / (2 * props.numImages);
+      dragStartX.value -= rotationFraction;
     }
   }
 }
@@ -40,22 +51,17 @@ function viewDrag(e) {
 <template>
   <div>
     <div class="d-flex align-items-center justify-content-center position-relative">
-      <!-- <template v-for="n in props.numImages" :key="n">
-        <img v-show="n == currImg.value" :src="path + n + '.png'" alt="360 car view" class="d-block img-fluid" />
-      </template> -->
-      <img :src="path + currImg + '.png'" alt="360 car view" class="d-block img-fluid" />
+      <template v-for="n in props.numImages" :key="n">
+        <img v-show="n === currImg" :src="path + n + '.png'" alt="360 car view" class="img-fluid" />
+      </template>
       <div
         class="view360"
-        draggable="true"
-        @drop.prevent
-        @dragstart.prevent
-        @dragover.prevent
-        @mousedown="viewDragStart($event)"
-        @mousemove="viewDrag($event)"
-        @mouseup="imgFocused = false"
         @touchstart="viewDragStart($event)"
         @touchmove="viewDrag($event)"
         @touchend="imgFocused = false"
+        @mousedown="viewDragStart($event)"
+        @mousemove="viewDrag($event)"
+        @mouseup="imgFocused = false"
       ></div>
     </div>
   </div>
