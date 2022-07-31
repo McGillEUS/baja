@@ -1,6 +1,7 @@
 <script setup>
 import { people } from '@/assets/automation/people.json'
 import { cars } from '@/assets/automation/cars.json'
+import TypingText from '../components/TypingText.vue';
 </script>
 
 <template>
@@ -9,7 +10,9 @@ import { cars } from '@/assets/automation/cars.json'
       <div class="full-height-overlay">
         <div class="full-height-content landing-content">
           <h1 class="display-1">McGill Baja Racing</h1>
-          <p class="fs-5 pt-3">Welcome to the team!</p>
+          <p class="fs-5 pt-3">
+            <typing-text text="Welcome to the team!" />
+          </p>
         </div>
         <RouterLink to="/team#people" class="nav-link scroll-down"
           ><i class="bi bi-chevron-compact-down fs-1 px-2"></i

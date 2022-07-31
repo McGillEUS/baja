@@ -1,5 +1,5 @@
 <script setup>
-import View360 from "../components/View360.vue";
+import View360 from '../components/View360.vue';
 </script>
 
 <template>

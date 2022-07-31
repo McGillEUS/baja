@@ -1,10 +1,16 @@
+<script setup>
+import TypingText from '../components/TypingText.vue';
+</script>
+
 <template>
   <main id="home">
     <section id="landing-section" class="min-vh-100 full-height-image">
       <div class="full-height-overlay">
         <div class="full-height-content landing-content">
           <h1 class="display-1">McGill Baja Racing</h1>
-          <p class="fs-5 pt-3">Take the dirt road home</p>
+          <p class="fs-5 pt-3">
+            <typing-text text="Take the dirt road home" />
+          </p>
         </div>
         <RouterLink to="/#baja-short-desc" class="nav-link scroll-down"
           ><i class="bi bi-chevron-compact-down fs-1 px-2"></i
