@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import { getCoord } from "../assets/utils";
 
 const props = defineProps({
   numImages: Number,
@@ -10,22 +11,6 @@ const ROTATIONS = 2;
 const currImg = ref(1);
 const dragStartX = ref(0);
 const imgFocused = ref(false);
-
-function nextImg() {
-  currImg.value = currImg.value < props.numImages ? ++currImg.value : 1;
-}
-
-function prevImg() {
-  currImg.value = currImg.value > 1 ? --currImg.value : props.numImages;
-}
-
-function getCoord(e) {
-  if (e.type == 'touchstart' || e.type == 'touchmove') {
-    let eTouch = (typeof e.originalEvent === 'undefined') ? e : e.originalEvent;
-    let touch = eTouch.touches[0] || eTouch.changedTouches[0];
-    return touch.pageX;
-  } else return e.clientX;
-}
 
 function viewDragStart(e) {
   dragStartX.value = getCoord(e);
@@ -38,10 +23,10 @@ function viewDrag(e) {
   let rotationFraction = innerWidth / (ROTATIONS * props.numImages)
   if (imgFocused.value && Math.abs(diff) > rotationFraction) {
     if (diff > 0) {
-      prevImg();
+      currImg.value = currImg.value > 1 ? --currImg.value : props.numImages;
       dragStartX.value += rotationFraction;
     } else {
-      nextImg();
+      currImg.value = currImg.value < props.numImages ? ++currImg.value : 1;
       dragStartX.value -= rotationFraction;
     }
   }
