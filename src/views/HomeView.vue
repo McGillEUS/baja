@@ -1,5 +1,5 @@
 <script setup>
-import TypingText from '../components/TypingText.vue';
+import TypingText from "../components/TypingText.vue";
 </script>
 
 <template>
@@ -66,28 +66,43 @@ import TypingText from '../components/TypingText.vue';
       </div>
 
       <div class="row pt-3 pt-lg-5">
-        <div id="comp-map1" class="col-md-6 col-lg-3 comp-map full-height-image">
+        <div
+          class="col-md-6 col-lg-3 comp-map full-height-image"
+          style="background-image: url('/src/assets/images/maps/quebec-city-QC.png')"
+        >
           <div class="map-content">
             <h3>Épreuve du Nord</h3>
             <p class="text-primary">FEB 3 - 4</p>
             <p>Quebec City, Quebec, Canada</p>
           </div>
         </div>
-        <div id="comp-map2" class="col-md-6 col-lg-3 comp-map full-height-image">
+
+        <div
+          class="col-md-6 col-lg-3 comp-map full-height-image"
+          style="background-image: url('/src/assets/images/maps/cookeville-TN.png')"
+        >
           <div class="map-content">
             <h3>Baja SAE Tennessee</h3>
             <p class="text-primary">MAY 12 - 15</p>
             <p>Cookeville, Tennessee, USA</p>
           </div>
         </div>
-        <div id="comp-map3" class="col-md-6 col-lg-3 comp-map full-height-image">
+        
+        <div
+          class="col-md-6 col-lg-3 comp-map full-height-image"
+          style="background-image: url('/src/assets/images/maps/rochester-NY.png')"
+        >
           <div class="map-content">
             <h3>Baja SAE Rochester</h3>
             <p class="text-primary">JUNE 2 - 5</p>
             <p>Rochester, New York, USA</p>
           </div>
         </div>
-        <div id="comp-map4" class="col-md-6 col-lg-3 comp-map full-height-image">
+        
+        <div
+          class="col-md-6 col-lg-3 comp-map full-height-image"
+          style="background-image: url('/src/assets/images/maps/green-valley-AZ.png')"
+        >
           <div class="map-content">
             <h3>Baja SAE Arizona</h3>
             <p class="text-primary">SEP 29 - OCT 2</p>
@@ -202,7 +217,10 @@ import TypingText from '../components/TypingText.vue';
             </div>
             <div class="col-6 col-sm-4 col-lg-3">
               <a href="https://supalloy.com/">
-                <img src="@/assets/images/sponsors/superior-alloy-technology-logo.png" alt="Superior Alloy Technology" />
+                <img
+                  src="@/assets/images/sponsors/superior-alloy-technology-logo.png"
+                  alt="Superior Alloy Technology"
+                />
               </a>
             </div>
           </div>
@@ -316,8 +334,9 @@ import TypingText from '../components/TypingText.vue';
           </div>
         </div>
         <div id="social-links" class="py-3 py-lg-5 d-flex justify-content-center">
-          <a href="https://www.facebook.com/mcgillbaja" class="nav-link bi bi-facebook"></a>
-          <a href="https://www.instagram.com/mcgill_baja/" class="nav-link bi bi-instagram"></a>
+          <a href="https://www.facebook.com/mcgillbaja"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/mcgill_baja/"><i class="bi bi-instagram"></i></a>
+          <a href="https://ca.linkedin.com/company/mcgillbajaracing"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
     </section>
@@ -347,22 +366,6 @@ import TypingText from '../components/TypingText.vue';
   }
 }
 
-#comp-map1 {
-  background-image: url("@/assets/images/maps/quebec-city-QC.png");
-}
-
-#comp-map2 {
-  background-image: url("@/assets/images/maps/cookeville-TN.png");
-}
-
-#comp-map3 {
-  background-image: url("@/assets/images/maps/rochester-NY.png");
-}
-
-#comp-map4 {
-  background-image: url("@/assets/images/maps/green-valley-AZ.png");
-}
-
 #sponsor-images img {
   max-width: 100%;
   height: auto;
@@ -370,12 +373,45 @@ import TypingText from '../components/TypingText.vue';
 }
 
 #social-links a {
-  background-color: $body-bg;
-  font-size: 3rem;
-  width: 6.5rem;
-  height: 6.5rem;
-  padding: 1rem;
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
   border-radius: 50%;
   margin: 0 1rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $body-bg;
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    background-color: var(--bs-light);
+    transition: background-color 0.2s;
+
+    &::after {
+      transform: scale(0.95);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  .bi {
+    color: var(--bs-light);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 </style>
