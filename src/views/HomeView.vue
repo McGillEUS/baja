@@ -43,8 +43,8 @@ import TypingText from "../components/TypingText.vue";
             and manufacture an off-road prototype vehicle. While the team consists mostly of engineering students, we
             have members from all faculties on campus.
           </p>
-          <RouterLink to="/team" class="btn btn-outline-primary btn-padded mt-3"
-            >Check us out<i class="bi bi-arrow-right ps-2"></i
+          <RouterLink to="/team" class="btn-animated mt-3"
+            >Check us out<i class="bi bi-arrow-right"></i
           ></RouterLink>
         </div>
       </div>
@@ -291,7 +291,7 @@ import TypingText from "../components/TypingText.vue";
           </p>
           <div>
             <a
-              class="btn btn-outline-primary btn-padded my-3 my-lg-5"
+              class="btn-animated my-3 my-lg-5"
               href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf"
               target="_blank"
               >Sponsorship Package<i class="bi bi-box-arrow-up-right ps-2"></i
