@@ -23,8 +23,6 @@ import CompareImages from "../components/CompareImages.vue";
       <compare-images
         path1="/src/assets/images/gallery/Front.png"
         path2="/src/assets/images/gallery/Front-cad.png"
-        :img-width="554"
-        :img-height="554"
       />
     </div>
   </main>

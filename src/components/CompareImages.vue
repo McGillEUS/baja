@@ -2,63 +2,48 @@
 import { onMounted, ref } from "vue";
 import { getCoord } from "../assets/utils";
 
-const props = defineProps({
-  path1: String,
-  path2: String,
-  imgWidth: Number,
-  imgHeight: Number,
-});
+defineProps({ path1: String, path2: String });
 
-const imgCompOverlay = ref(null);
-const imgCompSlider = ref(null);
+const imgToCompare = ref(null);
 const dragging = ref(false);
+const topOffset = ref(50);
+const leftOffset = ref(50);
 
 onMounted(() => {
-  imgCompOverlay.value.style.width = props.imgWidth / 2 + "px";
-  
-  imgCompSlider.value.style.top = props.imgHeight / 2 - imgCompSlider.value.offsetHeight / 2 + "px";
-  imgCompSlider.value.style.left = props.imgWidth / 2 - imgCompSlider.value.offsetWidth / 2 + "px";
-  
-  window.addEventListener("touchend", () => dragging.value = false);
-  window.addEventListener("mouseup", () => dragging.value = false);
+  window.addEventListener("touchend", () => (dragging.value = false));
+  window.addEventListener("mouseup", () => (dragging.value = false));
 });
 
 function slideMove(e) {
   if (!dragging.value) return false;
 
-  let posX = getCoord(e) - imgCompOverlay.value.getBoundingClientRect().left;
-  if (posX < 0) posX = 0;
-  else if (posX > props.imgWidth) posX = props.imgWidth;
+  let offsetX = (getCoord(e) - imgToCompare.value.getBoundingClientRect().left) / imgToCompare.value.offsetWidth;
+  if (offsetX < 0) offsetX = 0;
+  else if (offsetX > imgToCompare.value.offsetWidth) offsetX = 1;
+  leftOffset.value = offsetX * 100;
 
-  let posY = getCoord(e, false) - imgCompOverlay.value.getBoundingClientRect().top;
-  if (posY < 0) posY = 0;
-  else if (posY > props.imgWidth) posY = props.imgWidth;
-  
-  imgCompOverlay.value.style.width = posX + "px";
-  imgCompSlider.value.style.top = posY - imgCompSlider.value.offsetHeight / 2 + "px";
-  imgCompSlider.value.style.left = imgCompOverlay.value.offsetWidth - imgCompSlider.value.offsetWidth / 2 + "px";
+  let offsetY = (getCoord(e, false) - imgToCompare.value.getBoundingClientRect().top) / imgToCompare.value.offsetHeight;
+  if (offsetY < 0) offsetY = 0;
+  else if (offsetY > imgToCompare.value.offsetHeight) offsetY = 1;
+  topOffset.value = offsetY * 100;
 }
 </script>
 
 <template>
-  <div
-    class="position-relative d-inline-block mx-auto"
-    :style="{ height: imgHeight + 'px', width: imgWidth + 'px' }"
-    @touchmove="slideMove($event)"
-    @mousemove="slideMove($event)"
-  >
-    <div class="position-absolute overflow-hidden">
-      <img :src="path1" :width="imgWidth" :height="imgHeight" />
-    </div>
+  <div class="d-inline-block position-relative mw-100" @touchmove="slideMove($event)" @mousemove="slideMove($event)">
+    <img :src="path1" class="img-fluid" :style="{ clipPath: `inset(0 ${100 - leftOffset}% 0 0)` }" />
+    <img
+      ref="imgToCompare"
+      :src="path2"
+      class="img-fluid position-absolute"
+      :style="{ clipPath: `inset(0 0 0 ${leftOffset}%)`, top: 0, left: 0 }"
+    />
     <div
-      ref="imgCompSlider"
       class="img-comp-slider"
+      :style="{ top: `calc(${topOffset}% - 1.5rem)`, left: `calc(${leftOffset}% - 1.5rem)` }"
       @touchstart.prevent="dragging = true"
       @mousedown.prevent="dragging = true"
     ></div>
-    <div ref="imgCompOverlay" class="position-absolute overflow-hidden">
-      <img :src="path2" :width="imgWidth" :height="imgHeight" />
-    </div>
   </div>
 </template>
 
