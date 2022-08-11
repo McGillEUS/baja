@@ -50,16 +50,16 @@ const onNavigate = () => {
               <RouterLink to="/" class="nav-link px-md-3" @click="onNavigate">Home</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/gallery" class="nav-link px-md-3" active-class="active" @click="onNavigate">Gallery</RouterLink>
-            </li>
-            <li class="nav-item">
               <RouterLink to="/#sponsors" class="nav-link px-md-3" @click="onNavigate">Sponsors</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/team" class="nav-link px-md-3" active-class="active" @click="onNavigate">Our Team</RouterLink>
+              <RouterLink to="/#contact" class="nav-link px-md-3" @click="onNavigate">Contact</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/#contact" class="nav-link px-md-3" @click="onNavigate">Contact</RouterLink>
+              <RouterLink to="/gallery" class="nav-link px-md-3" active-class="active" @click="onNavigate">Gallery</RouterLink>
+            </li>
+            <li class="nav-item">
+              <RouterLink to="/team" class="nav-link px-md-3" active-class="active" @click="onNavigate">Our Team</RouterLink>
             </li>
           </ul>
         </div>
