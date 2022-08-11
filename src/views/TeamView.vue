@@ -77,7 +77,7 @@ import TypingText from '../components/TypingText.vue';
 
 <style lang="scss">
 #team-landing-section {
-  background-image: url("@/assets/images/placeholders/landing-bg2.jpg");
+  background-image: url("@/assets/images/team-photo.jpg");
   background-attachment: fixed;
 }
 

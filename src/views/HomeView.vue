@@ -204,11 +204,11 @@ import { sponsors } from "@/assets/automation/sponsors.json";
 }
 
 #baja-short-desc .full-height-image {
-  background-image: url("@/assets/images/placeholders/smaller-bg.jpg");
+  background-image: url("@/assets/images/what-we-do.jpg");
 }
 
 #team-short-desc .full-height-image {
-  background-image: url("@/assets/images/placeholders/smaller-bg3.jpg");
+  background-image: url("@/assets/images/teamwork.jpg");
 }
 
 .comp-map {

@@ -5,6 +5,7 @@ import { getCoord } from "../assets/utils";
 const props = defineProps({
   numImages: Number,
   path: String,
+  imgType: String
 });
 
 const ROTATIONS = 2;
@@ -36,8 +37,8 @@ function viewDrag(e) {
 <template>
   <div>
     <div class="d-flex align-items-center justify-content-center position-relative">
-      <template v-for="n in props.numImages" :key="n">
-        <img v-show="n === currImg" :src="path + n + '.png'" alt="360 car view" class="img-fluid" />
+      <template v-for="n in numImages" :key="n">
+        <img v-show="n === currImg" :src="path + n + '.' + imgType" alt="360 car view" style="min-width: 90vw" />
       </template>
       <div
         class="view360"
