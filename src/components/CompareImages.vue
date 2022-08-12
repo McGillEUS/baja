@@ -19,12 +19,12 @@ function slideMove(e) {
 
   let offsetX = (getCoord(e) - imgToCompare.value.getBoundingClientRect().left) / imgToCompare.value.offsetWidth;
   if (offsetX < 0) offsetX = 0;
-  else if (offsetX > imgToCompare.value.offsetWidth) offsetX = 1;
+  else if (offsetX > 1) offsetX = 1;
   leftOffset.value = offsetX * 100;
 
   let offsetY = (getCoord(e, false) - imgToCompare.value.getBoundingClientRect().top) / imgToCompare.value.offsetHeight;
   if (offsetY < 0) offsetY = 0;
-  else if (offsetY > imgToCompare.value.offsetHeight) offsetY = 1;
+  else if (offsetY > 1) offsetY = 1;
   topOffset.value = offsetY * 100;
 }
 </script>
