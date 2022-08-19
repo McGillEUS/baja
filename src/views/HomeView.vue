@@ -5,7 +5,7 @@ import { sponsors } from "@/assets/automation/sponsors.json";
 
 <template>
   <main id="home">
-    <section id="landing-section" class="min-vh-100 full-height-image">
+    <section id="home-landing-section" class="min-vh-100 full-height-image">
       <div class="full-height-overlay">
         <div class="full-height-content landing-content">
           <h1 class="display-1">McGill Baja Racing</h1>
@@ -140,13 +140,13 @@ import { sponsors } from "@/assets/automation/sponsors.json";
         <div class="container">
           <p>
             Thinking about sponsoring us? Check out our
-            <a href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf" target="_blank">sponsorship package</a> and
+            <a href="./Sponsorship package.pdf" target="_blank">sponsorship package</a> and
             learn how you can help by <RouterLink to="/#contact">contacting us</RouterLink> today!
           </p>
           <div>
             <a
               class="btn-animated my-3 my-lg-5"
-              href="./McGill-Baja-Racing-2021-2022-Sponsorship-Package.pdf"
+              href="./Sponsorship package.pdf"
               target="_blank"
               >Sponsorship Package<i class="bi bi-box-arrow-up-right ps-2"></i
             ></a>
@@ -197,8 +197,8 @@ import { sponsors } from "@/assets/automation/sponsors.json";
   </main>
 </template>
 
-<style lang="scss">
-#landing-section {
+<style lang="scss" scoped>
+#home-landing-section {
   background-image: url("@/assets/images/placeholders/landing-bg.jpg");
   background-attachment: fixed;
 }

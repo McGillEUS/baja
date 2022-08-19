@@ -1,6 +1,6 @@
 <script setup>
-import { people } from '@/assets/automation/people.json'
-import { cars } from '@/assets/automation/cars.json'
+import { people } from '@/assets/automation/people.json';
+import { cars } from '@/assets/automation/cars.json';
 import TypingText from '../components/TypingText.vue';
 </script>
 
@@ -75,7 +75,7 @@ import TypingText from '../components/TypingText.vue';
   </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #team-landing-section {
   background-image: url("@/assets/images/team-photo.jpg");
   background-attachment: fixed;
