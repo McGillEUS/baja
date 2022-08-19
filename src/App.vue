@@ -71,6 +71,6 @@ const onNavigate = () => {
 </template>
 
 <style lang="scss">
-@import "@/assets/styles/global.scss";
-@import "@/assets/styles/menu.scss";
+@import "./src/assets/styles/global.scss";
+@import "./src/assets/styles/menu.scss";
 </style>

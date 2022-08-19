@@ -1,6 +1,6 @@
 <script setup>
 import TypingText from "../components/TypingText.vue";
-import { sponsors } from "@/assets/automation/sponsors.json";
+import { sponsors } from "../assets/automation/sponsors.json";
 </script>
 
 <template>
@@ -67,7 +67,7 @@ import { sponsors } from "@/assets/automation/sponsors.json";
       <div class="row pt-3 pt-lg-5">
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('/src/assets/images/maps/quebec-city-QC.png')"
+          style="background-image: url('./src/assets/images/maps/quebec-city-QC.png')"
         >
           <div class="map-content">
             <h3>Épreuve du Nord</h3>
@@ -78,7 +78,7 @@ import { sponsors } from "@/assets/automation/sponsors.json";
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('/src/assets/images/maps/cookeville-TN.png')"
+          style="background-image: url('./src/assets/images/maps/cookeville-TN.png')"
         >
           <div class="map-content">
             <h3>Baja SAE Tennessee</h3>
@@ -89,7 +89,7 @@ import { sponsors } from "@/assets/automation/sponsors.json";
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('/src/assets/images/maps/rochester-NY.png')"
+          style="background-image: url('./src/assets/images/maps/rochester-NY.png')"
         >
           <div class="map-content">
             <h3>Baja SAE Rochester</h3>
@@ -100,7 +100,7 @@ import { sponsors } from "@/assets/automation/sponsors.json";
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('/src/assets/images/maps/green-valley-AZ.png')"
+          style="background-image: url('./src/assets/images/maps/green-valley-AZ.png')"
         >
           <div class="map-content">
             <h3>Baja SAE Arizona</h3>
@@ -199,16 +199,16 @@ import { sponsors } from "@/assets/automation/sponsors.json";
 
 <style lang="scss" scoped>
 #home-landing-section {
-  background-image: url("@/assets/images/placeholders/landing-bg.jpg");
+  background-image: url("./src/assets/images/placeholders/landing-bg.jpg");
   background-attachment: fixed;
 }
 
 #baja-short-desc .full-height-image {
-  background-image: url("@/assets/images/what-we-do.jpg");
+  background-image: url("./src/assets/images/what-we-do.jpg");
 }
 
 #team-short-desc .full-height-image {
-  background-image: url("@/assets/images/teamwork.jpg");
+  background-image: url("./src/assets/images/teamwork.jpg");
 }
 
 .comp-map {

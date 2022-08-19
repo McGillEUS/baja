@@ -72,7 +72,7 @@ import TypingText from '../components/TypingText.vue';
 
 <style lang="scss" scoped>
 #gallery-landing-section {
-  background-image: url("@/assets/images/gallery-landing.jpg");
+  background-image: url("./src/assets/images/gallery-landing.jpg");
   background-attachment: fixed;
 }
 </style>
