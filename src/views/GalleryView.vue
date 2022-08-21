@@ -25,7 +25,7 @@ import TypingText from '../components/TypingText.vue';
       <h2 class="display-3">360 View</h2>
       <div class="title-separator mt-3 mb-5 mx-auto"></div>
       <p class="fs-5 px-4">Click and drag to rotate the car</p>
-      <view360 :numImages="27" :firstImage="24" path="/src/assets/images/gallery/360-view/" imgType="png" />
+      <view360 :numImages="27" :firstImage="24" path="./src/assets/images/gallery/360-view/" imgType="png" />
     </div>
 
     <div class="text-center py-5">
@@ -33,8 +33,8 @@ import TypingText from '../components/TypingText.vue';
       <div class="title-separator mt-3 mb-5 mx-auto"></div>
       <p class="fs-5 px-4 pb-5">Click and drag to compare our car to our CAD</p>
       <compare-images
-        path1="/src/assets/images/gallery/Front.png"
-        path2="/src/assets/images/gallery/Front-cad.png"
+        path1="./src/assets/images/gallery/Front.png"
+        path2="./src/assets/images/gallery/Front-cad.png"
       />
     </div>
 
@@ -45,25 +45,25 @@ import TypingText from '../components/TypingText.vue';
 
     <div class="container-xl row pb-5 mx-auto justify-content-center align-items-center">
       <div class="col-12 p-3">
-        <img class="img-fluid" src="/src/assets/images/gallery/general/1.jpg" alt="">
+        <img class="img-fluid" src="../assets/images/gallery/general/1.jpg" alt="">
       </div>
       <div class="col-md-6 p-3">
-        <img class="img-fluid" src="/src/assets/images/gallery/general/2.jpg" alt="">
+        <img class="img-fluid" src="../assets/images/gallery/general/2.jpg" alt="">
       </div>
       <div class="col-md-6 p-3">
-        <img class="img-fluid" src="/src/assets/images/gallery/general/7.jpg" alt="">
+        <img class="img-fluid" src="../assets/images/gallery/general/7.jpg" alt="">
       </div>
       <div class="col-12 p-3">
-        <img class="img-fluid" src="/src/assets/images/gallery/general/3.jpg" alt="">
+        <img class="img-fluid" src="../assets/images/gallery/general/3.jpg" alt="">
       </div>
       <div class="col-12 p-3">
-        <img class="img-fluid" src="/src/assets/images/gallery/general/4.jpg" alt="">
+        <img class="img-fluid" src="../assets/images/gallery/general/4.jpg" alt="">
       </div>
       <div class="col-12 p-3">
-        <img class="img-fluid" src="/src/assets/images/gallery/general/5.jpg" alt="">
+        <img class="img-fluid" src="../assets/images/gallery/general/5.jpg" alt="">
       </div>
       <div class="col-12 p-3">
-        <img class="img-fluid" src="/src/assets/images/gallery/general/6.jpg" alt="">
+        <img class="img-fluid" src="../assets/images/gallery/general/6.jpg" alt="">
       </div>
     </div>
     </section>
