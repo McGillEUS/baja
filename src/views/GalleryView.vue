@@ -60,7 +60,7 @@ import TypingText from '../components/TypingText.vue';
         <img class="img-fluid" src="../assets/images/gallery/general/4.jpg" alt="">
       </div>
       <div class="col-12 p-3">
-        <img class="img-fluid" src="../assets/images/gallery/general/5.jpg" alt="">
+        <img class="img-fluid" src="../assets/images/gallery/general/8.jpg" alt="">
       </div>
       <div class="col-12 p-3">
         <img class="img-fluid" src="../assets/images/gallery/general/6.jpg" alt="">
