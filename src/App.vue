@@ -17,6 +17,8 @@ import Offcanvas from "bootstrap/js/dist/offcanvas";
 // import 'bootstrap/js/dist/toast';
 // import 'bootstrap/js/dist/tooltip';
 
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 onMounted(() => window.addEventListener("scroll", handleScroll));
 onBeforeUnmount(() => window.removeEventListener("scroll", handleScroll));
 
@@ -71,6 +73,6 @@ const onNavigate = () => {
 </template>
 
 <style lang="scss">
-@import "./src/assets/styles/global.scss";
-@import "./src/assets/styles/menu.scss";
+@import "./assets/styles/global.scss";
+@import "./assets/styles/menu.scss";
 </style>
