@@ -1,0 +1,27 @@
+// Pre-processed variables
+
+@import "bootstrap/scss/functions";
+
+// Variable overrides
+$primary: #e91b2f;
+$grid-gutter-width: 0;
+
+$font-family-base: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-title: "Oxanium", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+
+$body-color: #e7eaee;
+$body-bg: #111519;
+
+$bgColor: $body-bg;
+$bgColorOpacity: #111519be;
+$bgColorDark: #0a0d10;
+
+$offcanvas-horizontal-width: 100vw;
+$offcanvas-vertical-height: 100vh;
+$offcanvas-bg-color: $bgColorDark;
+$offcanvas-color: $body-color;
+
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
