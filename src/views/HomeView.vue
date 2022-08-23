@@ -7,10 +7,6 @@ import { anchorLink } from "../assets/utils";
 import landingBG from "../assets/images/placeholders/landing-bg.jpg";
 import shortDescImage from "../assets/images/what_we_do.jpg";
 import teamworkImage from "../assets/images/teamwork.jpg";
-import map1 from "../assets/images/maps/quebec-city-QC.png";
-import map2 from "../assets/images/maps/cookeville-TN.png";
-import map3 from "../assets/images/maps/rochester-NY.png";
-import map4 from "../assets/images/maps/green-valley-AZ.png";
 
 const props = defineProps({ anchor: String });
 defineEmits(["navigate"]);
@@ -91,7 +87,10 @@ onMounted(() => {
       </div>
 
       <div class="row pt-3 pt-lg-5">
-        <div class="col-md-6 col-lg-3 comp-map full-height-image" :style="{ backgroundImage: 'url(' + map1 + ')' }">
+        <div
+          class="col-md-6 col-lg-3 comp-map full-height-image"
+          style="background-image: url('images/maps/quebec-city-QC.png')"
+        >
           <div class="map-content">
             <h3>Épreuve du Nord</h3>
             <p class="text-primary">FEB 3 - 4</p>
@@ -99,7 +98,10 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3 comp-map full-height-image" :style="{ backgroundImage: 'url(' + map2 + ')' }">
+        <div
+          class="col-md-6 col-lg-3 comp-map full-height-image"
+          style="background-image: url('images/maps/cookeville-TN.png')"
+        >
           <div class="map-content">
             <h3>Baja SAE Tennessee</h3>
             <p class="text-primary">MAY 12 - 15</p>
@@ -107,7 +109,10 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3 comp-map full-height-image" :style="{ backgroundImage: 'url(' + map3 + ')' }">
+        <div
+          class="col-md-6 col-lg-3 comp-map full-height-image"
+          style="background-image: url('images/maps/rochester-NY.png')"
+        >
           <div class="map-content">
             <h3>Baja SAE Rochester</h3>
             <p class="text-primary">JUNE 2 - 5</p>
@@ -115,7 +120,10 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3 comp-map full-height-image" :style="{ backgroundImage: 'url(' + map4 + ')' }">
+        <div
+          class="col-md-6 col-lg-3 comp-map full-height-image"
+          style="background-image: url('images/maps/green-valley-AZ.png')"
+        >
           <div class="map-content">
             <h3>Baja SAE Arizona</h3>
             <p class="text-primary">SEP 29 - OCT 2</p>

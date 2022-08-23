@@ -5,6 +5,8 @@ import TypingText from '../components/TypingText.vue';
 import { onMounted } from "vue";
 import { anchorLink } from "../assets/utils";
 
+import landingBG from "../assets/images/team-photo.jpg";
+
 const props = defineProps({ anchor: String });
 defineEmits(['navigate']);
 
@@ -15,7 +17,9 @@ onMounted(() => {
 
 <template>
   <main id="team">
-    <section id="team-landing-section" class="min-vh-100 full-height-image">
+    <section id="team-landing-section" class="min-vh-100 full-height-image"
+      :style="{ backgroundImage: 'url(' + landingBG + ')', backgroundAttachment: 'fixed' }"
+    >
       <div class="full-height-overlay">
         <div class="full-height-content landing-content">
           <h1 class="display-1">McGill Baja Racing</h1>
@@ -85,11 +89,6 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-#team-landing-section {
-  background-image: url("./src/assets/images/team-photo.jpg");
-  background-attachment: fixed;
-}
-
 #people .person > div, #cars .car > div {
   position: relative;
   max-width: 400px;
