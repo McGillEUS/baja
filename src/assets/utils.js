@@ -6,3 +6,8 @@ export function getCoord(e, x = true) {
     return x ? touch.clientX : touch.clientY;
   } else return x ? e.clientX : e.clientY;
 }
+
+// Scroll to anchor on same page
+export function anchorLink(anchor) {
+  document.getElementById(anchor).scrollIntoView();
+}

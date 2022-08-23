@@ -2,6 +2,15 @@
 import { people } from '../assets/automation/people.json';
 import { cars } from '../assets/automation/cars.json';
 import TypingText from '../components/TypingText.vue';
+import { onMounted } from "vue";
+import { anchorLink } from "../assets/utils";
+
+const props = defineProps({ anchor: String });
+defineEmits(['navigate']);
+
+onMounted(() => {
+  if (props.anchor !== '') anchorLink(props.anchor);
+});
 </script>
 
 <template>
@@ -14,9 +23,9 @@ import TypingText from '../components/TypingText.vue';
             <typing-text text="Welcome to the team!" />
           </p>
         </div>
-        <RouterLink to="/team#people" class="nav-link scroll-down"
+        <span class="nav-link scroll-down" @click="anchorLink('people')"
           ><i class="bi bi-chevron-compact-down fs-1 px-2"></i
-        ></RouterLink>
+        ></span>
       </div>
     </section>
 

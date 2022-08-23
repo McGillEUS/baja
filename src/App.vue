@@ -1,6 +1,8 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
-import { onMounted, onBeforeUnmount } from "vue";
+import { onMounted, onBeforeUnmount, ref } from "vue";
+import HomeView from "./views/HomeView.vue";
+import GalleryView from "./views/GalleryView.vue";
+import TeamView from "./views/TeamView.vue";
 
 // Import Bootstrap
 
@@ -29,9 +31,19 @@ const handleScroll = () => {
   else headerNav.classList.remove("scrolled");
 };
 
-const onNavigate = () => {
+const currView = ref('home');
+const currAnchor = ref('');
+
+const onNavigate = (location) => {
   const offcanvasNavbar = Offcanvas.getInstance("#offcanvas-navbar");
   if (offcanvasNavbar !== null && offcanvasNavbar !== undefined) offcanvasNavbar.hide();
+
+  const locationParts =  location.split('#');
+  const sameView = currView.value === locationParts[0];
+  currView.value = locationParts[0];
+  currAnchor.value = locationParts.length === 2 ? locationParts[1] : '';
+
+  if (sameView && currAnchor.value !== "") document.getElementById(currAnchor.value).scrollIntoView();;
 };
 </script>
 
@@ -47,21 +59,20 @@ const onNavigate = () => {
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-center flex-grow-1">
-            <!-- Links for views defined in router > index.js -->
             <li class="nav-item">
-              <RouterLink to="/" class="nav-link px-md-3" @click="onNavigate">Home</RouterLink>
+              <span class="nav-link px-md-3" @click="onNavigate('home#home')">Home</span>
             </li>
             <li class="nav-item">
-              <RouterLink to="/#sponsors" class="nav-link px-md-3" @click="onNavigate">Sponsors</RouterLink>
+              <span class="nav-link px-md-3" @click="onNavigate('home#sponsors')">Sponsors</span>
             </li>
             <li class="nav-item">
-              <RouterLink to="/#contact" class="nav-link px-md-3" @click="onNavigate">Contact</RouterLink>
+              <span class="nav-link px-md-3" @click="onNavigate('home#contact')">Contact</span>
             </li>
             <li class="nav-item">
-              <RouterLink to="/gallery" class="nav-link px-md-3" active-class="active" @click="onNavigate">Gallery</RouterLink>
+              <span class="nav-link px-md-3" @click="onNavigate('gallery#gallery')">Gallery</span>
             </li>
             <li class="nav-item">
-              <RouterLink to="/team" class="nav-link px-md-3" active-class="active" @click="onNavigate">Our Team</RouterLink>
+              <span class="nav-link px-md-3" @click="onNavigate('team#team')">Our Team</span>
             </li>
           </ul>
         </div>
@@ -69,7 +80,9 @@ const onNavigate = () => {
     </nav>
   </header>
 
-  <RouterView />
+  <HomeView v-if="currView === 'home'" :anchor="currAnchor" @navigate="(location) => onNavigate(location)" />
+  <GalleryView v-if="currView === 'gallery'" :anchor="currAnchor" @navigate="(location) => onNavigate(location)" />
+  <TeamView v-if="currView === 'team'" :anchor="currAnchor" @navigate="(location) => onNavigate(location)" />
 </template>
 
 <style lang="scss">

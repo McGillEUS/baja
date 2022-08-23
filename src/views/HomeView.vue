@@ -1,6 +1,15 @@
 <script setup>
 import TypingText from "../components/TypingText.vue";
 import { sponsors } from "../assets/automation/sponsors.json";
+import { onMounted } from "vue";
+import { anchorLink } from "../assets/utils";
+
+const props = defineProps({ anchor: String });
+defineEmits(['navigate']);
+
+onMounted(() => {
+  if (props.anchor !== '') anchorLink(props.anchor);
+});
 </script>
 
 <template>
@@ -13,9 +22,9 @@ import { sponsors } from "../assets/automation/sponsors.json";
             <typing-text text="Take the dirt road home" />
           </p>
         </div>
-        <RouterLink to="/#baja-short-desc" class="nav-link scroll-down"
+        <span class="nav-link scroll-down" @click="anchorLink('baja-short-desc')"
           ><i class="bi bi-chevron-compact-down fs-1 px-2"></i
-        ></RouterLink>
+        ></span>
       </div>
     </section>
 
@@ -44,7 +53,9 @@ import { sponsors } from "../assets/automation/sponsors.json";
             and manufacture an off-road prototype vehicle. While the team consists mostly of engineering students, we
             have members from all faculties on campus.
           </p>
-          <RouterLink to="/team" class="btn-animated mt-3">Check us out<i class="bi bi-arrow-right"></i></RouterLink>
+          <span class="btn-animated mt-3" @click="$emit('navigate', 'team#team')">
+            Check us out<i class="bi bi-arrow-right"></i>
+          </span>
         </div>
       </div>
       <div class="col-md-6 full-height-image"></div>
@@ -141,7 +152,7 @@ import { sponsors } from "../assets/automation/sponsors.json";
           <p>
             Thinking about sponsoring us? Check out our
             <a href="./Sponsorship package.pdf" target="_blank">sponsorship package</a> and
-            learn how you can help by <RouterLink to="/#contact">contacting us</RouterLink> today!
+            learn how you can help by <span class="link-primary span-link" @click="anchorLink('contact')">contacting us</span> today!
           </p>
           <div>
             <a

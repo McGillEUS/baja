@@ -26,7 +26,7 @@ npm run build
 
 ## Project Structure
 
-This is a vue project with vue-router following the standard file structure. When adding views, make sure to add them to the router's `index.js`. Bootstrap is also being used with variable overrides in `assets/styles/_custom.scss`.
+This is a vue 3 project using SCSS and Bootstrap V5 with variable overrides in `assets/styles/_custom.scss`.
 
 ## Automation
 
