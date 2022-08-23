@@ -5,7 +5,7 @@ import { onMounted } from "vue";
 import { anchorLink } from "../assets/utils";
 
 import landingBG from "../assets/images/placeholders/landing-bg.jpg";
-import shortDescImage from "../assets/images/what-we-do.jpg";
+import shortDescImage from "../assets/images/what_we_do.jpg";
 import teamworkImage from "../assets/images/teamwork.jpg";
 import map1 from "../assets/images/maps/quebec-city-QC.png";
 import map2 from "../assets/images/maps/cookeville-TN.png";
