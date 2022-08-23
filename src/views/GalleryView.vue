@@ -5,8 +5,10 @@ import TypingText from "../components/TypingText.vue";
 import { onMounted } from "vue";
 import { anchorLink } from "../assets/utils";
 
+import landingBG from "../assets/images/gallery-landing.jpg";
+
 const props = defineProps({ anchor: String });
-defineEmits(['navigate']);
+defineEmits(["navigate"]);
 
 onMounted(() => {
   if (props.anchor !== "") anchorLink(props.anchor);
@@ -15,7 +17,11 @@ onMounted(() => {
 
 <template>
   <main id="gallery">
-    <section id="gallery-landing-section" class="min-vh-100 full-height-image">
+    <section
+      id="gallery-landing-section"
+      class="min-vh-100 full-height-image"
+      :style="{ backgroundImage: 'url(' + landingBG + ')', backgroundAttachment: 'fixed' }"
+    >
       <div class="full-height-overlay">
         <div class="full-height-content landing-content" style="top: 35%">
           <h1 class="display-1">McGill Baja Racing</h1>
@@ -34,7 +40,7 @@ onMounted(() => {
         <h2 class="display-3">360 View</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
         <p class="fs-5 px-4">Click and drag to rotate the car</p>
-        <view360 :numImages="27" :firstImage="24" path="./src/assets/images/gallery/360-view/" imgType="png" />
+        <view360 :numImages="27" :firstImage="24" path="images/gallery/360-view/" imgType="png" />
       </div>
 
       <div class="text-center py-5">
@@ -42,8 +48,8 @@ onMounted(() => {
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
         <p class="fs-5 px-4 pb-5">Click and drag to compare our car to our CAD</p>
         <compare-images
-          path1="./src/assets/images/gallery/Front.png"
-          path2="./src/assets/images/gallery/Front-cad.png"
+          path1="images/gallery/Front.png"
+          path2="images/gallery/Front-cad.png"
         />
       </div>
 
@@ -78,10 +84,3 @@ onMounted(() => {
     </section>
   </main>
 </template>
-
-<style lang="scss" scoped>
-#gallery-landing-section {
-  background-image: url("./src/assets/images/gallery-landing.jpg");
-  background-attachment: fixed;
-}
-</style>

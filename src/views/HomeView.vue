@@ -4,17 +4,29 @@ import { sponsors } from "../assets/automation/sponsors.json";
 import { onMounted } from "vue";
 import { anchorLink } from "../assets/utils";
 
+import landingBG from "../assets/images/placeholders/landing-bg.jpg";
+import shortDescImage from "../assets/images/what-we-do.jpg";
+import teamworkImage from "../assets/images/teamwork.jpg";
+import map1 from "../assets/images/maps/quebec-city-QC.png";
+import map2 from "../assets/images/maps/cookeville-TN.png";
+import map3 from "../assets/images/maps/rochester-NY.png";
+import map4 from "../assets/images/maps/green-valley-AZ.png";
+
 const props = defineProps({ anchor: String });
-defineEmits(['navigate']);
+defineEmits(["navigate"]);
 
 onMounted(() => {
-  if (props.anchor !== '') anchorLink(props.anchor);
+  if (props.anchor !== "") anchorLink(props.anchor);
 });
 </script>
 
 <template>
   <main id="home">
-    <section id="home-landing-section" class="min-vh-100 full-height-image">
+    <section
+      id="home-landing-section"
+      class="min-vh-100 full-height-image"
+      :style="{ backgroundImage: 'url(' + landingBG + ')', backgroundAttachment: 'fixed' }"
+    >
       <div class="full-height-overlay">
         <div class="full-height-content landing-content">
           <h1 class="display-1">McGill Baja Racing</h1>
@@ -40,7 +52,10 @@ onMounted(() => {
           </p>
         </div>
       </div>
-      <div class="col-md-6 full-height-image order-md-0"></div>
+      <div
+        class="col-md-6 full-height-image order-md-0"
+        :style="{ backgroundImage: 'url(' + shortDescImage + ')' }"
+      ></div>
     </section>
 
     <section id="team-short-desc" class="min-vh-100 row bg-darker">
@@ -58,7 +73,7 @@ onMounted(() => {
           </span>
         </div>
       </div>
-      <div class="col-md-6 full-height-image"></div>
+      <div class="col-md-6 full-height-image" :style="{ backgroundImage: 'url(' + teamworkImage + ')' }"></div>
     </section>
 
     <section class="pt-3 pt-lg-5">
@@ -76,10 +91,7 @@ onMounted(() => {
       </div>
 
       <div class="row pt-3 pt-lg-5">
-        <div
-          class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('./src/assets/images/maps/quebec-city-QC.png')"
-        >
+        <div class="col-md-6 col-lg-3 comp-map full-height-image" :style="{ backgroundImage: 'url(' + map1 + ')' }">
           <div class="map-content">
             <h3>Épreuve du Nord</h3>
             <p class="text-primary">FEB 3 - 4</p>
@@ -87,10 +99,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <div
-          class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('./src/assets/images/maps/cookeville-TN.png')"
-        >
+        <div class="col-md-6 col-lg-3 comp-map full-height-image" :style="{ backgroundImage: 'url(' + map2 + ')' }">
           <div class="map-content">
             <h3>Baja SAE Tennessee</h3>
             <p class="text-primary">MAY 12 - 15</p>
@@ -98,10 +107,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <div
-          class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('./src/assets/images/maps/rochester-NY.png')"
-        >
+        <div class="col-md-6 col-lg-3 comp-map full-height-image" :style="{ backgroundImage: 'url(' + map3 + ')' }">
           <div class="map-content">
             <h3>Baja SAE Rochester</h3>
             <p class="text-primary">JUNE 2 - 5</p>
@@ -109,10 +115,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <div
-          class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('./src/assets/images/maps/green-valley-AZ.png')"
-        >
+        <div class="col-md-6 col-lg-3 comp-map full-height-image" :style="{ backgroundImage: 'url(' + map4 + ')' }">
           <div class="map-content">
             <h3>Baja SAE Arizona</h3>
             <p class="text-primary">SEP 29 - OCT 2</p>
@@ -135,12 +138,16 @@ onMounted(() => {
         </div>
         <div id="sponsor-images" class="container py-5 text-center">
           <div v-for="sponsorClass in Object.keys(sponsors)" class="row justify-content-center align-items-center pb-5">
-            <div v-for="sponsor in sponsors[sponsorClass]" class="col-6" :class="{
-              'col-md-5 col-lg-4': sponsorClass === 'platinum',
-              'col-md-3': sponsorClass === 'gold',
-              'col-sm-4 col-lg-3': sponsorClass === 'silver',
-              'col-sm-3 col-lg-2': sponsorClass === 'bronze'
-            }">
+            <div
+              v-for="sponsor in sponsors[sponsorClass]"
+              class="col-6"
+              :class="{
+                'col-md-5 col-lg-4': sponsorClass === 'platinum',
+                'col-md-3': sponsorClass === 'gold',
+                'col-sm-4 col-lg-3': sponsorClass === 'silver',
+                'col-sm-3 col-lg-2': sponsorClass === 'bronze',
+              }"
+            >
               <a :href="sponsor.link">
                 <img :src="sponsor.path" :alt="sponsor.name" />
               </a>
@@ -151,14 +158,11 @@ onMounted(() => {
         <div class="container">
           <p>
             Thinking about sponsoring us? Check out our
-            <a href="./Sponsorship package.pdf" target="_blank">sponsorship package</a> and
-            learn how you can help by <span class="link-primary span-link" @click="anchorLink('contact')">contacting us</span> today!
+            <a href="./Sponsorship package.pdf" target="_blank">sponsorship package</a> and learn how you can help by
+            <span class="link-primary span-link" @click="anchorLink('contact')">contacting us</span> today!
           </p>
           <div>
-            <a
-              class="btn-animated my-3 my-lg-5"
-              href="./Sponsorship package.pdf"
-              target="_blank"
+            <a class="btn-animated my-3 my-lg-5" href="./Sponsorship package.pdf" target="_blank"
               >Sponsorship Package<i class="bi bi-box-arrow-up-right ps-2"></i
             ></a>
           </div>
@@ -209,19 +213,6 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-#home-landing-section {
-  background-image: url("./src/assets/images/placeholders/landing-bg.jpg");
-  background-attachment: fixed;
-}
-
-#baja-short-desc .full-height-image {
-  background-image: url("./src/assets/images/what-we-do.jpg");
-}
-
-#team-short-desc .full-height-image {
-  background-image: url("./src/assets/images/teamwork.jpg");
-}
-
 .comp-map {
   height: 400px;
 

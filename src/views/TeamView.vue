@@ -44,7 +44,7 @@ onMounted(() => {
         <div class="col person p-3" v-for="person in people">
           <div class="h-100 text-center px-3 pt-5 pb-3 mx-auto">
             <div class="person-img w-100 d-flex justify-content-center align-items-center">
-              <img :src="'src/assets/images/people/' + person.name.split(' ')[0] + '.jpg'" :alt="'I\'m ' + person.name + ' and I don\'t have a picture :('" />
+              <img :src="'images/people/' + person.name.split(' ')[0] + '.jpg'" :alt="'I\'m ' + person.name + ' and I don\'t have a picture :('" />
             </div>
             <div class="pt-3">
               <h5 class="py-3">{{person.name}}</h5>
@@ -71,7 +71,7 @@ onMounted(() => {
         <div class="col car p-3" v-for="car in cars">
           <div class="h-100 text-center px-4 pt-4 pb-3 mx-auto">
             <div class="car-img w-100 d-flex d-flex align-items-center align-items-center">
-              <img :src="'src/assets/images/cars/' + car.year + '.jpg'" :alt="car.year" />
+              <img :src="'images/cars/' + car.year + '.jpg'" :alt="car.year" />
             </div>
             <div class="pt-3">
               <h5 class="py-3">{{car.year}}</h5>
