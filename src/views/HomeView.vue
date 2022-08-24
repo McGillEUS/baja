@@ -4,7 +4,7 @@ import { sponsors } from "../assets/automation/sponsors.json";
 import { onMounted } from "vue";
 import { anchorLink } from "../assets/utils";
 
-import landingBG from "../assets/images/placeholders/landing-bg.jpg";
+import landingBG from "../assets/images/car.png";
 import shortDescImage from "../assets/images/what_we_do.jpg";
 import teamworkImage from "../assets/images/teamwork.jpg";
 
@@ -38,7 +38,7 @@ onMounted(() => {
 
     <section id="baja-short-desc" class="min-vh-100 row">
       <div class="col-md-6 d-flex justify-content-center align-items-center order-md-1">
-        <div class="offset-content px-3 px-sm-5 px-lg-0">
+        <div class="offset-content px-3 px-sm-5 px-lg-0 py-5">
           <h2 class="display-3">What we do</h2>
           <div class="title-separator mt-3 mb-5"></div>
           <p class="fs-5 justified-p">
@@ -50,13 +50,13 @@ onMounted(() => {
       </div>
       <div
         class="col-md-6 full-height-image order-md-0"
-        :style="{ backgroundImage: 'url(' + shortDescImage + ')' }"
+        :style="{ backgroundImage: 'url(' + shortDescImage + ')', minHeight: '400px' }"
       ></div>
     </section>
 
     <section id="team-short-desc" class="min-vh-100 row bg-darker">
       <div class="col-md-6 d-flex justify-content-center align-items-center">
-        <div class="offset-content px-3 px-sm-5 px-lg-0">
+        <div class="offset-content px-3 px-sm-5 px-lg-0 py-5">
           <h2 class="display-3">Our team</h2>
           <div class="title-separator mt-3 mb-5"></div>
           <p class="fs-5 justified-p">
@@ -69,7 +69,10 @@ onMounted(() => {
           </span>
         </div>
       </div>
-      <div class="col-md-6 full-height-image" :style="{ backgroundImage: 'url(' + teamworkImage + ')' }"></div>
+      <div
+        class="col-md-6 full-height-image"
+        :style="{ backgroundImage: 'url(' + teamworkImage + ')', minHeight: '400px' }"
+      ></div>
     </section>
 
     <section class="pt-3 pt-lg-5">
