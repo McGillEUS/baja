@@ -12,6 +12,16 @@ defineEmits(["navigate"]);
 
 onMounted(() => {
   if (props.anchor !== "") anchorLink(props.anchor);
+
+  // Resize images after page loads
+  setTimeout(() => {
+    const galleryImages = document.querySelectorAll('#general-images img');
+    for (let i = 0; i < galleryImages.length; i++) {
+      if (galleryImages[i].naturalHeight > galleryImages[i].naturalWidth) {
+        galleryImages[i].parentElement.classList.replace('col-12', 'col-md-6');
+      }
+    }
+  }, 1000);
 });
 </script>
 
@@ -24,9 +34,9 @@ onMounted(() => {
     >
       <div class="full-height-overlay">
         <div class="full-height-content landing-content" style="top: 35%">
-          <h1 class="display-1">McGill Baja Racing</h1>
+          <h1 class="display-1">Gallery</h1>
           <p class="fs-5 pt-3">
-            <typing-text text="Check out our cars" />
+            <typing-text text="A BTS look at Baja" />
           </p>
         </div>
         <span class="nav-link scroll-down" @click="anchorLink('gallery-images')"
@@ -58,27 +68,9 @@ onMounted(() => {
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
       </div>
 
-      <div class="container-xl row pb-5 mx-auto justify-content-center align-items-center">
-        <div class="col-12 p-3">
-          <img class="img-fluid" src="../assets/images/gallery/general/1.jpg" alt="" />
-        </div>
-        <div class="col-md-6 p-3">
-          <img class="img-fluid" src="../assets/images/gallery/general/2.jpg" alt="" />
-        </div>
-        <div class="col-md-6 p-3">
-          <img class="img-fluid" src="../assets/images/gallery/general/7.jpg" alt="" />
-        </div>
-        <div class="col-12 p-3">
-          <img class="img-fluid" src="../assets/images/gallery/general/3.jpg" alt="" />
-        </div>
-        <div class="col-12 p-3">
-          <img class="img-fluid" src="../assets/images/gallery/general/4.jpg" alt="" />
-        </div>
-        <div class="col-12 p-3">
-          <img class="img-fluid" src="../assets/images/gallery/general/8.jpg" alt="" />
-        </div>
-        <div class="col-12 p-3">
-          <img class="img-fluid" src="../assets/images/gallery/general/6.jpg" alt="" />
+      <div id="general-images" class="container-xl row pb-5 mx-auto justify-content-center align-items-center">
+        <div class="col-12 p-3" v-for="img in 24" :key="img">
+          <img class="img-fluid" :src="`images/gallery/general/${img}.jpg`" alt="" />
         </div>
       </div>
     </section>

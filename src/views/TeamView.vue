@@ -22,9 +22,9 @@ onMounted(() => {
     >
       <div class="full-height-overlay">
         <div class="full-height-content landing-content">
-          <h1 class="display-1">McGill Baja Racing</h1>
+          <h1 class="display-1">Meet the Team</h1>
           <p class="fs-5 pt-3">
-            <typing-text text="Welcome to the team!" />
+            <typing-text text="Welcome to the faces of McGill Baja!" />
           </p>
         </div>
         <span class="nav-link scroll-down" @click="anchorLink('people')"
