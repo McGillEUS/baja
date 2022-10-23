@@ -10,6 +10,16 @@
         "link": "https://monday.com/",
         "name": "Monday.com",
         "path": "images/sponsors/monday.com-logo.png"
+      },
+      {
+        "link": "https://bombardier.com",
+        "name": "Bombardier",
+        "path": "images/sponsors/bombardier-logo.png"
+      },
+      {
+        "link": "https://www.gmnbt.com/",
+        "name": "GMN Bearings",
+        "path": "images/sponsors/gmn-bearing-logo.png"
       }
     ],
     "gold": [
@@ -61,6 +71,11 @@
         "path": "images/sponsors/ateliers-mr-driveshaft-logo.png"
       },
       {
+        "link": "https://www.groupecanimex.com/",
+        "name": "Canimex",
+        "path": "images/sponsors/canimex-logo.png"
+      },
+      {
         "link": "https://www.elkasuspension.com/",
         "name": "Elka",
         "path": "images/sponsors/elka-logo.png"
@@ -96,6 +111,11 @@
         "link": "https://www.allballsracing.com/",
         "name": "All Balls Racing",
         "path": "images/sponsors/all-balls-logo.png"
+      },
+      {
+        "link": "http://simcap.ca/",
+        "name": "SIMCAP",
+        "path": "images/sponsors/simcap-logo.png"
       },
       {
         "link": "https://www.aon3d.com/",
@@ -146,6 +166,11 @@
         "link": "https://www.powersourcecanada.ca/",
         "name": "Power Source Canada",
         "path": "images/sponsors/power-source-canada-logo.png"
+      },
+      {
+        "link": "https://studiorush.ca/",
+        "name": "Rush Studio",
+        "path": "images/sponsors/rush-studio-logo.png"
       }
     ]
   }
