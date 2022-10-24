@@ -1,5 +1,5 @@
 <script setup>
-import { people } from '../assets/automation/people.json';
+import { members } from '../assets/automation/members.json';
 import { cars } from '../assets/automation/cars.json';
 import TypingText from '../components/TypingText.vue';
 import { onMounted } from "vue";
@@ -27,13 +27,13 @@ onMounted(() => {
             <typing-text text="Welcome to the faces of McGill Baja!" />
           </p>
         </div>
-        <span class="nav-link scroll-down" @click="anchorLink('people')"
+        <span class="nav-link scroll-down" @click="anchorLink('members')"
           ><i class="bi bi-chevron-compact-down fs-1 px-2"></i
         ></span>
       </div>
     </section>
 
-    <section id="people" class="container-xl py-3 py-lg-5">
+    <section id="members" class="container-xl py-3 py-lg-5">
       <div class="text-center py-5">
         <h2 class="display-3">Team of {{ new Date().getFullYear() }}</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
@@ -45,15 +45,16 @@ onMounted(() => {
       </div>
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 pt-3">
-        <div class="col person p-3" v-for="person in people">
+        <div class="col member p-3" v-for="member in members">
           <div class="h-100 text-center px-3 pt-5 pb-3 mx-auto">
-            <div class="person-img w-100 d-flex justify-content-center align-items-center">
-              <img :src="'images/people/' + person.name.split(' ')[0] + '.jpg'" :alt="'I\'m ' + person.name + ' and I don\'t have a picture :('" />
+            <div class="member-img w-100 d-flex justify-content-center align-items-center">
+              <img :src="'images/members/' + member.name.split(' ')[0] + '.jpg'" :alt="'I\'m ' + member.name + ' and I don\'t have a picture :('" />
             </div>
             <div class="pt-3">
-              <h5 class="py-3">{{person.name}}</h5>
-              <p>{{person.role}}</p>
-              <p>{{person.department}}, {{person.year}}</p>
+              <h5 class="py-3">{{member.name}}</h5>
+              <p>{{member.role}}</p>
+              <p>{{member.department}}, {{member.year}}</p>
+              <a v-if="member.linkedin" class="stretched-link" :href="member.linkedin"></a>
             </div>
           </div>
         </div>
@@ -89,7 +90,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-#people .person > div, #cars .car > div {
+#members .member > div, #cars .car > div {
   position: relative;
   max-width: 400px;
   background-color: $bgColorDark;
@@ -99,7 +100,7 @@ onMounted(() => {
 
 }
 
-#people .person > div {
+#members .member > div {
 
   &::before, &::after {
     position: absolute;
@@ -125,8 +126,8 @@ onMounted(() => {
   }
 }
 
-.person-img {
-  height: 200px;
+.member-img {
+  height: 300px;
   
   img {
     height: auto;
