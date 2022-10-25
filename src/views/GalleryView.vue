@@ -69,7 +69,7 @@ onMounted(() => {
       </div>
 
       <div id="general-images" class="container-xl row pb-5 mx-auto justify-content-center align-items-center">
-        <div class="col-12 p-3" v-for="img in 24" :key="img">
+        <div class="col-12 p-3" v-for="img in 25" :key="img">
           <img class="img-fluid" :src="`images/gallery/general/${img}.jpg`" alt="" />
         </div>
       </div>
