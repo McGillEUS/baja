@@ -46,7 +46,7 @@ onMounted(() => {
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 pt-3">
         <div class="col member p-3" v-for="member in members">
-          <div class="h-100 text-center px-3 pt-5 pb-3 mx-auto">
+          <div class="member-info h-100 text-center px-3 pt-5 pb-3 mx-auto" :class="{ 'member-effect': member.linkedin }">
             <div class="member-img w-100 d-flex justify-content-center align-items-center">
               <img :src="'images/members/' + member.name.split(' ')[0] + '.jpg'" :alt="'I\'m ' + member.name + ' and I don\'t have a picture :('" />
             </div>
@@ -55,6 +55,11 @@ onMounted(() => {
               <p>{{member.role}}</p>
               <p>{{member.department}}, {{member.year}}</p>
               <a v-if="member.linkedin" class="stretched-link" :href="member.linkedin"></a>
+            </div>
+            <div v-if="member.blurb" class="member-blurb h-100 text-center px-5 pt-5 pb-3 d-flex flex-column justify-content-center align-items-center">
+              <p class="pb-3">{{member.blurb}}</p>
+              <h5 class="py-3">{{member.name}}</h5>
+              <i v-if="member.linkedin" class="bi bi-linkedin fs-1"></i>
             </div>
           </div>
         </div>
@@ -90,7 +95,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-#members .member > div, #cars .car > div {
+#members .member-info, #cars .car > div {
   position: relative;
   max-width: 400px;
   background-color: $bgColorDark;
@@ -100,9 +105,9 @@ onMounted(() => {
 
 }
 
-#members .member > div {
+#members .member-info {
 
-  &::before, &::after {
+  &.member-effect::before, &.member-effect::after {
     position: absolute;
     content: '';
     bottom: 0;
@@ -112,10 +117,10 @@ onMounted(() => {
     transition: height 0.2s ease 0.1s;
   }
   
-  &::before { left: 0; }
-  &::after { right: 0; }
+  &.member-effect::before { left: 0; }
+  &.member-effect::after { right: 0; }
   
-  &:hover {
+  &.member-effect:hover {
     border-top-color: $primary;
     transition: border-top 0.1s ease 0.2s;
     
@@ -124,17 +129,35 @@ onMounted(() => {
       transition: height 0.2s ease;
     }
   }
-}
 
-.member-img {
-  height: 300px;
-  
-  img {
-    height: auto;
-    max-height: 100%;
-    width: auto;
-    max-width: 200px;
-    font-style: italic;
+  .member-img {
+    height: 300px;
+    
+    img {
+      height: auto;
+      max-height: 100%;
+      width: auto;
+      max-width: 200px;
+      font-style: italic;
+    }
+  }
+
+  .member-blurb {
+    background-color: $bgColorDark;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
+  &:hover .member-blurb {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
   }
 }
 
