@@ -3,6 +3,7 @@ import { onMounted, onBeforeUnmount, ref } from "vue";
 import HomeView from "./views/HomeView.vue";
 import GalleryView from "./views/GalleryView.vue";
 import TeamView from "./views/TeamView.vue";
+import CapstoneView from "./views/CapstoneView.vue";
 
 // Import Bootstrap
 
@@ -25,6 +26,7 @@ onMounted(() => {
   window.addEventListener("scroll", handleScroll);
   if (location.hash === '#gallery') onNavigate('gallery#gallery');
   else if (location.hash === '#team') onNavigate('team#team');
+  else if (location.hash === '#capstone') onNavigate('capstone#capstone');
 });
 
 onBeforeUnmount(() => window.removeEventListener("scroll", handleScroll));
@@ -79,6 +81,9 @@ const onNavigate = (location) => {
             <li class="nav-item">
               <span class="nav-link px-md-3" @click="onNavigate('team#team')">Our Team</span>
             </li>
+            <li class="nav-item">
+              <span class="nav-link px-md-3" @click="onNavigate('capstone#capstone')">Capstone</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -88,6 +93,7 @@ const onNavigate = (location) => {
   <HomeView v-if="currView === 'home'" :anchor="currAnchor" @navigate="(location) => onNavigate(location)" />
   <GalleryView v-if="currView === 'gallery'" :anchor="currAnchor" @navigate="(location) => onNavigate(location)" />
   <TeamView v-if="currView === 'team'" :anchor="currAnchor" @navigate="(location) => onNavigate(location)" />
+  <CapstoneView v-if="currView === 'capstone'" :anchor="currAnchor" @navigate="(location) => onNavigate(location)"/>
 </template>
 
 <style lang="scss">
