@@ -21,7 +21,12 @@ import Offcanvas from "bootstrap/js/dist/offcanvas";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-onMounted(() => window.addEventListener("scroll", handleScroll));
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+  if (location.hash === '#gallery') onNavigate('gallery#gallery');
+  else if (location.hash === '#team') onNavigate('team#team');
+});
+
 onBeforeUnmount(() => window.removeEventListener("scroll", handleScroll));
 
 const handleScroll = () => {
