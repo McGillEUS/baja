@@ -103,34 +103,34 @@ onMounted(() => {
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/cookeville-TN.png')"
+          style="background-image: url('images/maps/oshkosh-WI.png')"
         >
           <div class="map-content">
-            <h3>Baja SAE Tennessee</h3>
-            <p class="text-primary">MAY 12 - 15</p>
-            <p>Cookeville, Tennessee, USA</p>
+            <h3>Baja SAE Oshkosh</h3>
+            <p class="text-primary">MAY 4 - 7</p>
+            <p>Oshkosh, Wisconsin, USA</p>
           </div>
         </div>
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/rochester-NY.png')"
+          style="background-image: url('images/maps/washougal-WA.png')"
         >
           <div class="map-content">
-            <h3>Baja SAE Rochester</h3>
-            <p class="text-primary">JUNE 2 - 5</p>
-            <p>Rochester, New York, USA</p>
+            <h3>Baja SAE Oregon</h3>
+            <p class="text-primary">MAY 31 - JUNE 3</p>
+            <p>Washougal, Washington, USA</p>
           </div>
         </div>
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/green-valley-AZ.png')"
+          style="background-image: url('images/maps/nashport-OH.png')"
         >
           <div class="map-content">
-            <h3>Baja SAE Arizona</h3>
-            <p class="text-primary">SEP 29 - OCT 2</p>
-            <p>Green Valley, Arizona, USA</p>
+            <h3>Baja SAE Ohio</h3>
+            <p class="text-primary">SEP 6 - 10</p>
+            <p>Nashport, Ohio, USA</p>
           </div>
         </div>
       </div>
