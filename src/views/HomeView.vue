@@ -77,7 +77,7 @@ onMounted(() => {
 
     <section class="pt-3 pt-lg-5">
       <div class="text-center py-5">
-        <h2 class="display-3">2022 Competitions</h2>
+        <h2 class="display-3">2023 Competitions</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
         <div class="container">
           <p class="fs-5 justified-p px-4">
@@ -200,15 +200,15 @@ onMounted(() => {
             <div class="row">
               <div class="col-xl-6 pb-3">
                 <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
-                <p>Benjamin Jordan</p>
-                <p><a href="mailto:benjamin.jordan@mail.mcgill.ca">benjamin.jordan@mail.mcgill.ca</a></p>
-                <p><a href="tel:514-730-7078">(514) 730-7078</a></p>
-              </div>
-              <div class="col-xl-6 pb-3">
-                <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
                 <p>Zach Katz</p>
                 <p><a href="mailto:zachary.katz@mail.mcgill.ca">zachary.katz@mail.mcgill.ca</a></p>
                 <p><a href="tel:514-261-8845">(514) 261-8845</a></p>
+              </div>
+              <div class="col-xl-6 pb-3">
+                <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
+                <p>Cat Valencia</p>
+                <p><a href="mailto:catherine.valencia@mail.mcgill.ca">catherine.valencia@mail.mcgill.ca</a></p>
+                <p><a href="tel:206-556-6193">(206) 556-6193</a></p>
               </div>
             </div>
           </div>

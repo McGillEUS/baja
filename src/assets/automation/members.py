@@ -1,25 +1,25 @@
 # Ensure python is installed
-# In the terminal, install module xlrd using `pip install xlrd` 
 # Then run the file using `python members.py > members.json`
 
-import xlrd
+import csv
 import json
 
-# Open the sheet
-# Make sure it's a .xls file (open a .xlsx doc in excel and save as .xls)
-sheet = xlrd.open_workbook("./members.xls").sheet_by_index(0)
+csv_file_path = "./members.csv"  # Replace with the path to your CSV file
 output = []
 
-for i in range(1, sheet.nrows):
-    # Grab target columns
-    _, name, linkedin, year, department, role, blurb = sheet.row_values(i)
-    output.append({
-        "name": name,
-        "linkedin": linkedin,
-        "year": year,
-        "department": department,
-        "role": role,
-        "blurb": blurb
-    })
+with open(csv_file_path, 'r') as csv_file:
+    reader = csv.reader(csv_file)
+    next(reader)  # Skip header row
+
+    for row in reader:
+        timestamp, name, year, department, role, linkedin, blurb = row
+        output.append({
+            "name": name,
+            "year": year,
+            "department": department,
+            "role": role,
+            "linkedin": linkedin,
+            "blurb": blurb
+        })
 
 print(json.dumps({"members": output}))
