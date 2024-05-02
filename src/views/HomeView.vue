@@ -77,7 +77,7 @@ onMounted(() => {
 
     <section class="pt-3 pt-lg-5">
       <div class="text-center py-5">
-        <h2 class="display-3">2023 Competitions</h2>
+        <h2 class="display-3">2024 Competitions</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
         <div class="container">
           <p class="fs-5 justified-p px-4">
@@ -96,41 +96,41 @@ onMounted(() => {
         >
           <div class="map-content">
             <h3>Épreuve du Nord</h3>
-            <p class="text-primary">FEB 3 - 4</p>
+            <p class="text-primary">FEB 2 - 3</p>
             <p>Quebec City, Quebec, Canada</p>
           </div>
         </div>
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/oshkosh-WI.png')"
+          style="background-image: url('images/maps/gorman-CA.png')"
         >
           <div class="map-content">
-            <h3>Baja SAE Oshkosh</h3>
-            <p class="text-primary">MAY 4 - 7</p>
-            <p>Oshkosh, Wisconsin, USA</p>
+            <h3>Baja SAE California</h3>
+            <p class="text-primary">APR 25 - 28</p>
+            <p>Gorman, California, USA</p>
           </div>
         </div>
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/washougal-WA.png')"
+          style="background-image: url('images/maps/williamsport-PA.png')"
         >
           <div class="map-content">
-            <h3>Baja SAE Oregon</h3>
-            <p class="text-primary">MAY 31 - JUNE 3</p>
-            <p>Washougal, Washington, USA</p>
+            <h3>Baja SAE Williamsport</h3>
+            <p class="text-primary">MAY 16 - MAY 19</p>
+            <p>Williamsport, Pennsylvania, USA</p>
           </div>
         </div>
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/nashport-OH.png')"
+          style="background-image: url('images/maps/holly-MI.png')"
         >
           <div class="map-content">
-            <h3>Baja SAE Ohio</h3>
-            <p class="text-primary">SEP 6 - 10</p>
-            <p>Nashport, Ohio, USA</p>
+            <h3>Baja SAE Michigan</h3>
+            <p class="text-primary">SEP 11 - 14</p>
+            <p>Holly, Michigan, USA</p>
           </div>
         </div>
       </div>
@@ -169,11 +169,11 @@ onMounted(() => {
         <div class="container">
           <p>
             Thinking about sponsoring us? Check out our
-            <a href="./Sponsorship package.pdf" target="_blank">sponsorship package</a> and learn how you can help by
+            <a href="./MB24 Sponsorship Package.pdf" target="_blank">sponsorship package</a> and learn how you can help by
             <span class="link-primary span-link" @click="anchorLink('contact')">contacting us</span> today!
           </p>
           <div>
-            <a class="btn-animated my-3 my-lg-5" href="./Sponsorship package.pdf" target="_blank"
+            <a class="btn-animated my-3 my-lg-5" href="./MB24 Sponsorship Package.pdf" target="_blank"
               >Sponsorship Package<i class="bi bi-box-arrow-up-right ps-2"></i
             ></a>
           </div>
