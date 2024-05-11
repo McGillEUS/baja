@@ -1,10 +1,17 @@
 {
   "sponsors": {
     "platinum": [
+    ],
+    "gold": [
       {
         "link": "https://www.mcgill.ca/engineering/",
         "name": "McGill Faculty of Engineering",
         "path": "images/sponsors/facaulty-of-engineering.png"
+      },
+      {
+        "link": "https://mcgilleus.ca/",
+        "name": "McGill EUS",
+        "path": "images/sponsors/eus_logo.png"
       },
       {
         "link": "https://monday.com/",
@@ -12,79 +19,22 @@
         "path": "images/sponsors/monday.com-logo.png"
       },
       {
-        "link": "https://bombardier.com",
-        "name": "Bombardier",
-        "path": "images/sponsors/bombardier-logo.png"
-      },
-      {
         "link": "https://www.gmnbt.com/",
         "name": "GMN Bearings",
         "path": "images/sponsors/gmn-bearing-logo.png"
-      }
-    ],
-    "gold": [
-      {
-        "link": "https://mcgilleus.ca/",
-        "name": "McGill EUS",
-        "path": "images/sponsors/eus_logo.png"
-      },
-      {
-        "link": "https://ssmu.ca/",
-        "name": "SSMU",
-        "path": "images/sponsors/ssmu-logo.svg"
-      },
-      {
-        "link": "https://aciervanguard.com/",
-        "name": "Acier Vanguard",
-        "path": "images/sponsors/acier-vanguard-logo.png"
-      },
-      {
-        "link": "https://www.kisssoft.com/",
-        "name": "KISSsoft",
-        "path": "images/sponsors/kisssoft-logo.png"
-      },
-      {
-        "link": "https://www.mantracourt.com/",
-        "name": "Mantracourt",
-        "path": "images/sponsors/mantracourt-logo.png"
       },
       {
         "link": "https://www.skf.com/",
         "name": "SKF",
         "path": "images/sponsors/skf-logo.svg"
+      },
+      {
+        "link": "https://www.precimaxltd.com/",
+        "name": "Precimax",
+        "path": "images/sponsors/precimax-logo.png"
       }
     ],
     "silver": [
-      {
-        "link": "https://a7integration.com/",
-        "name": "A7 Integration",
-        "path": "images/sponsors/a7integration-logo.png"
-      },
-      {
-        "link": "https://aciervulcan.com/",
-        "name": "Acier Vulcan",
-        "path": "images/sponsors/acier-vulcan-logo.png"
-      },
-      {
-        "link": "http://www.industrieshd.com/",
-        "name": "Ateliers Mr Driveshaft",
-        "path": "images/sponsors/ateliers-mr-driveshaft-logo.png"
-      },
-      {
-        "link": "https://www.groupecanimex.com/",
-        "name": "Canimex",
-        "path": "images/sponsors/canimex-logo.png"
-      },
-      {
-        "link": "https://www.elkasuspension.com/",
-        "name": "Elka",
-        "path": "images/sponsors/elka-logo.png"
-      },
-      {
-        "link": "https://www.guruenergy.com/",
-        "name": "Guru",
-        "path": "images/sponsors/guru-logo.png"
-      },
       {
         "link": "https://www.robustgear.com/",
         "name": "Robust Gear",
@@ -101,16 +51,51 @@
         "path": "images/sponsors/st-hubert-machine-shop-logo.png"
       },
       {
-        "link": "https://supalloy.com/",
-        "name": "Superior Alloy Technology",
-        "path": "images/sponsors/superior-alloy-technology-logo.png"
+        "link": "https://www.libertyspring.com/",
+        "name": "Libery Spring",
+        "path": "images/sponsors/liberty-spring-logo.png"
+      },
+      {
+        "link": "https://monmetal.ca/",
+        "name": "MonMetal",
+        "path": "images/sponsors/monmetal-logo.svg"
+      },
+      {
+        "link": "https://cvtech-ibc.com/home/",
+        "name": "CVTech-IBC",
+        "path": "images/sponsors/cvtech-logo.png"
+      },
+      {
+        "link": "https://vr3.ca/",
+        "name": "VR3",
+        "path": "images/sponsors/vr3-logo.png"
+      },
+      {
+        "link": "https://mda.space/",
+        "name": "MDA Space",
+        "path": "images/sponsors/mda-logo.svg"
+      },
+      {
+        "link": "https://www.fusia-groupe.com/",
+        "name": "FusiA Groupe",
+        "path": "images/sponsors/fusia-logo.png"
       }
     ],
     "bronze": [
       {
-        "link": "https://www.allballsracing.com/",
-        "name": "All Balls Racing",
-        "path": "images/sponsors/all-balls-logo.png"
+        "link": "https://ssmu.ca/",
+        "name": "SSMU",
+        "path": "images/sponsors/ssmu-logo.svg"
+      },
+      {
+        "link": "https://www.kisssoft.com/",
+        "name": "KISSsoft",
+        "path": "images/sponsors/kisssoft-logo.png"
+      },
+      {
+        "link": "https://www.mantracourt.com/",
+        "name": "Mantracourt",
+        "path": "images/sponsors/mantracourt-logo.png"
       },
       {
         "link": "http://simcap.ca/",
@@ -123,34 +108,9 @@
         "path": "images/sponsors/aon3d-logo.svg"
       },
       {
-        "link": "https://www.emotorsdirect.ca/",
-        "name": "eMotors Direct",
-        "path": "images/sponsors/emotors-direct-logo.svg"
-      },
-      {
-        "link": "https://www.hoskin.ca/",
-        "name": "Hoskin Scientific",
-        "path": "images/sponsors/hoskin-scientific-logo.png"
-      },
-      {
-        "link": "https://www.polaris.com/",
-        "name": "Polaris",
-        "path": "images/sponsors/polaris-logo.svg"
-      },
-      {
         "link": "https://www.thermetco.com/",
         "name": "Thermetco",
         "path": "images/sponsors/thermetco-logo.png"
-      },
-      {
-        "link": "https://www.equipeibs.com/",
-        "name": "Tuboquip",
-        "path": "images/sponsors/tuboquip-logo.svg"
-      },
-      {
-        "link": "https://www.ultraspec.ca/",
-        "name": "Ultraspec",
-        "path": "images/sponsors/ultraspec-logo.png"
       },
       {
         "link": "https://www.wilwood.com/",
@@ -158,19 +118,24 @@
         "path": "images/sponsors/wilwood-logo.png"
       },
       {
-        "link": "https://www.libertyspring.com/",
-        "name": "Libery Spring",
-        "path": "images/sponsors/liberty-spring-logo.png"
+        "link": "https://www.johnstonplastics.com/",
+        "name": "Johnston Industial Plastics",
+        "path": "images/sponsors/johnston-plastics-logo.png"
       },
       {
-        "link": "https://www.powersourcecanada.ca/",
-        "name": "Power Source Canada",
-        "path": "images/sponsors/power-source-canada-logo.png"
+        "link": "https://daemar.com/",
+        "name": "Daemar",
+        "path": "images/sponsors/daemar-logo.png"
       },
       {
-        "link": "https://studiorush.ca/",
-        "name": "Rush Studio",
-        "path": "images/sponsors/rush-studio-logo.png"
+        "link": "https://daemar.com/",
+        "name": "Huntsman",
+        "path": "images/sponsors/huntsman-logo.svg"
+      },
+      {
+        "link": "http://www.gbs.ca/",
+        "name": "GBS",
+        "path": "images/sponsors/gbs-logo.png"
       }
     ]
   }
