@@ -200,15 +200,15 @@ onMounted(() => {
             <div class="row">
               <div class="col-xl-6 pb-3">
                 <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
-                <p>Zach Katz</p>
-                <p><a href="mailto:zachary.katz@mail.mcgill.ca">zachary.katz@mail.mcgill.ca</a></p>
-                <p><a href="tel:514-261-8845">(514) 261-8845</a></p>
+                <p>Jemma Pooley</p>
+                <p><a href="mailto:zachary.katz@mail.mcgill.ca"></a></p>
+                <p><a href="tel:514-261-8845"></a></p>
               </div>
               <div class="col-xl-6 pb-3">
                 <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
                 <p>Cat Valencia</p>
-                <p><a href="mailto:catherine.valencia@mail.mcgill.ca">catherine.valencia@mail.mcgill.ca</a></p>
-                <p><a href="tel:206-556-6193">(206) 556-6193</a></p>
+                <p><a href="mailto:catherine.valencia@mail.mcgill.ca"></a></p>
+                <p><a href="tel:206-556-6193"></a></p>
               </div>
             </div>
           </div>
