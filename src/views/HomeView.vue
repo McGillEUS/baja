@@ -96,7 +96,7 @@ onMounted(() => {
 
     <section class="pt-3 pt-lg-5">
       <div class="text-center py-5">
-        <h2 class="display-3">2024 Competitions</h2>
+        <h2 class="display-3">2025 Competitions</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
         <div class="container">
           <p class="fs-5 justified-p px-4">
@@ -110,7 +110,7 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="row pt-3 pt-lg-5">
+      <div class="row pt-3 pt-lg-5 justify-content-center">
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
           style="background-image: url('images/maps/Laval.png')"
@@ -144,16 +144,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <!-- <div
-          class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/holly-MI.png')"
-        >
-          <div class="map-content">
-            <h3>Baja SAE Michigan</h3>
-            <p class="text-primary">SEP 11 - 14</p>
-            <p>Holly, Michigan, USA</p>
-          </div>
-        </div> -->
+        <!-- Rest of your maps -->
       </div>
     </section>
 
@@ -239,37 +230,50 @@ onMounted(() => {
               270, <br />Montreal, QC, H3A 0C3
             </address>
           </div>
-          <div class="col-md-6 col-xl-8 pb-4">
-            <h3 class="pb-2 pb-lg-3 d-xl-none">Captains' Info</h3>
-            <div class="row">
-              <div class="col-xl-6 pb-3">
-                <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
-                <p>Jemma Pooley</p>
-                <p><a href="mailto:zachary.katz@mail.mcgill.ca"></a></p>
-                <p><a href="tel:514-261-8845"></a></p>
-              </div>
-              <div class="col-xl-6 pb-3">
-                <h3 class="pb-2 pb-lg-3 d-none d-xl-block">Captain's Info</h3>
-                <p>Cat Valencia</p>
-                <p><a href="mailto:catherine.valencia@mail.mcgill.ca"></a></p>
-                <p><a href="tel:206-556-6193"></a></p>
-              </div>
+          <div class="col-md-6 col-xl-4 pb-4">
+            <h3 class="pb-2 pb-lg-3">Newsletter</h3>
+            <p>
+              Stay up-to-date with our latest events, competition results, and
+              team announcements!
+            </p>
+            <p class="mb-3">
+              Join our mailing list to receive quarterly updates from the McGill
+              Baja Racing team.
+              <a
+                href="https://forms.office.com/r/M7SX5jSRis"
+                target="_blank"
+                class="link-primary"
+                >Sign up here</a
+              >
+            </p>
+          </div>
+          <div class="col-xl-4 pb-4">
+            <h3 class="pb-2 pb-lg-3">Social Media</h3>
+            <p>
+              Follow us on social media to see our regular updates and
+              behind-the-scenes content!
+            </p>
+            <div class="d-flex justify-content-center mt-4">
+              <a
+                href="https://www.facebook.com/mcgillbaja"
+                class="social-link me-3"
+              >
+                <i class="bi bi-facebook fs-3"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/mcgill_baja/"
+                class="social-link me-3"
+              >
+                <i class="bi bi-instagram fs-3"></i>
+              </a>
+              <a
+                href="https://ca.linkedin.com/company/mcgillbajaracing"
+                class="social-link"
+              >
+                <i class="bi bi-linkedin fs-3"></i>
+              </a>
             </div>
           </div>
-        </div>
-        <div
-          id="social-links"
-          class="py-3 py-lg-5 d-flex justify-content-center"
-        >
-          <a href="https://www.facebook.com/mcgillbaja"
-            ><i class="bi bi-facebook"></i
-          ></a>
-          <a href="https://www.instagram.com/mcgill_baja/"
-            ><i class="bi bi-instagram"></i
-          ></a>
-          <a href="https://ca.linkedin.com/company/mcgillbajaracing"
-            ><i class="bi bi-linkedin"></i
-          ></a>
         </div>
       </div>
     </section>
@@ -283,6 +287,29 @@ onMounted(() => {
   .map-content {
     text-align: center;
     padding-top: 20%;
+  }
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $primary;
+    transform: translateY(-3px);
+    i {
+      color: white;
+    }
+  }
+
+  i {
+    color: #dc3545; /* Using Bootstrap's red color */
   }
 }
 
