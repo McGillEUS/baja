@@ -183,7 +183,7 @@ onMounted(() => {
               <li class="mb-4">
                 <h4>Submit Your Interest Form</h4>
                 <p>
-                  Fill out our online form form with your information, and your
+                  Fill out our online form with your information, and your
                   interests.
                 </p>
               </li>
