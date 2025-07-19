@@ -14,6 +14,7 @@ defineEmits(["navigate"]);
 const supersystemOrder = [
   "Captains",
   "Technical Directors",
+  "Drivers",
   "Powertrain",
   "Suspension, Steering and Brakes",
   "Electronics",
@@ -28,6 +29,8 @@ const supersystemDescriptions = {
     "Team leaders responsible for overall coordination, strategy, and representing the team at competitions.",
   "Technical Director":
     "Engineering leads who oversee technical aspects of the vehicle design and ensure integration across all systems.",
+  Drivers:
+    "Team members responsible for driving the vehicle during tests and competitions.",
   "Finance and Communications":
     "Members handling team budget, sponsorships, marketing, and external communications.",
   "Suspension, Steering and Brakes":

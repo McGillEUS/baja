@@ -1,5 +1,8 @@
 {
   "cars": [
+    { "year": "MB25", "name": "Murphy" },
+    { "year": "MB24", "name": "Kimberly" },
+    { "year": "MB23", "name": "Frankie" },
     { "year": "MB22", "name": "Mary" },
     { "year": "MB19", "name": "Roxie" },
     { "year": "MB18", "name": "Tilly" },

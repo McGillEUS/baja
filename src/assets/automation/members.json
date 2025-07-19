@@ -1,238 +1,238 @@
 {
   "members": [
     {
-      "name": "Cat Valencia",
-      "year": "U3",
-      "department": "History",
-      "supersystem": "Captains",
-      "role": "Captain",
-      "linkedin": "https://www.linkedin.com/in/cat-valencia-36a8b5214/",
-      "blurb": "I think I'm in too deep"
-    },
-    {
       "name": "Jemma Pooley",
+      "year": "U3",
+      "department": "Mechanical Engineering",
+      "supersystem": "Captains",
+      "role": "Captain and Transmission Lead",
+      "linkedin": "https://ca.linkedin.com/in/jemma-pooley",
+      "blurb": "I have more Baja shirts than clean socks"
+    },
+    {
+      "name": "Lucas Schuppek",
       "year": "U2",
       "department": "Mechanical Engineering",
       "supersystem": "Captains",
-      "role": "Captain and CVT Lead",
-      "linkedin": "https://www.linkedin.com/in/jemma-pooley/",
-      "blurb": "Your favorite spreadsheet engineer"
-    },
-    {
-      "name": "Mark Teron",
-      "year": "U4",
-      "department": "Mechanical Engineering",
-      "supersystem": "Technical Directors",
-      "role": "Technical Director",
-      "linkedin": "https://ca.linkedin.com/in/mark-teron-917994250",
-      "blurb": "I make the good good pizza, n I get paid for it"
-    },
-    {
-      "name": "Red Singer",
-      "year": "U4",
-      "department": "Mechanical engineering",
-      "supersystem": "Technical Directors",
-      "role": "Technical Director",
-      "linkedin": "https://ca.linkedin.com/in/red-singer-34047225a?trk=people-guest_people_search-card",
-      "blurb": "I drill a hole in rock (Why, cause Hole)- They keep making me weld... hundreds of hours of welding"
-    },
-    {
-      "name": "Achraf Maine",
-      "year": "U4",
-      "department": "Mechanical Engineering",
-      "supersystem": "Technical Directors",
-      "role": "Technical Director",
-      "linkedin": "https://www.linkedin.com/in/achraf-maine",
-      "blurb": "That feeling when you finally get the gearbox to close at 4am. Been chasing it ever since."
-    },
-    {
-      "name": "Andrew Bujold",
-      "year": "U3",
-      "department": "Accounting",
-      "supersystem": "Finance and Communications",
-      "role": "VP Finance",
-      "linkedin": "https://www.linkedin.com/in/andrew-bujold-101119251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      "blurb": "Management #1"
-    },
-    {
-      "name": "Ianis Busuioc",
-      "year": "U2",
-      "department": "Double Major Finance and Math & Stats ",
-      "supersystem": "Finance and Communications",
-      "role": "VP Finance",
-      "linkedin": "www.linkedin.com/in/ ianis-busuioc-12584029a",
-      "blurb": "KINDER !"
-    },
-    {
-      "name": "Giordano Santilli",
-      "year": "U2",
-      "department": "International Management",
-      "supersystem": "Finance and Communications",
-      "role": "VP Sponsorship & Funding",
-      "linkedin": "www.linkedin.com/in/giordano-santilli-1a76422b6",
-      "blurb": "Yippee"
-    },
-    {
-      "name": "Sumaiya Zaman",
-      "year": "U4",
-      "department": "Communications",
-      "supersystem": "Finance and Communications",
-      "role": "Communications",
-      "linkedin": "",
-      "blurb": "I <3 engineering"
-    },
-    {
-      "name": "Katarina Sauder",
-      "year": "U2",
-      "department": "Civil engineering",
-      "supersystem": "Finance and Communications",
-      "role": "Communications",
-      "linkedin": "https://www.linkedin.com/in/katarina-sauder-b4a751324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      "blurb": "I am a sucker for a sweet treat, and I make it my mission to find the best dessert spots wherever I travel!"
-    },
-    {
-      "name": "Alexander Rosen",
-      "year": "U3",
-      "department": "Mechanical Engineering",
-      "supersystem": "Suspension, Steering and Brakes",
-      "role": "Suspension Subteam Leader",
-      "linkedin": "www.linkedin.com/in/alexander-rosen-aa27bb24b",
-      "blurb": "wi"
-    },
-    {
-      "name": "Remy Laurendeau ",
-      "year": "U2",
-      "department": "Computer Engineering ",
-      "supersystem": "Suspension, Steering and Brakes",
-      "role": "Brakes Subteam Leader",
-      "linkedin": "https://www.linkedin.com/in/remy-laurendeau?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      "blurb": "Non mais laisser moi, MANGER MA BANANE !"
+      "role": "Captain and Drivetrain Lead",
+      "linkedin": "https://www.linkedin.com/in/lschuppek/",
+      "blurb": "I look forward to using the grease gun every year"
     },
     {
       "name": "Zac Groszman",
       "year": "U3",
       "department": "Mechanical Engineering",
       "supersystem": "Powertrain",
-      "role": "Drivetrain Subteam Leader",
+      "role": "Drivetrain Lead",
       "linkedin": "https://www.linkedin.com/in/zacgroszman",
-      "blurb": "NASCAR >>> F1"
+      "blurb": "McMaster-Carr #1407K73 😍"
     },
     {
-      "name": "Anika Olsen",
-      "year": "U4",
-      "department": "Mechanical Engineering",
-      "supersystem": "Powertrain",
-      "role": "Drivetrain Subteam Leader ",
+      "name": "Remy Laurendeau",
+      "year": "U2",
+      "department": "Computer Engineering ",
+      "supersystem": "Drivers",
+      "role": "Driver and Electronics Lead",
       "linkedin": "",
-      "blurb": "Gearbox gearbox gearbox KISSsoft KISSsoft KISSsoft"
+      "blurb": "I love playing bowling with other cars! "
+    },
+    {
+      "name": "Alexander Rosen",
+      "year": "U3",
+      "department": "Mechanical Engineering ",
+      "supersystem": "Technical Directors",
+      "role": "Technical Director and eCVT Lead",
+      "linkedin": "http://linkedin.com/in/alexander-rosen-aa27bb24b",
+      "blurb": "My mantra is Newton’s second law"
+    },
+    {
+      "name": "Elsa Edwards",
+      "year": "U2",
+      "department": "Mechanical Engineering",
+      "supersystem": "Suspension, Steering and Brakes",
+      "role": "Steering Lead",
+      "linkedin": "https://www.linkedin.com/in/elsa-edwards-57651a295?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      "blurb": "Montrealphile"
     },
     {
       "name": "Simon Kamnitzer",
       "year": "U2",
       "department": "Mechanical Engineering",
       "supersystem": "Powertrain",
-      "role": "Drivetrain lead",
-      "linkedin": "https://www.linkedin.com/in/simon-kamnitzer/",
-      "blurb": "KISSsoft has a mind of its own"
+      "role": "Drivetrain Lead",
+      "linkedin": "www.linkedin.com/in/simon-kamnitzer",
+      "blurb": "Car goes vroum"
     },
     {
-      "name": "Lucas Schuppek",
+      "name": "Gaetan Bonnemaison",
+      "year": "U1",
+      "department": "Mechanical Engineering",
+      "supersystem": "Ergonomics",
+      "role": "Pedals lead",
+      "linkedin": "www.linkedin.com/in/gaetan-bonnemaison",
+      "blurb": "Pedals make the car go vroom"
+    },
+    {
+      "name": "Max Tchoubar",
+      "year": "U1",
+      "department": "Mechanical Engineering",
+      "supersystem": "Suspension, Steering and Brakes",
+      "role": "Suspension Lead",
+      "linkedin": "https://ca.linkedin.com/in/maxime-tchoubar-50143a2a5",
+      "blurb": "Rip and tear, until it is done"
+    },
+    {
+      "name": "\u00c1lvaro Tomassoni Enfedaque",
       "year": "U2",
       "department": "Mechanical Engineering",
-      "supersystem": "Powertrain",
-      "role": "Drivetrain Subteam Leader",
-      "linkedin": "https://www.linkedin.com/in/lschuppek/",
-      "blurb": "GANK lead at heart"
-    },
-    {
-      "name": "Pierre-Olivier Bluteau",
-      "year": "U3",
-      "department": "Electrical Engineering",
-      "supersystem": "Electronics",
-      "role": "Electronics Subteam lead",
+      "supersystem": "Suspension, Steering and Brakes",
+      "role": "Suspension Lead",
       "linkedin": "",
-      "blurb": "Nobody has realized yet that all our testing data is fake"
-    },
-    {
-      "name": "Ian Moore",
-      "year": "U2",
-      "department": "Computer Engineering",
-      "supersystem": "Electronics",
-      "role": "Electronics Subteam Leader",
-      "linkedin": "https://www.linkedin.com/in/moore-ian/",
-      "blurb": "Ask me about what that button does (preferably before you press it)!"
-    },
-    {
-      "name": "Jaouen Vezin",
-      "year": "U2",
-      "department": "Civil engineering",
-      "supersystem": "Powertrain",
-      "role": "CVT Cooling lead",
-      "linkedin": "www.linkedin.com/in/jaouen-vezin-914736252",
-      "blurb": "The casing is getting bigger :)"
-    },
-    {
-      "name": "Noam Amiga",
-      "year": "U2",
-      "department": "Mechanical Engineering",
-      "role": "Pedals Subteam Leader",
-      "supersystem": "Suspension, Steering and Brakes",
-      "linkedin": "https://www.linkedin.com/in/noam-amiga/",
-      "blurb": "Pedal to the Metal !(next line) Kachowww!"
-    },
-    {
-      "name": "Anthony Gracioppo",
-      "year": "U2",
-      "department": "Physics",
-      "role": "Steering Subteam Leader",
-      "supersystem": "Suspension, Steering and Brakes",
-      "linkedin": "https://www.linkedin.com/in/anthony-gracioppo-8b20152ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-      "blurb": "I can ballroom dance"
+      "blurb": "what's that in kg?"
     },
     {
       "name": "Ethan Jacques",
-      "year": "U3",
+      "year": "U4",
+      "department": "Mechanical Engineering ",
+      "supersystem": "Powertrain",
+      "role": "eCVT Lead",
+      "linkedin": "www.linkedin.com/in/ethan-jacques",
+      "blurb": "I love triathlon training, engineering, and my dog Tribb!"
+    },
+    {
+      "name": "Wyatt Hogan",
+      "year": "U1",
       "department": "Mechanical Engineering",
-      "role": "Steering Subteam Leader",
       "supersystem": "Suspension, Steering and Brakes",
-      "linkedin": "https://www.linkedin.com/in/ethan-jacques/",
-      "blurb": "I've done a Half Ironman!"
+      "role": "Brakes Lead",
+      "linkedin": "https://www.linkedin.com/in/wyatt-hogan-47542824a",
+      "blurb": "  \ud83c\udfce\ufe0f whoah!!\n    ^\n^^^^^^"
+    },
+    {
+      "name": "Nandita Thumkunta Reddy",
+      "year": "U3",
+      "department": "Finance & Business Analytics",
+      "supersystem": "Finance and Communications",
+      "role": "Finance Team",
+      "linkedin": "",
+      "blurb": "I love crochet!"
     },
     {
       "name": "Sophie Bullen",
-      "year": "U1",
-      "department": "Materials Engineering",
-      "role": "Composites/Ergonomics Subteam Leader",
+      "year": "U2",
+      "department": "Materials Engineering ",
       "supersystem": "Ergonomics",
-      "linkedin": "https://www.linkedin.com/in/sophie-bullen-53840a2b1/",
-      "blurb": "Beyonce and I are from the same city !"
+      "role": "Composites Lead ",
+      "linkedin": "http://linkedin.com/in/sophie-bullen-53840a2b1",
+      "blurb": "Honorary member of Captain Cat FC "
+    },
+    {
+      "name": "Manon Keller",
+      "year": "U3",
+      "department": "Chemical Engineering",
+      "supersystem": "Finance and Communications",
+      "role": "VP Communications",
+      "linkedin": "https://www.linkedin.com/in/manon-keller-31b220276/",
+      "blurb": "I'm Baja\u2019s unofficial paparazzi"
     },
     {
       "name": "Aidan Byrne",
-      "year": "U2",
-      "department": "Chemical Engineering",
-      "role": "Composites",
+      "year": "U3",
+      "department": "Chemical Engineering ",
       "supersystem": "Ergonomics",
-      "linkedin": "https://www.linkedin.com/in/aidan-thomas-byrne/",
-      "blurb": "Composites are cool! "
+      "role": "Composites Lead and Safety Officer",
+      "linkedin": "http://linkedin.com/in/aidan-thomas-byrne",
+      "blurb": "Safety First! \ud83e\uddba\ud83e\uddef"
     },
     {
-      "name": "Ada Santavy",
-      "year": "U4",
-      "department": "Mechanical Engineering",
-      "role": "Capstone team",
-      "supersystem": "Powertrain",
-      "linkedin": "www.linkedin.com/in/ada-santavy",
-      "blurb": "I love Crocs"
-    },
-    {
-      "name": "Zein Saadany-Gordon",
+      "name": "Noam Amiga",
       "year": "U3",
       "department": "Mechanical Engineering",
-      "role": "Frame",
-      "supersystem": "Ergonomics",
+      "supersystem": "Powertrain",
+      "role": "Transmission Lead",
+      "linkedin": "https://www.linkedin.com/in/noam-amiga/",
+      "blurb": "CVTeam work makes the dreamwork!"
+    },
+    {
+      "name": "Nadim Fakhoury",
+      "year": "U1",
+      "department": "Mechanical Engineering",
+      "supersystem": "Suspension, Steering and Brakes",
+      "role": "Brakes Lead",
       "linkedin": "",
-      "blurb": "I didn't fill out this form in time because stoopid"
+      "blurb": "I really like Swiss Butter"
+    },
+    {
+      "name": "Isaac Sandvold-Rh\u00e9aume",
+      "year": "U3",
+      "department": "Mechanical Engineering",
+      "supersystem": "Suspension, Steering and Brakes",
+      "role": "Suspension Lead",
+      "linkedin": "https://www.linkedin.com/in/isaac-sandvold-rh%C3%A9aume-a46a27266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      "blurb": "I enjoy building stuff (note: sorry for the photo format, i am uploading from my phone and can\u2019t change the name. Also I thought we would be taking actual headshots with like baja uniforms and stuff at the beginning at the semester, is that a possibility? I would prefer to use that kind of headshot then the one i uploaded. Thanks)"
+    },
+    {
+      "name": "Rhea Duguay",
+      "year": "U2",
+      "department": "Mechanical Engineering ",
+      "supersystem": "Suspension, Steering and Brakes",
+      "role": "Suspension Lead",
+      "linkedin": "https://www.linkedin.com/in/rhea-duguay-3b67b3254?originalSubdomain=ca",
+      "blurb": "You got that?"
+    },
+    {
+      "name": "Brett Balazic ",
+      "year": "U3",
+      "department": "Mechanical Engineering ",
+      "supersystem": "Powertrain",
+      "role": "Transmission Lead",
+      "linkedin": "https://www.linkedin.com/in/brett-balazic?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "blurb": "Careful with that wrench, Eugene"
+    },
+    {
+      "name": "Anthony Gracioppo",
+      "year": "U3",
+      "department": "Physics",
+      "supersystem": "Powertrain",
+      "role": "Drivetrain Lead",
+      "linkedin": "www.linkedin.com/in/anthony-gracioppo-8b20152ab",
+      "blurb": "I love cycling!"
+    },
+    {
+      "name": "Astin Roukema ",
+      "year": "U2",
+      "department": "Mechanical Engineering ",
+      "supersystem": "Suspension, Steering and Brakes",
+      "role": "Steering Lead",
+      "linkedin": "",
+      "blurb": "Unfathomably cooked"
+    },
+    {
+      "name": "Giordano Santilli",
+      "year": "U2",
+      "department": "International Management",
+      "supersystem": "Finance and Communications",
+      "role": "Finance Lead",
+      "linkedin": "https://www.linkedin.com/in/giordano-santilli-1a76422b6/",
+      "blurb": "Summer Lover"
+    },
+    {
+      "name": "Pierre-Olivier Bluteau",
+      "year": "U4",
+      "department": "Electrical Engineering",
+      "supersystem": "Technical Directors",
+      "role": "Technical Director and eCVT Lead",
+      "linkedin": "",
+      "blurb": "I always wanted to get into herding cats"
+    },
+    {
+      "name": "Zein Saadani-Gordon ",
+      "year": "U3",
+      "department": "Mechanical Engineering",
+      "supersystem": "Ergonomics",
+      "role": "Frame Lead",
+      "linkedin": "",
+      "blurb": "I love pickles"
     }
   ]
 }
