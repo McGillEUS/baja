@@ -215,8 +215,8 @@ onMounted(() => {
               >
               <p class="mt-3">
                 or email us at:
-                <a href="mailto:mcgill.baja@mail.mcgill.ca"
-                  >mcgill.baja@mail.mcgill.ca</a
+                <a href="mailto:baja@mail.mcgill.ca"
+                  >baja@mail.mcgill.ca</a
                 >
               </p>
             </div>
