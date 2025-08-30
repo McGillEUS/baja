@@ -181,31 +181,35 @@ onMounted(() => {
           <div class="application-steps p-4">
             <ol class="fs-5">
               <li class="mb-4">
-                <h4>Submit Your Interest Form</h4>
+                <h4>Say Hi!</h4>
                 <p>
-                  Fill out our online form with your information, and your
-                  interests.
+                  	Come to our first general meeting on Monday, September 8th at 5:00pm in the EUS Commonroom or any general meeting after to learn more about us and ask questions!
                 </p>
               </li>
               <li class="mb-4">
+                <h4>Submit the Membership Form</h4>
+                <p>
+                  Fill out the 2025-2026 Baja Membership Form and pay the team fee
+                </p>
+              </li>
+              <li class="mb-4">
+                <h4>Complete the Safety Training(s)</h4>
+                <p>
+                  Complete our safety training (details are in the membership form) to get access to our cool workshop: MEDN!
+									Note: this is not required to begin working on projects
+                </p>
+              </li>
+          <li class="mb-4">
                 <h4>Show Up!</h4>
                 <p>
-                  Show up to our events and meetings to meet the team and learn
-                  more about our projects.
-                </p>
-              </li>
-              <li class="mb-4">
-                <h4>Join the Team!</h4>
-                <p>
-                  Choose the department you want to join and start working on
-                  exciting projects with us!
+                  	Choose the subteam you want to join and start working on exciting projects with us!
                 </p>
               </li>
             </ol>
 
             <div class="text-center mt-5">
               <a
-                href="mailto:mcgill.baja@mail.mcgill.ca"
+                href="https://forms.office.com/r/hAmjPQ8rpY"
                 class="btn btn-primary btn-lg px-4"
                 >Join Now</a
               >
