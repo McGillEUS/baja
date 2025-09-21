@@ -5,7 +5,7 @@ import TypingText from "../components/TypingText.vue";
 import { onMounted, computed } from "vue";
 import { anchorLink } from "../assets/utils";
 
-import landingBG from "../assets/images/team-photo.jpg";
+import landingBG from "../assets/images/team.jpg";
 
 const props = defineProps({ anchor: String });
 defineEmits(["navigate"]);

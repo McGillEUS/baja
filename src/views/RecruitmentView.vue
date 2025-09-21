@@ -152,7 +152,7 @@ onMounted(() => {
           </div>
         </div>
 
-        <!-- <div class="col-md-6">
+        <div class="col-md-6">
           <div class="position-card h-100 p-4">
             <h3 class="mb-3">Software Team</h3>
             <p>
@@ -166,7 +166,32 @@ onMounted(() => {
               <li>Data analysis interest</li>
             </ul>
           </div>
-        </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section id="learn-about-us" class="p-3 pt-lg-5">
+      <div class="text-center py-5">
+        <h2 class="display-3">Learn About Us</h2>
+        <div class="title-separator mt-3 mb-5 mx-auto"></div>
+        <div class="container">
+          <p class="fs-5 justified-p px-4">
+            Our first general meeting is on
+            <strong>Monday, September 8th at 5:00PM</strong> in the EUS
+            Commonroom. After this, you can come and learn about our team and
+            ask any questions at the following meeting times:
+          </p>
+
+          <p class="fs-5 mt-4">
+            <strong>Fall Semester General Meetings:</strong><br />
+            Mondays at 5:30pm – 6:00pm in the EUS Commonroom
+          </p>
+
+          <p class="fs-5 mt-3">
+            <strong>Fall Semester Shop Days:</strong><br />
+            Thursdays at 6:00pm in MEDN
+          </p>
+        </div>
       </div>
     </section>
 
@@ -183,26 +208,31 @@ onMounted(() => {
               <li class="mb-4">
                 <h4>Say Hi!</h4>
                 <p>
-                  	Come to our first general meeting on Monday, September 8th at 5:00pm in the EUS Commonroom or any general meeting after to learn more about us and ask questions!
+                  Come to our first general meeting on Monday, September 8th at
+                  5:00pm in the EUS Commonroom or any general meeting after to
+                  learn more about us and ask questions!
                 </p>
               </li>
               <li class="mb-4">
                 <h4>Submit the Membership Form</h4>
                 <p>
-                  Fill out the 2025-2026 Baja Membership Form and pay the team fee
+                  Fill out the 2025-2026 Baja Membership Form and pay the team
+                  fee
                 </p>
               </li>
               <li class="mb-4">
                 <h4>Complete the Safety Training(s)</h4>
                 <p>
-                  Complete our safety training (details are in the membership form) to get access to our cool workshop: MEDN!
-									Note: this is not required to begin working on projects
+                  Complete our safety training (details are in the membership
+                  form) to get access to our cool workshop: MEDN! Note: this is
+                  not required to begin working on projects
                 </p>
               </li>
-          <li class="mb-4">
+              <li class="mb-4">
                 <h4>Show Up!</h4>
                 <p>
-                  	Choose the subteam you want to join and start working on exciting projects with us!
+                  Choose the subteam you want to join and start working on
+                  exciting projects with us!
                 </p>
               </li>
             </ol>
@@ -215,9 +245,7 @@ onMounted(() => {
               >
               <p class="mt-3">
                 or email us at:
-                <a href="mailto:baja@mcgilleus.ca"
-                  >baja@mcgilleus.ca</a
-                >
+                <a href="mailto:baja@mcgilleus.ca">baja@mcgilleus.ca</a>
               </p>
             </div>
           </div>

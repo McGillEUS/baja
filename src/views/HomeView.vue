@@ -14,6 +14,16 @@ defineEmits(["navigate"]);
 onMounted(() => {
   if (props.anchor !== "") anchorLink(props.anchor);
 });
+
+const logoSizeClass = (tier) => {
+  if (tier === "iron") {
+    return "logo-small";
+  } else if (tier === "bronze") {
+    return "logo-medium";
+  } else {
+    return "logo-large"; // silver, gold, diamond
+  }
+};
 </script>
 
 <template>
@@ -148,6 +158,41 @@ onMounted(() => {
       </div>
     </section>
 
+    <section id="newsletter" class="p-3 pt-lg-5">
+      <div class="text-center py-5">
+        <h2 class="display-3">Newsletter</h2>
+        <div class="title-separator mt-3 mb-5 mx-auto"></div>
+        <div class="container">
+          <p class="fs-5 justified-p px-4">
+            Catch up on our latest updates, competition results, and team news.
+            Scroll through our most recent newsletter below:
+          </p>
+
+          <!-- ✅ Embedded PDF -->
+          <div class="d-flex justify-content-center">
+            <iframe
+              src="./McGill Baja newsletter, French and English.pdf"
+              class="newsletter-frame"
+              title="McGill Baja Newsletter"
+              style="width: 100%; height: 700px; border: none"
+            ></iframe>
+          </div>
+
+          <p class="mt-4">
+            <a
+              class="btn-animated"
+              href="./McGill Baja newsletter, French and English.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Open Full Newsletter
+              <i class="bi bi-box-arrow-up-right ps-2"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section id="sponsors" class="p-3 pt-lg-5">
       <div class="text-center py-5">
         <h2 class="display-3">Sponsors</h2>
@@ -160,48 +205,56 @@ onMounted(() => {
           </p>
           <p class="fs-2 py-3 py-lg-5">Thank you to all our sponsors!</p>
         </div>
+
         <div id="sponsor-images" class="container py-5 text-center">
+          <!-- Loop over tiers -->
           <div
-            v-for="sponsorClass in Object.keys(sponsors)"
-            class="row justify-content-center align-items-center pb-5"
+            v-for="(group, tier) in sponsors"
+            :key="tier"
+            class="sponsor-group mb-5"
           >
-            <div
-              v-for="sponsor in sponsors[sponsorClass]"
-              class="col-6"
-              :class="{
-                'col-md-5 col-lg-4': sponsorClass === 'platinum',
-                'col-md-3': sponsorClass === 'gold',
-                'col-sm-4 col-lg-3': sponsorClass === 'silver',
-                'col-sm-3 col-lg-2': sponsorClass === 'bronze',
-              }"
-            >
-              <a :href="sponsor.link">
-                <img :src="sponsor.path" :alt="sponsor.name" />
-              </a>
+            <div class="row justify-content-center g-4">
+              <div
+                v-for="sponsor in group"
+                :key="sponsor.name"
+                class="col-6 col-md-4 col-lg-3 d-flex justify-content-center"
+              >
+                <a :href="sponsor.link" target="_blank" rel="noopener">
+                  <img
+                    :src="sponsor.path"
+                    :alt="sponsor.name"
+                    class="sponsor-logo"
+                    :class="logoSizeClass(tier)"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="container">
-          <p>
-            Thinking about sponsoring us? Check out our
-            <a href="./MB25 Sponsorship Package.pdf" target="_blank"
-              >sponsorship package</a
-            >
-            and learn how you can help by
-            <span class="link-primary span-link" @click="anchorLink('contact')"
-              >contacting us</span
-            >
-            today!
-          </p>
-          <div>
-            <a
-              class="btn-animated my-3 my-lg-5"
-              href="./MB25 Sponsorship Package.pdf"
-              target="_blank"
-              >Sponsorship Package<i class="bi bi-box-arrow-up-right ps-2"></i
-            ></a>
-          </div>
+      <!-- ✅ Sponsorship CTA -->
+      <div class="container">
+        <p>
+          Thinking about sponsoring us? Check out our
+          <a href="./MB25 Sponsorship Package.pdf" target="_blank"
+            >sponsorship package</a
+          >
+          and learn how you can help by
+          <span class="link-primary span-link" @click="anchorLink('contact')">
+            contacting us
+          </span>
+          today!
+        </p>
+        <div>
+          <a
+            class="btn-animated my-3 my-lg-5"
+            href="./MB25 Sponsorship Package.pdf"
+            target="_blank"
+          >
+            Sponsorship Package
+            <i class="bi bi-box-arrow-up-right ps-2"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -313,10 +366,34 @@ onMounted(() => {
   }
 }
 
-#sponsor-images img {
-  max-width: 100%;
-  height: auto;
-  padding: 1.5rem;
+// #sponsor-images img {
+//   max-width: 100%;
+//   height: auto;
+//   padding: 1.5rem;
+// }
+
+.sponsor-logo {
+  display: block;
+  width: 100%;
+  height: auto; /* keeps proportions */
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sponsor-logo:hover {
+  transform: scale(1.05); /* subtle hover zoom */
+}
+
+.logo-small {
+  max-width: 120px; /* iron */
+}
+
+.logo-medium {
+  max-width: 180px; /* bronze */
+}
+
+.logo-large {
+  max-width: 240px; /* silver, gold, diamond */
 }
 
 #social-links a {
@@ -359,6 +436,15 @@ onMounted(() => {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .newsletter-frame {
+    width: 100%;
+    max-width: 900px; /* keeps it aligned with your content */
+    height: 600px; /* makes it scrollable */
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* subtle shadow for consistency */
+    border-radius: 0.5rem; /* matches rounded look */
   }
 }
 </style>
