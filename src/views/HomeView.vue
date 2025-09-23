@@ -233,26 +233,30 @@ const logoSizeClass = (tier) => {
         </div>
       </div>
 
-      <!-- ✅ Sponsorship CTA -->
       <div class="container">
-        <p>
-          Thinking about sponsoring us? Check out our
-          <a href="./MB25 Sponsorship Package.pdf" target="_blank"
-            >sponsorship package</a
-          >
-          and learn how you can help by
+        <p class="fs-5 justified-p px-4">
+          Thinking about sponsoring us? Check out our sponsorship packages and
+          learn how you can help by
           <span class="link-primary span-link" @click="anchorLink('contact')">
             contacting us
           </span>
           today!
         </p>
-        <div>
+        <div class="d-flex flex-wrap justify-content-center gap-3 my-3 my-lg-5">
           <a
-            class="btn-animated my-3 my-lg-5"
-            href="./MB25 Sponsorship Package.pdf"
+            class="btn-animated"
+            href="./MB26 Sponsorship-EN.pdf"
             target="_blank"
           >
-            Sponsorship Package
+            Sponsorship Package (EN)
+            <i class="bi bi-box-arrow-up-right ps-2"></i>
+          </a>
+          <a
+            class="btn-animated"
+            href="./MB26 Sponsorship-FR.pdf"
+            target="_blank"
+          >
+            Sponsorship Package (FR)
             <i class="bi bi-box-arrow-up-right ps-2"></i>
           </a>
         </div>
