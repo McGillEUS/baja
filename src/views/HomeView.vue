@@ -106,7 +106,7 @@ const logoSizeClass = (tier) => {
 
     <section class="pt-3 pt-lg-5">
       <div class="text-center py-5">
-        <h2 class="display-3">2025 Competitions</h2>
+        <h2 class="display-3">2026 Competitions</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
         <div class="container">
           <p class="fs-5 justified-p px-4">
@@ -123,34 +123,34 @@ const logoSizeClass = (tier) => {
       <div class="row pt-3 pt-lg-5 justify-content-center">
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/Laval.png')"
+          style="background-image: url('images/maps/QC.png')"
         >
           <div class="map-content">
             <h3>Épreuve du Nord</h3>
-            <p class="text-primary">FEB 7 - 8</p>
+            <p class="text-primary">Feb 6 - 7</p>
             <p>Quebec City, Quebec, Canada</p>
           </div>
         </div>
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/Maryland.png')"
+          style="background-image: url('images/maps/NY.png')"
         >
           <div class="map-content">
-            <h3>Baja SAE Maryland</h3>
-            <p class="text-primary">June 3 - 5</p>
-            <p>Mechanicsville, Maryland, USA</p>
+            <h3>Baja SAE New York</h3>
+            <p class="text-primary">June 11 - 14</p>
+            <p>Palmyra, NY, USA</p>
           </div>
         </div>
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/Clarkson.png')"
+          style="background-image: url('images/maps/Ohio.png')"
         >
           <div class="map-content">
-            <h3>Oktobajafest</h3>
-            <p class="text-primary">October 3 - 5</p>
-            <p>Postdam, New York, USA</p>
+            <h3>Baja SAE Ohio</h3>
+            <p class="text-primary">Sept 24 - 27</p>
+            <p>Nashport, Ohio, USA</p>
           </div>
         </div>
 
