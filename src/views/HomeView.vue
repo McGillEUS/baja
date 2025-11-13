@@ -106,7 +106,7 @@ const logoSizeClass = (tier) => {
 
     <section class="pt-3 pt-lg-5">
       <div class="text-center py-5">
-        <h2 class="display-3">2025 Competitions</h2>
+        <h2 class="display-3">2026 Competitions</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
         <div class="container">
           <p class="fs-5 justified-p px-4">
@@ -123,7 +123,7 @@ const logoSizeClass = (tier) => {
       <div class="row pt-3 pt-lg-5 justify-content-center">
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/Laval.png')"
+          style="background-image: url('images/maps/QC.png')"
         >
           <div class="map-content">
             <h3>Épreuve du Nord</h3>
