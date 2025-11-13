@@ -6,6 +6,7 @@ import { onMounted } from "vue";
 import { anchorLink } from "../assets/utils";
 
 import landingBG from "../assets/images/gallery-landing.jpg";
+import ImageCompressor from "../components/ImageCompressor.vue";
 
 const props = defineProps({ anchor: String });
 defineEmits(["navigate"]);
