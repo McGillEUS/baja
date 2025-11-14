@@ -2,16 +2,28 @@
 import View360 from "../components/View360.vue";
 import CompareImages from "../components/CompareImages.vue";
 import TypingText from "../components/TypingText.vue";
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { anchorLink } from "../assets/utils";
 
 import landingBG from "../assets/images/gallery-landing.jpg";
+import {compressImage} from "../utils/ImageCompressor.js";
 
 const props = defineProps({ anchor: String });
 defineEmits(["navigate"]);
 
-onMounted(() => {
+const compr_images = ref([]);
+
+onMounted(async() => {
   if (props.anchor !== "") anchorLink(props.anchor);
+
+  //compress all images
+  const out = [];
+  for (let i = 1; i <= 25; i++){
+    const url = `public/images/gallery/general/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    out.push(compr_url);
+  }
+  compr_images.value = out;
 
   // Resize images after page loads
   setTimeout(() => {
@@ -69,9 +81,12 @@ onMounted(() => {
       </div>
 
       <div id="general-images" class="container-xl row pb-5 mx-auto justify-content-center align-items-center">
-        <div class="col-12 p-3" v-for="img in 25" :key="img">
-          <img class="img-fluid" :src="`images/gallery/general/${img}.jpg`" alt="" />
+        <div class="col-12 p-3" v-for="(img, index) in compr_images" :key="index">
+          <img class="img-fluid" :src="img"/>
         </div>
+        <!-- <div class="col-12 p-3" v-for="img in compr_images" :key="img">
+          <img class="img-fluid" :src="`images/gallery/general/${img}.jpg`" alt="" />
+        </div> -->
       </div>
     </section>
   </main>
