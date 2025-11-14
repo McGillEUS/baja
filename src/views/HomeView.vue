@@ -340,6 +340,7 @@ const logoSizeClass = (tier) => {
 <style lang="scss" scoped>
 .comp-map {
   height: 400px;
+  border:3px solid #101519;
 
   .map-content {
     text-align: center;
