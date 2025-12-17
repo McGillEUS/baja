@@ -1,0 +1,14 @@
+.gallery-page {
+
+    .full-height-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &.landing-content {
+            text-align: left;
+            width: 80%;
+        }
+    }
+}
