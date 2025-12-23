@@ -12,19 +12,40 @@ import '../assets/styles/gallery.scss'
 const props = defineProps({ anchor: String });
 defineEmits(["navigate"]);
 
-const compr_images = ref([]);
+const compr_gen_images = ref([]);
+const compr_col1_images = ref([]);
+const compr_col2_images = ref([]);
 
 onMounted(async() => {
   if (props.anchor !== "") anchorLink(props.anchor);
 
   //compress all images
-  const out = [];
+  const gen = [];
   for (let i = 1; i <= 25; i++){
-    const url = `public/images/gallery/general/${i}.jpg`;
+    const url = `/images/gallery/general/${i}.jpg`;
     const compr_url = await compressImage(url);
-    out.push(compr_url);
+    gen.push(compr_url);
   }
-  compr_images.value = out;
+  compr_gen_images.value = gen;
+
+  const col1 = [];
+
+  for (let i = 1; i <= 1; i++){
+    const url = `/images/gallery/comparison-view/column-1-pics/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    col1.push(compr_url);
+  }
+  compr_col1_images.value = col1;
+
+  const col2 = [];
+
+  for (let i = 1; i <= 2; i++){
+    const url = `/images/gallery/comparison-view/column-2-pics/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    col2.push(compr_url);
+  }
+  compr_col2_images.value = col2;
+
 
   // resize images after page loads
   setTimeout(() => {
@@ -65,10 +86,28 @@ onMounted(async() => {
       <div class="subtitle py-5">
         <h2 class="display-3">Comparison View</h2>
         <p class="fs-5 pb-5">Click and drag to compare our car to our CAD</p>
-        <compare-images
-          path1="images/gallery/Front.png"
-          path2="images/gallery/Front-cad.png"
-        />
+        <div class="side-by-side">
+          <div class="column-1">
+            <compare-images
+            path1="images/gallery/Front.png"
+            path2="images/gallery/Front-cad.png"
+            />
+            <img 
+              v-for="(img, index) in compr_col1_images" :key="index" 
+              class="img-fluid" :src="img"
+            />
+            
+          </div>
+          <div class="column-2">
+            <img 
+              v-for="(img, index) in compr_col2_images" :key="index" 
+              class="img-fluid" :src="img"
+            />
+
+          </div>
+
+
+        </div>
       </div>
 
       <section id="gallery-images" class="py-3 py-lg-5">
@@ -85,12 +124,9 @@ onMounted(async() => {
       </div>
 
       <div id="general-images" class="container-xl row pb-5 mx-auto justify-content-center align-items-center">
-        <div class="col-12 p-3" v-for="(img, index) in compr_images" :key="index">
+        <div class="col-12 p-3" v-for="(img, index) in compr_gen_images" :key="index">
           <img class="img-fluid" :src="img"/>
         </div>
-        <!-- <div class="col-12 p-3" v-for="img in compr_images" :key="img">
-          <img class="img-fluid" :src="`images/gallery/general/${img}.jpg`" alt="" />
-        </div> -->
       </div>
       </section>
     </main>
