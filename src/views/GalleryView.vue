@@ -87,7 +87,7 @@ onMounted(async() => {
         <h2 class="display-3">Comparison View</h2>
         <p class="fs-5 pb-5">Click and drag to compare our car to our CAD</p>
         <div class="side-by-side">
-          <div class="column-1">
+          <div class="comp-column-1">
             <compare-images
             path1="images/gallery/Front.png"
             path2="images/gallery/Front-cad.png"
@@ -98,7 +98,7 @@ onMounted(async() => {
             />
           </div>
 
-          <div class="column-2">
+          <div class="comp-column-2">
             <img 
               v-for="(img, index) in compr_col2_images" :key="index" 
               class="img-fluid" :src="img"
@@ -109,7 +109,9 @@ onMounted(async() => {
       </div>
 
       <section id="gallery-images" class="py-3 py-lg-5">
+
       <div class="horizontal-line mt-3 mb-5 "></div>
+
       <div class="py-5">
         <h2 class="subtitle display-3">360 View</h2>
         <p class="subtitle fs-5 px-0">Click and drag to rotate the car</p>
@@ -118,16 +120,47 @@ onMounted(async() => {
         </div>
       </div>
 
-      <div class="text-center py-5">
-        <h2 class="display-3">Highlights</h2>
-        <div class="title-separator mt-3 mb-5 mx-auto"></div>
+      <div class="subtitle py-5">
+        <h2 class="display-3">MB25</h2>
+        <h2 class="display-3">Murphy</h2>
       </div>
 
-      <div id="general-images" class="container-xl row pb-5 mx-auto justify-content-center align-items-center">
+      <div class="side-by-side">
+        <div class="col-1">
+          <div class="box">
+            <img src="../../public/images/gallery/MBheader.jpg"/>
+          </div>
+        </div>
+        <div style="padding: 5%;">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+        </div>
+      </div>
+
+      <div id="general-images" class="side-by-side">
+        <div class="column-1">
+          <img src="../../public/images/gallery/general/1.jpg"/>
+
+        </div>
+        <div class="column-2">
+          <img src="../../public/images/gallery/general/1.jpg"/>
+
+        </div>
+        <div class="column-3">
+          <img src="../../public/images/gallery/general/1.jpg"/>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- <div id="general-images" class="container-xl row pb-5 mx-auto justify-content-center align-items-center">
         <div class="col-12 p-3" v-for="(img, index) in compr_gen_images" :key="index">
           <img class="img-fluid" :src="img"/>
         </div>
-      </div>
+      </div> -->
       </section>
     </main>
   </div>

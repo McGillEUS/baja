@@ -39,12 +39,28 @@
         background-color: $primary;
     }
 
+    .box {
+        display: inline-block;
+        padding: 0.5rem;
+        // border: 2px solid $primary;
+        border-top: 2px solid $primary;
+        border-right: 2px solid $primary;
+        border-bottom: 2px solid $primary;
+        background: transparent;
+        right: -8vw;
+    }
+    .box img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
     .side-by-side {
         display: flex;
        
     }
     
-    .column-1 {
+    .comp-column-1 {
         flex: 0 0 auto;
         padding-right: 2rem;
         width: 40rem;
@@ -58,7 +74,7 @@
         
     }
     
-    .column-2 {
+    .comp-column-2 {
         width: 30rem;
         height: 25rem;
         flex: 0 0 auto;
@@ -70,4 +86,58 @@
             padding: 0.5rem;
         }
     }
+
+    .col-1 {
+        flex: 0 0 auto;
+        padding-right: 2rem;
+        width: 55rem;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            padding: 0.5rem;
+        }
+    }
+
+    .column-1 {
+        flex: 0 0 auto;
+        padding-right: 2rem;
+        padding-left: 4rem;
+        width: 30rem;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            padding: 0.5rem;
+        }
+    }
+
+    .column-2 {
+        flex: 0 0 auto;
+        width: 30rem;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            padding: 0.5rem;
+        }
+    }
+
+    .column-3 {
+        flex: 0 0 auto;
+        padding-right: 4rem;
+        padding-left: 2rem;
+        width: 30rem;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            padding: 0.5rem;
+        }
+    }
+
 }
