@@ -17,6 +17,14 @@
         width: 45%;
         margin-left: 13%;
     }
+
+    .horizontal-line {
+        position:relative;
+        width: 45rem;
+        height: 2px;
+        background-color: $primary;
+        margin-left: auto;
+    }
       
     .vertical-line {
         position: absolute;

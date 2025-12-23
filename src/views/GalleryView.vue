@@ -96,26 +96,26 @@ onMounted(async() => {
               v-for="(img, index) in compr_col1_images" :key="index" 
               class="img-fluid" :src="img"
             />
-            
           </div>
+
           <div class="column-2">
             <img 
               v-for="(img, index) in compr_col2_images" :key="index" 
               class="img-fluid" :src="img"
             />
-
           </div>
-
 
         </div>
       </div>
 
       <section id="gallery-images" class="py-3 py-lg-5">
-      <div class="text-center py-5">
-        <h2 class="display-3">360 View</h2>
-        <div class="title-separator mt-3 mb-5 mx-auto"></div>
-        <p class="fs-5 px-4">Click and drag to rotate the car</p>
-        <view360 :numImages="27" :firstImage="24" path="images/gallery/360-view/" imgType="png" />
+      <div class="horizontal-line mt-3 mb-5 "></div>
+      <div class="py-5">
+        <h2 class="subtitle display-3">360 View</h2>
+        <p class="subtitle fs-5 px-0">Click and drag to rotate the car</p>
+        <div class="center">
+          <view360 :numImages="27" :firstImage="24" path="images/gallery/360-view/" imgType="png" />
+        </div>
       </div>
 
       <div class="text-center py-5">
