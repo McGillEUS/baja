@@ -15,6 +15,10 @@ defineEmits(["navigate"]);
 const compr_gen_images = ref([]);
 const compr_col1_images = ref([]);
 const compr_col2_images = ref([]);
+const mb_header = ref([]);
+const column1_images = ref([]);
+const column2_images = ref([]);
+const column3_images = ref([]);
 
 onMounted(async() => {
   if (props.anchor !== "") anchorLink(props.anchor);
@@ -29,7 +33,6 @@ onMounted(async() => {
   compr_gen_images.value = gen;
 
   const col1 = [];
-
   for (let i = 1; i <= 1; i++){
     const url = `/images/gallery/comparison-view/column-1-pics/${i}.jpg`;
     const compr_url = await compressImage(url);
@@ -38,7 +41,6 @@ onMounted(async() => {
   compr_col1_images.value = col1;
 
   const col2 = [];
-
   for (let i = 1; i <= 2; i++){
     const url = `/images/gallery/comparison-view/column-2-pics/${i}.jpg`;
     const compr_url = await compressImage(url);
@@ -46,6 +48,33 @@ onMounted(async() => {
   }
   compr_col2_images.value = col2;
 
+  const url = '/images/gallery/MB-header.jpg';
+  const compr_url = await compressImage(url);
+  mb_header.value = [compr_url];
+
+  const column1 = [];
+  for (let i = 1; i <= 10; i++){
+    const url = `/images/gallery/general/column-1-pics/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    column1.push(compr_url);
+  }
+  column1_images.value = column1;
+
+  const column2 = [];
+  for (let i = 1; i <= 10; i++){
+    const url = `/images/gallery/general/column-2-pics/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    column2.push(compr_url);
+  }
+  column2_images.value = column2;
+
+  const column3 = [];
+  for (let i = 1; i <= 9; i++){
+    const url = `/images/gallery/general/column-3-pics/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    column3.push(compr_url);
+  }
+  column3_images.value = column3;
 
   // resize images after page loads
   setTimeout(() => {
@@ -128,7 +157,7 @@ onMounted(async() => {
       <div class="side-by-side">
         <div class="col-1">
           <div class="box">
-            <img src="../../public/images/gallery/MBheader.jpg"/>
+            <img v-if="mb_header" :src="mb_header" />
           </div>
         </div>
         <div style="padding: 5%;">
@@ -137,20 +166,26 @@ onMounted(async() => {
         </div>
       </div>
 
-      <div id="general-images" class="side-by-side">
+      <div id="general-images" class="columns-wrapper">
         <div class="column-1">
-          <img src="../../public/images/gallery/general/1.jpg"/>
-
+          <img 
+            v-for="(img, index) in column1_images" :key="index" 
+            class="img-fluid" :src="img"
+          />
         </div>
         <div class="column-2">
-          <img src="../../public/images/gallery/general/1.jpg"/>
-
+          <img 
+            v-for="(img, index) in column2_images" :key="index" 
+            class="img-fluid" :src="img"
+          />
         </div>
+
         <div class="column-3">
-          <img src="../../public/images/gallery/general/1.jpg"/>
-
+          <img 
+            v-for="(img, index) in column3_images" :key="index" 
+            class="img-fluid" :src="img"
+          />
         </div>
-
 
       </div>
 

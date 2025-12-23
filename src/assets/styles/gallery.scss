@@ -57,7 +57,6 @@
 
     .side-by-side {
         display: flex;
-       
     }
     
     .comp-column-1 {
@@ -90,6 +89,7 @@
     .col-1 {
         flex: 0 0 auto;
         padding-right: 2rem;
+        padding-bottom: 2rem;
         width: 55rem;
 
         img {
@@ -100,10 +100,15 @@
         }
     }
 
+    .columns-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
     .column-1 {
         flex: 0 0 auto;
-        padding-right: 2rem;
-        padding-left: 4rem;
+        padding-right: 1rem;
+        padding-left: 3rem;
         width: 30rem;
 
         img {
@@ -116,7 +121,7 @@
 
     .column-2 {
         flex: 0 0 auto;
-        width: 30rem;
+        width: 25rem;
 
         img {
             width: 100%;
@@ -128,8 +133,8 @@
 
     .column-3 {
         flex: 0 0 auto;
-        padding-right: 4rem;
-        padding-left: 2rem;
+        padding-right: 3rem;
+        padding-left: 1rem;
         width: 30rem;
 
         img {
