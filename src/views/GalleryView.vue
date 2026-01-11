@@ -188,14 +188,6 @@ onMounted(async() => {
         </div>
 
       </div>
-
-
-
-      <!-- <div id="general-images" class="container-xl row pb-5 mx-auto justify-content-center align-items-center">
-        <div class="col-12 p-3" v-for="(img, index) in compr_gen_images" :key="index">
-          <img class="img-fluid" :src="img"/>
-        </div>
-      </div> -->
       </section>
     </main>
   </div>
