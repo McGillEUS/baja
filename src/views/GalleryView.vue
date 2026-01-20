@@ -161,8 +161,13 @@ onMounted(async() => {
           </div>
         </div>
         <div style="padding: 5%;">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+          <p>Murphy is our newest car design, developed during the 2024–2025 season. 
+            It earned its name after all the unexpected twists and challenges we faced 
+            at the Maryland competition in June 2025, a true nod to Murphy’s Law. 
+            Despite a chaotic and demanding week, the car carried us through and became 
+            part of some unforgettable team memories. Murphy truly proved its strength 
+            later that year at Oktobajafest in October, where we proudly secured 2nd place 
+            in both the SNT and Endurance events.</p>
         </div>
       </div>
 
