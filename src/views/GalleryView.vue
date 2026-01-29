@@ -89,38 +89,45 @@ onMounted(async() => {
 </script>
 
 <template>
-  <div class="gallery-page">
+  <div class="gallery-page ">
     <main id="gallery" class="gallery-wrapper">
       <div class="gallery-wrapper">
         <section
         id="gallery-landing-section"
         class="min-vh-100 full-height-image"
-        :style="{ backgroundImage: 'url(' + landingBG + ')', backgroundAttachment: 'fixed' }"
+        :style="{ backgroundImage: 'url(' + landingBG + ')',
+        backgroundAttachment: 'fixed' }"
         >
-        <div class="full-height-overlay">
-          <div class="title " style="top: 35%">
-            <h1 class="display-1">Gallery</h1>
-            <h1 class="display-1 pt-3">
-              <typing-text text="A BTS look at Baja" />
-            </h1>
+          <div class="full-height-overlay">
+            <div class="full-height-content landing-content">
+              <h1 class="display-1">Gallery</h1>
+              <p class="fs-5 pt-3">
+                <typing-text text="A BTS look at Baja" />
+              </p>
+            </div>
+            <span class="nav-link scroll-down" @click="anchorLink('members')"
+              ><i class="bi bi-chevron-compact-down fs-1 px-2"></i
+            ></span>
           </div>
-          <span class="nav-link scroll-down" @click="anchorLink('gallery-images')"
-            ><i class="bi bi-chevron-compact-down fs-1 px-2"></i
-          ></span>
-        </div>
         </section>
         <div class="vertical-line"></div>
       </div>
 
-      <div class="subtitle py-5">
-        <h2 class="display-3">Comparison View</h2>
-        <p class="fs-5 pb-5">Click and drag to compare our car to our CAD</p>
-        <div class="side-by-side">
-          <div class="comp-column-1">
-            <compare-images
+      <div class="py-5">
+        <div class="subtitle">
+          <h2 class="display-3">Comparison View</h2>
+          <p class="fs-5 pb-5">Click and drag to compare our car to our CAD</p>
+        </div>
+
+        <div class="center">
+          <compare-images
             path1="images/gallery/Front.png"
             path2="images/gallery/Front-cad.png"
-            />
+          />
+        </div>
+
+        <div class="side-by-side">
+          <div class="comp-column-1">
             <img 
               v-for="(img, index) in compr_col1_images" :key="index" 
               class="img-fluid" :src="img"
@@ -135,6 +142,7 @@ onMounted(async() => {
           </div>
 
         </div>
+
       </div>
 
       <section id="gallery-images" class="py-3 py-lg-5">
@@ -160,7 +168,7 @@ onMounted(async() => {
             <img v-if="mb_header" :src="mb_header" />
           </div>
         </div>
-        <div style="padding: 5%;">
+        <div class="paragraph">
           <p>Murphy is our newest car design, developed during the 2024–2025 season. 
             It earned its name after all the unexpected twists and challenges we faced 
             at the Maryland competition in June 2025, a true nod to Murphy’s Law. 

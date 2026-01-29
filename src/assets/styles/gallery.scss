@@ -1,4 +1,6 @@
 .gallery-page {
+    width: 100%;
+    overflow-x: hidden; 
 
     .gallery-wrapper {
         position: relative;
@@ -40,14 +42,17 @@
     }
 
     .box {
-        display: inline-block;
+        display: block;
+
         padding: 0.5rem;
-        // border: 2px solid $primary;
+    
         border-top: 2px solid $primary;
         border-right: 2px solid $primary;
         border-bottom: 2px solid $primary;
+        border-left: 2px solid $primary;
         background: transparent;
-        right: -8vw;
+        width: min(50vw, 55rem);
+        margin-left: clamp(-2rem, -6vw, -10rem);
     }
     .box img {
         display: block;
@@ -57,26 +62,30 @@
 
     .side-by-side {
         display: flex;
-    }
-    
-    .comp-column-1 {
-        flex: 0 0 auto;
-        padding-right: 2rem;
-        width: 40rem;
-
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            padding: 0.5rem;
-        }
+        // gap: 3rem;
+        align-items: flex-start;
+        // padding-left: 10rem;
+        // padding-right: 10rem;
+        padding-inline: clamp(1rem, 5vw, 10rem);
         
     }
     
+    .comp-column-1 {
+        flex: 1 1 0;
+        min-width: 25rem;
+
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            padding: 0.5rem;
+
+        }
+    }
+
     .comp-column-2 {
-        width: 30rem;
-        height: 25rem;
-        flex: 0 0 auto;
+        flex: 1 1 0;
+        min-width: 25rem;
     
         img {
             width: 100%;
@@ -85,12 +94,32 @@
             padding: 0.5rem;
         }
     }
+    .center {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 3.0rem;
+    }
+    .center compare-images {
+        width: 100%;
+    }
+    .comparison {
+        justify-content: center;
+        width: 100vw;
+        height: auto;
+ 
+        margin-bottom: 1.5rem;
+    }
+    .comparison compare-images {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
 
     .col-1 {
-        flex: 0 0 auto;
-        padding-right: 2rem;
-        padding-bottom: 2rem;
-        width: 55rem;
+
+        flex: 1 1 50%;
+        max-width: 55rem;
+        min-width: 0;
 
         img {
             width: 100%;
@@ -103,45 +132,46 @@
     .columns-wrapper {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 1rem;
+        padding-inline: clamp(1rem, 4vw, 2rem);
+        padding-top: 2rem;
     }
-
-    .column-1 {
-        flex: 0 0 auto;
-        padding-right: 1rem;
-        padding-left: 3rem;
-        width: 30rem;
-
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            padding: 0.5rem;
-        }
-    }
-
-    .column-2 {
-        flex: 0 0 auto;
-        width: 25rem;
-
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            padding: 0.5rem;
-        }
-    }
-
+    .column-1,
+    .column-2,
     .column-3 {
-        flex: 0 0 auto;
-        padding-right: 3rem;
-        padding-left: 1rem;
-        width: 30rem;
+      flex: 1 1 18rem; 
+      max-width: 25rem;
+  
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        padding-bottom: 1.0rem;
+      }
+    }
+    .paragraph {
+        flex: 1 1 30%;
+        max-width: 35rem;
+        line-height: 1.6;
+        min-width: 0;
+    }
 
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            padding: 0.5rem;
+    @media (max-width: 768px) {
+        .side-by-side {
+          flex-direction: column;
+          padding-inline: 1rem;
+        }
+        .col-1,
+        .paragraph {
+          width: 100%;
+          max-width: none;
+        }
+      
+        .box {
+          margin-left: 0;
+          width: 100%;
         }
     }
 
