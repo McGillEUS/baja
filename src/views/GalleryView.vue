@@ -2,18 +2,81 @@
 import View360 from "../components/View360.vue";
 import CompareImages from "../components/CompareImages.vue";
 import TypingText from "../components/TypingText.vue";
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { anchorLink } from "../assets/utils";
 
 import landingBG from "../assets/images/gallery-landing.jpg";
+import {compressImage} from "../utils/ImageCompressor.js";
+import '../assets/styles/gallery.scss'
 
 const props = defineProps({ anchor: String });
 defineEmits(["navigate"]);
 
-onMounted(() => {
+const compr_gen_images = ref([]);
+const compr_col1_images = ref([]);
+const compr_col2_images = ref([]);
+const mb_header = ref([]);
+const column1_images = ref([]);
+const column2_images = ref([]);
+const column3_images = ref([]);
+
+onMounted(async() => {
   if (props.anchor !== "") anchorLink(props.anchor);
 
-  // Resize images after page loads
+  //compress all images
+  const gen = [];
+  for (let i = 1; i <= 25; i++){
+    const url = `/images/gallery/general/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    gen.push(compr_url);
+  }
+  compr_gen_images.value = gen;
+
+  const col1 = [];
+  for (let i = 1; i <= 1; i++){
+    const url = `/images/gallery/comparison-view/column-1-pics/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    col1.push(compr_url);
+  }
+  compr_col1_images.value = col1;
+
+  const col2 = [];
+  for (let i = 1; i <= 2; i++){
+    const url = `/images/gallery/comparison-view/column-2-pics/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    col2.push(compr_url);
+  }
+  compr_col2_images.value = col2;
+
+  const url = '/images/gallery/MB-header.jpg';
+  const compr_url = await compressImage(url);
+  mb_header.value = [compr_url];
+
+  const column1 = [];
+  for (let i = 1; i <= 10; i++){
+    const url = `/images/gallery/general/column-1-pics/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    column1.push(compr_url);
+  }
+  column1_images.value = column1;
+
+  const column2 = [];
+  for (let i = 1; i <= 10; i++){
+    const url = `/images/gallery/general/column-2-pics/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    column2.push(compr_url);
+  }
+  column2_images.value = column2;
+
+  const column3 = [];
+  for (let i = 1; i <= 9; i++){
+    const url = `/images/gallery/general/column-3-pics/${i}.jpg`;
+    const compr_url = await compressImage(url);
+    column3.push(compr_url);
+  }
+  column3_images.value = column3;
+
+  // resize images after page loads
   setTimeout(() => {
     const galleryImages = document.querySelectorAll('#general-images img');
     for (let i = 0; i < galleryImages.length; i++) {
@@ -26,53 +89,119 @@ onMounted(() => {
 </script>
 
 <template>
-  <main id="gallery">
-    <section
-      id="gallery-landing-section"
-      class="min-vh-100 full-height-image"
-      :style="{ backgroundImage: 'url(' + landingBG + ')', backgroundAttachment: 'fixed' }"
-    >
-      <div class="full-height-overlay">
-        <div class="full-height-content landing-content" style="top: 35%">
-          <h1 class="display-1">Gallery</h1>
-          <p class="fs-5 pt-3">
-            <typing-text text="A BTS look at Baja" />
-          </p>
+  <div class="gallery-page ">
+    <main id="gallery" class="gallery-wrapper">
+      <div class="gallery-wrapper">
+        <section
+        id="gallery-landing-section"
+        class="min-vh-100 full-height-image"
+        :style="{ backgroundImage: 'url(' + landingBG + ')',
+        backgroundAttachment: 'fixed' }"
+        >
+          <div class="full-height-overlay">
+            <div class="full-height-content landing-content">
+              <h1 class="display-1">Gallery</h1>
+              <p class="fs-5 pt-3">
+                <typing-text text="A BTS look at Baja" />
+              </p>
+            </div>
+            <span class="nav-link scroll-down" @click="anchorLink('members')"
+              ><i class="bi bi-chevron-compact-down fs-1 px-2"></i
+            ></span>
+          </div>
+        </section>
+        <div class="vertical-line"></div>
+      </div>
+
+      <div class="py-5">
+        <div class="subtitle">
+          <h2 class="display-3">Comparison View</h2>
+          <p class="fs-5 pb-5">Click and drag to compare our car to our CAD</p>
         </div>
-        <span class="nav-link scroll-down" @click="anchorLink('gallery-images')"
-          ><i class="bi bi-chevron-compact-down fs-1 px-2"></i
-        ></span>
-      </div>
-    </section>
 
-    <section id="gallery-images" class="py-3 py-lg-5">
-      <div class="text-center py-5">
-        <h2 class="display-3">360 View</h2>
-        <div class="title-separator mt-3 mb-5 mx-auto"></div>
-        <p class="fs-5 px-4">Click and drag to rotate the car</p>
-        <view360 :numImages="27" :firstImage="24" path="images/gallery/360-view/" imgType="png" />
-      </div>
+        <div class="center">
+          <compare-images
+            path1="images/gallery/Front.png"
+            path2="images/gallery/Front-cad.png"
+          />
+        </div>
 
-      <div class="text-center py-5">
-        <h2 class="display-3">Comparison View</h2>
-        <div class="title-separator mt-3 mb-5 mx-auto"></div>
-        <p class="fs-5 px-4 pb-5">Click and drag to compare our car to our CAD</p>
-        <compare-images
-          path1="images/gallery/Front.png"
-          path2="images/gallery/Front-cad.png"
-        />
-      </div>
+        <div class="side-by-side">
+          <div class="comp-column-1">
+            <img 
+              v-for="(img, index) in compr_col1_images" :key="index" 
+              class="img-fluid" :src="img"
+            />
+          </div>
 
-      <div class="text-center py-5">
-        <h2 class="display-3">Highlights</h2>
-        <div class="title-separator mt-3 mb-5 mx-auto"></div>
+          <div class="comp-column-2">
+            <img 
+              v-for="(img, index) in compr_col2_images" :key="index" 
+              class="img-fluid" :src="img"
+            />
+          </div>
+
+        </div>
+
       </div>
 
-      <div id="general-images" class="container-xl row pb-5 mx-auto justify-content-center align-items-center">
-        <div class="col-12 p-3" v-for="img in 25" :key="img">
-          <img class="img-fluid" :src="`images/gallery/general/${img}.jpg`" alt="" />
+      <section id="gallery-images" class="py-3 py-lg-5">
+
+      <div class="horizontal-line mt-3 mb-5 "></div>
+
+      <div class="py-5">
+        <h2 class="subtitle display-3">360 View</h2>
+        <p class="subtitle fs-5 px-0">Click and drag to rotate the car</p>
+        <div class="center">
+          <view360 :numImages="27" :firstImage="24" path="images/gallery/360-view/" imgType="png" />
         </div>
       </div>
-    </section>
-  </main>
+
+      <div class="subtitle py-5">
+        <h2 class="display-3">MB25</h2>
+        <h2 class="display-3">Murphy</h2>
+      </div>
+
+      <div class="side-by-side">
+        <div class="col-1">
+          <div class="box">
+            <img v-if="mb_header" :src="mb_header" />
+          </div>
+        </div>
+        <div class="paragraph">
+          <p>Murphy is our newest car design, developed during the 2024–2025 season. 
+            It earned its name after all the unexpected twists and challenges we faced 
+            at the Maryland competition in June 2025, a true nod to Murphy’s Law. 
+            Despite a chaotic and demanding week, the car carried us through and became 
+            part of some unforgettable team memories. Murphy truly proved its strength 
+            later that year at Oktobajafest in October, where we proudly secured 2nd place 
+            in both the SNT and Endurance events.</p>
+        </div>
+      </div>
+
+      <div id="general-images" class="columns-wrapper">
+        <div class="column-1">
+          <img 
+            v-for="(img, index) in column1_images" :key="index" 
+            class="img-fluid" :src="img"
+          />
+        </div>
+        <div class="column-2">
+          <img 
+            v-for="(img, index) in column2_images" :key="index" 
+            class="img-fluid" :src="img"
+          />
+        </div>
+
+        <div class="column-3">
+          <img 
+            v-for="(img, index) in column3_images" :key="index" 
+            class="img-fluid" :src="img"
+          />
+        </div>
+
+      </div>
+      </section>
+    </main>
+  </div>
 </template>
