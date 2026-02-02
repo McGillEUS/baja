@@ -174,7 +174,7 @@ const logoSizeClass = (tier) => {
               src="./McGill Baja newsletter, French and English.pdf"
               class="newsletter-frame"
               title="McGill Baja Newsletter"
-              style="width: 100%; height: 700px; border: none"
+              style="width: 50%; height: 700px; border: none"
             ></iframe>
           </div>
 
