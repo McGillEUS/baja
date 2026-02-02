@@ -20,3 +20,4 @@ export async function compressImage(url){
         return url;
     }
 }
+

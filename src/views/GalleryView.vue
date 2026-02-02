@@ -20,72 +20,51 @@ const column1_images = ref([]);
 const column2_images = ref([]);
 const column3_images = ref([]);
 
-onMounted(async() => {
+onMounted(async () => {
   if (props.anchor !== "") anchorLink(props.anchor);
 
-  //compress all images
-  const gen = [];
-  for (let i = 1; i <= 25; i++){
-    const url = `/images/gallery/general/${i}.jpg`;
-    const compr_url = await compressImage(url);
-    gen.push(compr_url);
-  }
+  const loadSet = (basePath, count) =>
+    Promise.all(
+      Array.from({ length: count }, (_, i) =>
+        compressImage(`${basePath}/${i + 1}.jpg`)
+      )
+    );
+
+  const [
+    gen,
+    col1,
+    col2,
+    header,
+    column1,
+    column2,
+    column3
+  ] = await Promise.all([
+    loadSet('/images/gallery/general', 25),
+    loadSet('/images/gallery/comparison-view/column-1-pics', 2),
+    loadSet('/images/gallery/comparison-view/column-2-pics', 2),
+    compressImage('/images/gallery/MB-header.jpg'),
+    loadSet('/images/gallery/general/column-1-pics', 10),
+    loadSet('/images/gallery/general/column-2-pics', 10),
+    loadSet('/images/gallery/general/column-3-pics', 9),
+  ]);
+
   compr_gen_images.value = gen;
-
-  const col1 = [];
-  for (let i = 1; i <= 1; i++){
-    const url = `/images/gallery/comparison-view/column-1-pics/${i}.jpg`;
-    const compr_url = await compressImage(url);
-    col1.push(compr_url);
-  }
   compr_col1_images.value = col1;
-
-  const col2 = [];
-  for (let i = 1; i <= 2; i++){
-    const url = `/images/gallery/comparison-view/column-2-pics/${i}.jpg`;
-    const compr_url = await compressImage(url);
-    col2.push(compr_url);
-  }
   compr_col2_images.value = col2;
-
-  const url = '/images/gallery/MB-header.jpg';
-  const compr_url = await compressImage(url);
-  mb_header.value = [compr_url];
-
-  const column1 = [];
-  for (let i = 1; i <= 10; i++){
-    const url = `/images/gallery/general/column-1-pics/${i}.jpg`;
-    const compr_url = await compressImage(url);
-    column1.push(compr_url);
-  }
+  mb_header.value = [header];
   column1_images.value = column1;
-
-  const column2 = [];
-  for (let i = 1; i <= 10; i++){
-    const url = `/images/gallery/general/column-2-pics/${i}.jpg`;
-    const compr_url = await compressImage(url);
-    column2.push(compr_url);
-  }
   column2_images.value = column2;
-
-  const column3 = [];
-  for (let i = 1; i <= 9; i++){
-    const url = `/images/gallery/general/column-3-pics/${i}.jpg`;
-    const compr_url = await compressImage(url);
-    column3.push(compr_url);
-  }
   column3_images.value = column3;
 
-  // resize images after page loads
   setTimeout(() => {
-    const galleryImages = document.querySelectorAll('#general-images img');
-    for (let i = 0; i < galleryImages.length; i++) {
-      if (galleryImages[i].naturalHeight > galleryImages[i].naturalWidth) {
-        galleryImages[i].parentElement.classList.replace('col-12', 'col-md-6');
+    document.querySelectorAll('#general-images img').forEach(img => {
+      if (img.naturalHeight > img.naturalWidth) {
+        img.parentElement.classList.replace('col-12', 'col-md-6');
       }
-    }
+    });
   }, 1000);
 });
+
 </script>
 
 <template>
