@@ -25,9 +25,9 @@ const supersystemOrder = [
 
 // Define descriptions for each supersystem
 const supersystemDescriptions = {
-  Captains:
+  Captain:
     "Team leaders responsible for overall coordination, strategy, and representing the team at competitions.",
-  "Technical Directors":
+  "Technical Director":
     "Engineering leads who oversee technical aspects of the vehicle design and ensure integration across all systems.",
   Drivers:
     "Team members responsible for driving the vehicle during tests and competitions.",

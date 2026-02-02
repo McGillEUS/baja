@@ -177,18 +177,18 @@ onMounted(() => {
         <div class="container">
           <p class="fs-5 justified-p px-4">
             Our first general meeting is on
-            <strong>Monday, January 12th at 5:00PM</strong> in the EUS
+            <strong>Monday, September 8th at 5:00PM</strong> in the EUS
             Commonroom. After this, you can come and learn about our team and
             ask any questions at the following meeting times:
           </p>
 
           <p class="fs-5 mt-4">
-            <strong>Winter Semester General Meetings:</strong><br />
+            <strong>Fall Semester General Meetings:</strong><br />
             Mondays at 5:30pm – 6:00pm in the EUS Commonroom
           </p>
 
           <p class="fs-5 mt-3">
-            <strong>Winter Semester Shop Days:</strong><br />
+            <strong>Fall Semester Shop Days:</strong><br />
             Thursdays at 6:00pm in MEDN
           </p>
         </div>
@@ -208,7 +208,7 @@ onMounted(() => {
               <li class="mb-4">
                 <h4>Say Hi!</h4>
                 <p>
-                  Come to our first general meeting on Monday, January 12th at
+                  Come to our first general meeting on Monday, September 8th at
                   5:00pm in the EUS Commonroom or any general meeting after to
                   learn more about us and ask questions!
                 </p>
