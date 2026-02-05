@@ -6,7 +6,6 @@ import { ref, onMounted } from "vue";
 import { anchorLink } from "../assets/utils";
 
 import landingBG from "../assets/images/gallery-landing.jpg";
-import {compressImage} from "../utils/ImageCompressor.js";
 import '../assets/styles/gallery.scss'
 
 const props = defineProps({ anchor: String });
@@ -26,13 +25,13 @@ onMounted(() => {
   const loadSet = (basePath, count) =>
     Array.from({ length: count }, (_, i) => `${basePath}/${i + 1}.jpg`);
 
-  // General gallery
+  // general gallery
   compr_gen_images.value = loadSet(
     '/images/gallery/general',
     25
   );
 
-  // Comparison images
+  // comparison images
   compr_col1_images.value = loadSet(
     '/images/gallery/comparison-view/column-1-pics',
     2
@@ -43,10 +42,9 @@ onMounted(() => {
     2
   );
 
-  // Header image
+  // car image
   mb_header.value = ['/images/gallery/MB-header.jpg'];
 
-  // Column galleries
   column1_images.value = loadSet(
     '/images/gallery/general/column-1-pics',
     9
@@ -62,7 +60,6 @@ onMounted(() => {
     9
   );
 
-  // Resize logic (unchanged)
   setTimeout(() => {
     document.querySelectorAll('#general-images img').forEach(img => {
       if (img.naturalHeight > img.naturalWidth) {
