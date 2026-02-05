@@ -20,49 +20,56 @@ const column1_images = ref([]);
 const column2_images = ref([]);
 const column3_images = ref([]);
 
-onMounted(async () => {
+onMounted(() => {
   if (props.anchor !== "") anchorLink(props.anchor);
 
   const loadSet = (basePath, count) =>
-    Promise.all(
-      Array.from({ length: count }, (_, i) =>
-        compressImage(`${basePath}/${i + 1}.jpg`)
-      )
-    );
+    Array.from({ length: count }, (_, i) => `${basePath}/${i + 1}.jpg`);
 
-  const [
-    gen,
-    col1,
-    col2,
-    header,
-    column1,
-    column2,
-    column3
-  ] = await Promise.all([
-    loadSet('/images/gallery/general', 25),
-    loadSet('/images/gallery/comparison-view/column-1-pics', 2),
-    loadSet('/images/gallery/comparison-view/column-2-pics', 2),
-    compressImage('/images/gallery/MB-header.jpg'),
-    loadSet('/images/gallery/general/column-1-pics', 10),
-    loadSet('/images/gallery/general/column-2-pics', 10),
-    loadSet('/images/gallery/general/column-3-pics', 9),
-  ]);
+  // General gallery
+  compr_gen_images.value = loadSet(
+    '/images/gallery/general',
+    25
+  );
 
-  compr_gen_images.value = gen;
-  compr_col1_images.value = col1;
-  compr_col2_images.value = col2;
-  mb_header.value = [header];
-  column1_images.value = column1;
-  column2_images.value = column2;
-  column3_images.value = column3;
+  // Comparison images
+  compr_col1_images.value = loadSet(
+    '/images/gallery/comparison-view/column-1-pics',
+    2
+  );
 
+  compr_col2_images.value = loadSet(
+    '/images/gallery/comparison-view/column-2-pics',
+    2
+  );
+
+  // Header image
+  mb_header.value = ['/images/gallery/MB-header.jpg'];
+
+  // Column galleries
+  column1_images.value = loadSet(
+    '/images/gallery/general/column-1-pics',
+    9
+  );
+
+  column2_images.value = loadSet(
+    '/images/gallery/general/column-2-pics',
+    10
+  );
+
+  column3_images.value = loadSet(
+    '/images/gallery/general/column-3-pics',
+    9
+  );
+
+  // Resize logic (unchanged)
   setTimeout(() => {
     document.querySelectorAll('#general-images img').forEach(img => {
       if (img.naturalHeight > img.naturalWidth) {
         img.parentElement.classList.replace('col-12', 'col-md-6');
       }
     });
-  }, 1000);
+  }, 500);
 });
 
 </script>
