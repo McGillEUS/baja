@@ -15,6 +15,14 @@ onMounted(() => {
   if (props.anchor !== "") anchorLink(props.anchor);
 });
 
+const tierLabels = {
+  diamond: "Diamond Sponsors",
+  gold: "Gold Sponsors",
+  silver: "Silver Sponsors",
+  bronze: "Bronze Sponsors",
+  iron: "Iron Sponsors",
+};
+
 const logoSizeClass = (tier) => {
   if (tier === "iron") {
     return "logo-small";
@@ -213,6 +221,10 @@ const logoSizeClass = (tier) => {
             :key="tier"
             class="sponsor-group mb-5"
           >
+            <h3 class="display-5 mb-5">
+              {{tierLabels[tier]}}
+            </h3>
+            
             <div class="row justify-content-center g-4">
               <div
                 v-for="sponsor in group"
