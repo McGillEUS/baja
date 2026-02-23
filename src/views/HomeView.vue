@@ -179,7 +179,7 @@ const logoSizeClass = (tier) => {
           <!-- ✅ Embedded PDF -->
           <div class="d-flex justify-content-center">
             <iframe
-              src="./McGill Baja newsletter, French and English.pdf"
+              src="./McGill Baja newsletter 26, French and English.pdf"
               class="newsletter-frame"
               title="McGill Baja Newsletter"
               style="width: 50%; height: 700px; border: none"
@@ -189,7 +189,7 @@ const logoSizeClass = (tier) => {
           <p class="mt-4">
             <a
               class="btn-animated"
-              href="./McGill Baja newsletter, French and English.pdf"
+              href="./McGill Baja newsletter 26, French and English.pdf"
               target="_blank"
               rel="noopener"
             >
