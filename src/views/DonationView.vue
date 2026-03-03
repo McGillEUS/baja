@@ -5,7 +5,6 @@ import { anchorLink } from "../assets/utils";
 import Counter from "../components/Counter.vue";
 
 import landingBG from "../assets/images/donation-landing.jpg"; // You might want to replace this with a specific recruitment image
-import video from "../../public/images/donation/baja-promo.mp4";
 
 const props = defineProps({ anchor: String });
 defineEmits(["navigate"]);
@@ -43,6 +42,32 @@ onMounted(() => {
             <div class="title-separator mt-3 mb-5 mx-auto"></div>
         </div>
         <counter></counter>
+    </section>
+    <section id="video-section" class="p-3 pt-lg-5">
+        <div class="container-xl text-center py-5">
+            <h2 class="display-3">Watch Our Team in Action</h2>
+            <div class="title-separator mt-3 mb-5 mx-auto"></div>
+
+            <div class="video-wrapper mx-auto">
+            <iframe
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="McGill Baja Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            </div>
+        </div>
+
+        <div class="text-center py-4">
+            <a
+                href="https://giving.mcgill.ca/ways-give/more-ways-give/mcgill24"
+                target="_blank"
+                class="donate-btn"
+            >
+                Donate Now
+            </a>
+        </div>
     </section>
 
   </main>
