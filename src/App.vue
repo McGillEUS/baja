@@ -4,6 +4,7 @@ import HomeView from "./views/HomeView.vue";
 import GalleryView from "./views/GalleryView.vue";
 import TeamView from "./views/TeamView.vue";
 import RecruitmentView from "./views/RecruitmentView.vue";
+import DonationView from "./views/DonationView.vue";
 
 // Import Bootstrap
 
@@ -120,6 +121,13 @@ const onNavigate = (location) => {
                 >Recruitment</span
               >
             </li>
+            <li class="nav-item">
+              <span
+                class="nav-link px-md-3"
+                @click="onNavigate('donation#donation')"
+                >Donation</span
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -144,6 +152,11 @@ const onNavigate = (location) => {
 
   <RecruitmentView
     v-if="currView === 'recruitment'"
+    :anchor="currAnchor"
+    @navigate="(location) => onNavigate(location)"
+  />
+  <DonationView
+    v-if="currView === 'donation'"
     :anchor="currAnchor"
     @navigate="(location) => onNavigate(location)"
   />
