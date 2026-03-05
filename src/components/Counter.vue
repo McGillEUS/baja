@@ -28,7 +28,7 @@ export default{
         showRemaining(){
             const timer = setInterval(()=>{
                 const now = new Date();
-                const end = new Date(2026,2,3,20,16,10,10);
+                const end = new Date(2026,2,11,23,59,59,59);
                 const distance = end.getTime() - now.getTime();
 
                 if (distance < 0){
@@ -88,7 +88,7 @@ export default{
 }
 
 .countdown-time {
-  font-size: 3.5rem;
+  font-size: 3.0rem;
   font-weight: 700;
   color: white;
   display: flex;

@@ -36,38 +36,48 @@ onMounted(() => {
         ></span>
       </div>
     </section>
-    <section id="countdown-timer" class="p-3 pt-lg-5">
+    <section id="countdown-timer" class="p-3 pt-5 pb-2">
         <div class="text-center py-5">
-            <h2 class="display-3">Next Crowdfunding</h2>
+            <h2 class="display-3">Fuel Innovation. Drive Competition.</h2>
             <div class="title-separator mt-3 mb-5 mx-auto"></div>
+            <div class="container">
+                <p class="fs-5 px-4">
+                    Your support funds critical manufacturing upgrades and competition travel as we represent McGill on the international stage.
+                    On March 11, donations will be matched by McGill, doubling the impact of your support. Join our campaign before time runs out.
+                </p>
+            </div>
+            <counter></counter>
         </div>
-        <counter></counter>
     </section>
-    <section id="video-section" class="p-3 pt-lg-5">
+    <section id="video-section" class="p-3 pt-2 pb-5">
         <div class="container-xl text-center py-5">
             <h2 class="display-3">Watch Our Team in Action</h2>
             <div class="title-separator mt-3 mb-5 mx-auto"></div>
-
+            <div class="container">
+                <p class="fs-5 px-4">
+                    From the workshop to competition day, this is what your support makes possible.
+                </p>
+            </div>
             <div class="video-wrapper mx-auto">
             <iframe
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                src="https://drive.google.com/file/d/1rQXNVr6c5qU4Xe6hjGu5_9WSBd7R068p/preview"
                 title="McGill Baja Video"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
             </div>
-        </div>
-
-        <div class="text-center py-4">
+            <div class="py-4">
             <a
-                href="https://giving.mcgill.ca/ways-give/more-ways-give/mcgill24"
+                href="https://crowdfunding.mcgill.ca/ui/main/p/bajaracing2026"
                 target="_blank"
                 class="donate-btn"
             >
                 Donate Now
             </a>
         </div>
+        </div>
+
     </section>
 
   </main>
@@ -117,11 +127,15 @@ onMounted(() => {
     }
   }
 }
-.team-video {
-  width: 60%;
-  height: 60%;
+.video-wrapper {
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
   border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .donate-btn {
