@@ -47,6 +47,16 @@
         "link": "https://www.prattwhitney.com/en",
         "name": "Pratt & Whitney",
         "path": "images/sponsors/gold/pratt-logo.png"
+      },
+      {
+        "link": "http://www.gbs.ca/",
+        "name": "GBS",
+        "path": "images/sponsors/gold/gbs-logo.png"
+      },
+      {
+        "link": "https://www.gmnbt.com/",
+        "name": "GMN Bearings",
+        "path": "images/sponsors/gold/gmn-bearing-logo.png"
       }
     ],
 
@@ -55,16 +65,6 @@
         "link": "https://www.st-hubertmachineshop.com/",
         "name": "St Hubert Machine Shop",
         "path": "images/sponsors/silver/st-hubert-machine-shop-logo.png"
-      },
-      {
-        "link": "http://www.gbs.ca/",
-        "name": "GBS",
-        "path": "images/sponsors/silver/gbs-logo.png"
-      },
-      {
-        "link": "https://www.gmnbt.com/",
-        "name": "GMN Bearings",
-        "path": "images/sponsors/silver/gmn-bearing-logo.png"
       },
       {
         "link": "https://www.fusia-groupe.com/",
@@ -85,15 +85,15 @@
         "link": "https://accut.ca/",
         "name": "Accut",
         "path": "images/sponsors/silver/accut-logo.png"
+      },
+      {
+        "link": "https://cvtech-ibc.com/home/",
+        "name": "CVTech-IBC",
+        "path": "images/sponsors/silver/cvtech-logo.png"
       }
     ],
 
     "bronze": [
-      {
-        "link": "https://cvtech-ibc.com/home/",
-        "name": "CVTech-IBC",
-        "path": "images/sponsors/bronze/cvtech-logo.png"
-      },
       {
         "link": "https://anodisationexpert.com/",
         "name": "Anodisation Expert",
