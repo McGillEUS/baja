@@ -189,7 +189,7 @@ onMounted(() => {
 
           <p class="fs-5 mt-3">
             <strong>Fall Semester Shop Days:</strong><br />
-            Thursdays at 6:00pm - 8pm in MEDN
+            Thursdays at 6:00pm – 8pm in MEDN
           </p>
         </div>
       </div>
