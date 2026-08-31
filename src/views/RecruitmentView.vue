@@ -208,7 +208,7 @@ onMounted(() => {
               <li class="mb-4">
                 <h4>Say Hi!</h4>
                 <p>
-                  Come to our first general meeting on Monday, September 8th at
+                  Come to our first general meeting on Tuesday, September 8th at
                   5:30pm in the EUS Common Room or any general meeting after to
                   learn more about us and ask questions!
                 </p>
