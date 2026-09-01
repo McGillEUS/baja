@@ -179,14 +179,35 @@ const logoSizeClass = (tier) => {
           <!-- ✅ Embedded PDF -->
           <div class="d-flex justify-content-center">
             <iframe
-              src="./McGill Baja newsletter 26, French and English.pdf"
+              src="./New York Newsletter ENG.pdf"
               class="newsletter-frame"
               title="McGill Baja Newsletter"
               style="width: 50%; height: 700px; border: none"
             ></iframe>
           </div>
+          <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+            <a 
+              class="btn-animated"
+              href="./New York Newsletter ENG.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Open Newsletter (EN)
+              <i class="bi bi-box-arrow-up-right ps-2"></i>
+            </a>
 
-          <p class="mt-4">
+            <a
+              class="btn-animated"
+              href="./New York Newsletter FR.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Ouvrir le Bulletin (FR)
+              <i class="bi bi-box-arrow-up-right ps-2"></i>
+            </a>
+          </div>
+
+          <!-- <p class="mt-4">
             <a
               class="btn-animated"
               href="./McGill Baja newsletter 26, French and English.pdf"
@@ -196,7 +217,7 @@ const logoSizeClass = (tier) => {
               Open Full Newsletter
               <i class="bi bi-box-arrow-up-right ps-2"></i>
             </a>
-          </p>
+          </p> -->
         </div>
       </div>
     </section>
