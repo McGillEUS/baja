@@ -239,7 +239,7 @@ onMounted(() => {
 
             <div class="text-center mt-5">
               <a
-                href="https://forms.office.com/r/hAmjPQ8rpY"
+                href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=cZYxzedSaEqvqfz4-J8J6hAlvbiDPw5NiHhQwG53nvFUNDNSOFlSQlFQUDlNM0NJSTdRRVk0SlJPViQlQCN0PWcu&route=shorturl"
                 class="btn btn-primary btn-lg px-4"
                 >Join Now</a
               >
