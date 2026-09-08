@@ -39,27 +39,27 @@ const logoSizeClass = (tier) => {
 };
 
 const featuredNewsletter = {
-  title: "McGill Baja Heads to Hogs Hill",
+  title: "McGill Baja Heads to New York",
   image: newshead,
   description:
-    "McGill Baja's team hit the road to Rochester, NY for the Hogs Hill competition, surviving a chaotic drive down (complete with pit stops in \u201cMexico\u201d and near \u201cGreece\u201d), a weather evacuation mid-inspection, late-night bearing repairs, and a snapped tent \u2014 but still passed technical inspection on the first try and crushed hill climb. Despite mechanical hiccups during endurance, the team placed 45th out of 102 cars, capped off with ice cream runs, a beach dip, and a bittersweet goodbye to senior captain Jemma Pooley.",
+    "McGill Baja's team hit the road to Rochester, NY for the Hogs Hill competition, surviving a chaotic drive down (complete with pit stops in \u201cMexico\u201d and near \u201cGreece\u201d), a weather evacuation mid-inspection, late-night bearing repairs, and a snapped tent but still passed technical inspection on the first try and crushed hill climb. Despite mechanical hiccups during endurance, the team placed 45th out of 102 cars, capped off with ice cream runs, a beach dip, and a bittersweet goodbye to senior captain Jemma Pooley.",
   pdfEn: "./New York Newsletter ENG.pdf",
   pdfFr: "./New York Newsletter FR.pdf",
 };
 
 const archivedNewsletters = [
   {
-    title: "McGill Baja Racing \u2013 Fundraising Announcement",
+    title: "McGill Baja Racing 2025 \u2013 Seven Springs, NY",
     image: news1,
     pdf: "./Baja Newsletter 2.pdf",
   },
   {
-    title: "Newsletter Title Here",
+    title: "McGill Baja Racing 2026 \u2013 Quebec City, QC",
     image: news2,
     pdf: "./Baja Newsletter 3.pdf",
   },
   {
-    title: "Newsletter Title Here",
+    title: "McGill Baja Racing \u2013 Fundraising Announcement",
     image: news3,
     pdf: "./Baja Newsletter 4.pdf",
   },
@@ -208,9 +208,10 @@ const archivedNewsletters = [
             Catch up on our latest updates, competition results, and team news.
             Scroll through our most recent newsletter below:
           </p>
+          <hr class="newsletter-divider my-5" />
       
           <!-- Featured newsletter -->
-          <div class="row align-items-center g-4 newsletter-featured mt-4 text-start">
+          <div class="row align-items-center g-4 newsletter-featured text-start">
             <div class="col-lg-5">
               <img
                 :src="featuredNewsletter.image"
@@ -252,14 +253,15 @@ const archivedNewsletters = [
             </div>
           </div>
 
-          <hr class="newsletter-divider my-5" />
+          <hr class="newsletter-divider" />
 
           <!-- Archived newsletters -->
           <div class="row g-4 newsletter-archive text-start">
             <div
-              v-for="item in archivedNewsletters"
+              v-for="(item, index) in archivedNewsletters"
               :key="item.title"
               class="col-md-4"
+              :class="{ 'archive-col-divider': index > 0 }"
             >
               <a
                 :href="item.pdf"
@@ -278,13 +280,13 @@ const archivedNewsletters = [
                 </h5>
               </a>
             </div>
+            <hr class="newsletter-divider " />
           </div>
         </div>
       </div>
     </section>
 
-
-    <section id="sponsors" class="p-3 pt-lg-5">
+    <section id="sponsors" class="p-3 pt-lg-2">
       <div class="text-center py-5">
         <h2 class="display-3">Sponsors</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
@@ -539,20 +541,9 @@ const archivedNewsletters = [
   }
 }
 
-
-  .newsletter-frame {
-    width: 100%;
-    max-width: 900px; /* keeps it aligned with your content */
-    height: 600px; /* makes it scrollable */
-    border: none;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* subtle shadow for consistency */
-    border-radius: 0.5rem; /* matches rounded look */
-  }
-/* --- Newsletter section --- */
-
   #newsletter {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
   }
 
   .newsletter-container {
@@ -560,18 +551,17 @@ const archivedNewsletters = [
     margin: 0 auto
   }
 
-  // Featured image size/position
   .newsletter-featured-img {
-    width: 100%;              // change to e.g. 90% to shrink within its column
+    width: 100%;
     height: 100%;
-    max-height: 340px;        // increase/decrease to change image height
-    object-fit: cover;        // "cover" crops to fill; "contain" fits whole image without cropping
-    object-position: center;  // change to "top", "bottom", "20% 50%" etc. to reposition crop
+    max-height: 340px;
+    object-fit: cover; 
+    object-position: center;
   }
 
   .newsletter-featured {
-    margin-top: 2rem;         // space above the featured block
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    transform: translateY(-20px);
   }
 
   .newsletter-desc {
@@ -580,23 +570,21 @@ const archivedNewsletters = [
     line-height: 1.7;
   }
 
-  // Divider between featured newsletter and archive row
   .newsletter-divider {
-  width: 100%;
-  border: 0;
-  border-top: 2px solid rgba(255, 255, 255, 0.5);
-  opacity: 1;
-  margin: 3rem 0;
+    width: 100%;
+    border: 0;
+    border-top: 2px solid rgb(255, 255, 255);
+    opacity: 1;
+    margin: 3rem 0;
   }
 
   // Archive cards
   .archive-col {
-    padding: 0 1.5rem; // horizontal breathing room between columns
+    padding: 0 1.5rem; 
   }
 
-  // Vertical divider line BETWEEN old papers (matches your reference image)
   .archive-col-divider {
-  border-left: 2px solid rgba(255, 255, 255, 0.35);
+    border-left: 2px solid rgb(255, 255, 255);
   }
 
   .archive-card {
@@ -607,21 +595,22 @@ const archivedNewsletters = [
 
   .archive-img {
     width: 100%;
-    height: 180px;       // increase/decrease to resize archive thumbnails
+    height: 180px;
     object-fit: cover;
     object-position: center;
   }
 
   .archive-heading {
     font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    text-decoration: none;
     margin-top: 0.5rem;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
   }
 
   .archive-card:hover .archive-heading {
     color: $primary;
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
 </style>
