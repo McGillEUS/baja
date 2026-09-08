@@ -8,6 +8,11 @@ import landingBG from "../assets/images/car.png";
 import shortDescImage from "../assets/images/what_we_do.jpg";
 import teamworkImage from "../assets/images/teamwork.jpg";
 
+import newshead from "../assets/images/newsletter/news head.png";
+import news1 from "../assets/images/newsletter/news 1.png";
+import news2 from "../assets/images/newsletter/news 2.png";
+import news3 from "../assets/images/newsletter/news 3.png";
+
 const props = defineProps({ anchor: String });
 defineEmits(["navigate"]);
 
@@ -32,6 +37,33 @@ const logoSizeClass = (tier) => {
     return "logo-large"; // silver, gold, diamond
   }
 };
+
+const featuredNewsletter = {
+  title: "McGill Baja Heads to Hogs Hill",
+  image: newshead,
+  description:
+    "McGill Baja's team hit the road to Rochester, NY for the Hogs Hill competition, surviving a chaotic drive down (complete with pit stops in \u201cMexico\u201d and near \u201cGreece\u201d), a weather evacuation mid-inspection, late-night bearing repairs, and a snapped tent \u2014 but still passed technical inspection on the first try and crushed hill climb. Despite mechanical hiccups during endurance, the team placed 45th out of 102 cars, capped off with ice cream runs, a beach dip, and a bittersweet goodbye to senior captain Jemma Pooley.",
+  pdfEn: "./New York Newsletter ENG.pdf",
+  pdfFr: "./New York Newsletter FR.pdf",
+};
+
+const archivedNewsletters = [
+  {
+    title: "McGill Baja Racing \u2013 Fundraising Announcement",
+    image: news1,
+    pdf: "./Baja Newsletter 2.pdf",
+  },
+  {
+    title: "Newsletter Title Here",
+    image: news2,
+    pdf: "./Baja Newsletter 3.pdf",
+  },
+  {
+    title: "Newsletter Title Here",
+    image: news3,
+    pdf: "./Baja Newsletter 4.pdf",
+  },
+];
 </script>
 
 <template>
@@ -170,57 +202,87 @@ const logoSizeClass = (tier) => {
       <div class="text-center py-5">
         <h2 class="display-3">Newsletter</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
+
         <div class="container">
           <p class="fs-5 justified-p px-4">
             Catch up on our latest updates, competition results, and team news.
             Scroll through our most recent newsletter below:
           </p>
+      
+          <!-- Featured newsletter -->
+          <div class="row align-items-center g-4 newsletter-featured mt-4 text-start">
+            <div class="col-lg-5">
+              <img
+                :src="featuredNewsletter.image"
+                :alt="featuredNewsletter.title"
+                class="img-fluid newsletter-featured-img"
+              />
+            </div>
 
-          <!-- ✅ Embedded PDF -->
-          <div class="d-flex justify-content-center">
-            <iframe
-              src="./New York Newsletter ENG.pdf"
-              class="newsletter-frame"
-              title="McGill Baja Newsletter"
-              style="width: 50%; height: 700px; border: none"
-            ></iframe>
+            <div class="col-lg-7 pe-lg-5">
+              <h3 class="fw-bold mb-3">
+                {{ featuredNewsletter.title }}
+              </h3>
+
+              <p class="justified-p newsletter-desc">
+                {{ featuredNewsletter.description }}
+              </p>
+
+              <div class="d-flex flex-wrap gap-3 mt-4">
+                <a
+                  class="btn-animated"
+                  :href="featuredNewsletter.pdfEn"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Read in English
+                  <i class="bi bi-box-arrow-up-right ps-2"></i>
+                </a>
+
+                <a
+                  class="btn-animated"
+                  :href="featuredNewsletter.pdfFr"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Lire en Français
+                  <i class="bi bi-box-arrow-up-right ps-2"></i>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-            <a 
-              class="btn-animated"
-              href="./New York Newsletter ENG.pdf"
-              target="_blank"
-              rel="noopener"
-            >
-              Open Newsletter (EN)
-              <i class="bi bi-box-arrow-up-right ps-2"></i>
-            </a>
 
-            <a
-              class="btn-animated"
-              href="./New York Newsletter FR.pdf"
-              target="_blank"
-              rel="noopener"
+          <hr class="newsletter-divider my-5" />
+
+          <!-- Archived newsletters -->
+          <div class="row g-4 newsletter-archive text-start">
+            <div
+              v-for="item in archivedNewsletters"
+              :key="item.title"
+              class="col-md-4"
             >
-              Ouvrir le Bulletin (FR)
-              <i class="bi bi-box-arrow-up-right ps-2"></i>
-            </a>
+              <a
+                :href="item.pdf"
+                target="_blank"
+                rel="noopener"
+                class="archive-card"
+              >
+                <img
+                  :src="item.image"
+                  :alt="item.title"
+                  class="img-fluid mb-2 archive-img"
+                />
+
+                <h5 class="archive-heading">
+                  {{ item.title }}
+                </h5>
+              </a>
+            </div>
           </div>
-
-          <!-- <p class="mt-4">
-            <a
-              class="btn-animated"
-              href="./McGill Baja newsletter 26, French and English.pdf"
-              target="_blank"
-              rel="noopener"
-            >
-              Open Full Newsletter
-              <i class="bi bi-box-arrow-up-right ps-2"></i>
-            </a>
-          </p> -->
         </div>
       </div>
     </section>
+
 
     <section id="sponsors" class="p-3 pt-lg-5">
       <div class="text-center py-5">
@@ -475,6 +537,8 @@ const logoSizeClass = (tier) => {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
 
   .newsletter-frame {
     width: 100%;
@@ -484,5 +548,80 @@ const logoSizeClass = (tier) => {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* subtle shadow for consistency */
     border-radius: 0.5rem; /* matches rounded look */
   }
-}
+/* --- Newsletter section --- */
+
+  #newsletter {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .newsletter-container {
+    max-width: 1000px; // controls overall width of the whole newsletter block
+    margin: 0 auto
+  }
+
+  // Featured image size/position
+  .newsletter-featured-img {
+    width: 100%;              // change to e.g. 90% to shrink within its column
+    height: 100%;
+    max-height: 340px;        // increase/decrease to change image height
+    object-fit: cover;        // "cover" crops to fill; "contain" fits whole image without cropping
+    object-position: center;  // change to "top", "bottom", "20% 50%" etc. to reposition crop
+  }
+
+  .newsletter-featured {
+    margin-top: 2rem;         // space above the featured block
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-desc {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  // Divider between featured newsletter and archive row
+  .newsletter-divider {
+  width: 100%;
+  border: 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  margin: 3rem 0;
+  }
+
+  // Archive cards
+  .archive-col {
+    padding: 0 1.5rem; // horizontal breathing room between columns
+  }
+
+  // Vertical divider line BETWEEN old papers (matches your reference image)
+  .archive-col-divider {
+  border-left: 2px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .archive-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .archive-img {
+    width: 100%;
+    height: 180px;       // increase/decrease to resize archive thumbnails
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .archive-heading {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-top: 0.5rem;
+    transition: color 0.2s ease;
+  }
+
+  .archive-card:hover .archive-heading {
+    color: $primary;
+  }
+
 </style>
