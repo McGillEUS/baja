@@ -47,17 +47,17 @@ onMounted(() => {
 
   column1_images.value = loadSet(
     '/images/gallery/general/column-1-pics',
-    9
+    14
   );
 
   column2_images.value = loadSet(
     '/images/gallery/general/column-2-pics',
-    10
+    16
   );
 
   column3_images.value = loadSet(
     '/images/gallery/general/column-3-pics',
-    9
+    13
   );
 
   setTimeout(() => {
