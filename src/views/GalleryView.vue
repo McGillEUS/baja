@@ -52,7 +52,7 @@ onMounted(() => {
 
   column2_images.value = loadSet(
     '/images/gallery/general/column-2-pics',
-    16
+    15
   );
 
   column3_images.value = loadSet(
