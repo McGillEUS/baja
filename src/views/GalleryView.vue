@@ -141,8 +141,8 @@ onMounted(() => {
       </div>
 
       <div class="subtitle py-5">
-        <h2 class="display-3">MB25</h2>
-        <h2 class="display-3">Murphy</h2>
+        <h2 class="display-3">MB26</h2>
+        <h2 class="display-3">Nicky</h2>
       </div>
 
       <div class="side-by-side">
@@ -152,13 +152,16 @@ onMounted(() => {
           </div>
         </div>
         <div class="paragraph">
-          <p>Murphy is our newest car design, developed during the 2024–2025 season. 
-            It earned its name after all the unexpected twists and challenges we faced 
-            at the Maryland competition in June 2025, a true nod to Murphy’s Law. 
-            Despite a chaotic and demanding week, the car carried us through and became 
-            part of some unforgettable team memories. Murphy truly proved its strength 
-            later that year at Oktobajafest in October, where we proudly secured 2nd place 
-            in both the SNT and Endurance events.</p>
+          <p>
+            Nicky is our newest car, built during the 2025–2026 season. 
+            It earned its name after an intense race against the clock, 
+            with the car coming together in just a few days and the team working until 7 AM on
+             the morning of our New York competition in June, finishing just in the nick of time.
+              Despite the rushed start, Nicky made it onto the track and kicked off a season full of
+               challenges, repairs, and improvements. After a summer of hard work, the team headed to
+                Ohio in September, where Nicky proudly secured 19th place overall. From its last-minute
+                 assembly to its final race of the season, Nicky gave us plenty of moments to remember.
+          </p>
         </div>
       </div>
 
