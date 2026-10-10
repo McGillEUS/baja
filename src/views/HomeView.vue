@@ -342,7 +342,7 @@ const archivedNewsletters = [
         <div class="d-flex flex-wrap justify-content-center gap-3 my-3 my-lg-5">
           <a
             class="btn-animated"
-            href="./MB26 Sponsorship-EN.pdf"
+            href="./MB27 Sponsorship-EN.pdf"
             target="_blank"
           >
             Sponsorship Package (EN)
@@ -350,7 +350,7 @@ const archivedNewsletters = [
           </a>
           <a
             class="btn-animated"
-            href="./MB26 Sponsorship-FR.pdf"
+            href="./MB27 Sponsorship-FR.pdf"
             target="_blank"
           >
             Sponsorship Package (FR)
