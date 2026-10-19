@@ -5,6 +5,8 @@ import GalleryView from "./views/GalleryView.vue";
 import TeamView from "./views/TeamView.vue";
 import RecruitmentView from "./views/RecruitmentView.vue";
 import DonationView from "./views/DonationView.vue";
+import CarsView from "./views/CarsView.vue";
+import CarsMenu from "./components/CarsMenu.vue";
 
 // Import Bootstrap
 
@@ -103,12 +105,11 @@ const onNavigate = (location) => {
               >
             </li>
             <li class="nav-item">
-              <span
-                class="nav-link px-md-3"
-                @click="onNavigate('gallery#gallery')"
+              <span class="nav-link px-md-3" @click="onNavigate('gallery#gallery')"
                 >Gallery</span
               >
             </li>
+            <CarsMenu @navigate="(location) => onNavigate(location)" />
             <li class="nav-item">
               <span class="nav-link px-md-3" @click="onNavigate('team#team')"
                 >Our Team</span
@@ -143,6 +144,11 @@ const onNavigate = (location) => {
     v-if="currView === 'gallery'"
     :anchor="currAnchor"
     @navigate="(location) => onNavigate(location)"
+  />
+  <CarsView 
+  v-if="currView.startsWith('car-')"
+  :year="currView.slice(4)" 
+  @navigate="(location) => onNavigate(location)"
   />
   <TeamView
     v-if="currView === 'team'"
