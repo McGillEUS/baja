@@ -144,7 +144,7 @@ const goTo = (car) => {
   }
 
   .cars-description {
-    background: #8c8c8c;
+    background: #000000;
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -159,7 +159,7 @@ const goTo = (car) => {
   .cars-list {
     overflow-y: auto;
     padding: 1.5rem 0;
-    background: $bgColorDark;
+    background: #000000;
     scrollbar-width: thin;
     scrollbar-color: #555 transparent;
 
