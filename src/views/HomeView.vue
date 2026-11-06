@@ -163,7 +163,7 @@ const archivedNewsletters = [
       <div class="row pt-3 pt-lg-5 justify-content-center">
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/qc.png')"
+          style="background-image: url('images/maps/quebec.png')"
         >
           <div class="map-content">
             <h3>Épreuve du Nord</h3>
