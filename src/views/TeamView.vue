@@ -13,25 +13,26 @@ defineEmits(["navigate"]);
 // Define the order of supersystems for display
 const supersystemOrder = [
   "Captains",
-  "Technical Directors",
+  "Managers",
   "Drivers",
   "Powertrain",
   "Suspension, Steering and Brakes",
   "Electronics",
   "Pedals, Steering and Brakes",
   "Ergonomics",
-  "Finance and Communications",
+  "Internal Affairs",
+  "Finance",
 ];
 
 // Define descriptions for each supersystem
 const supersystemDescriptions = {
   Captains:
     "Team leaders responsible for overall coordination, strategy, and representing the team at competitions.",
-  "Technical Directors":
+  Managers:
     "Engineering leads who oversee technical aspects of the vehicle design and ensure integration across all systems.",
   Drivers:
     "Team members responsible for driving the vehicle during tests and competitions.",
-  "Finance and Communications":
+  "Finance":
     "Members handling team budget, sponsorships, marketing, and external communications.",
   "Suspension, Steering and Brakes":
     "Engineers designing systems that control vehicle dynamics, handling, and stopping power.",
@@ -41,6 +42,8 @@ const supersystemDescriptions = {
     "Specialists in vehicle electrical systems, data acquisition, sensors, and controls integration.",
   Ergonomics:
     "Members focused on driver comfort, safety, and vehicle aesthetics including composites and frame design.",
+  "Internal Affairs":
+    "Members overseeing internal team operations, including recruitment, member engagement, social events, communications, shop management, archives, and race operations.",
 };
 
 // Group members by their supersystem
@@ -162,7 +165,7 @@ onMounted(() => {
                 class="member-img w-100 d-flex justify-content-center align-items-center"
               >
                 <img
-                  :src="'images/members/' + member.name.split(' ')[0] + '.jpg'"
+                  :src="'images/members/' + member.name + '.jpg'"
                   :alt="
                     'I\'m ' + member.name + ' and I don\'t have a picture :('
                   "
@@ -172,21 +175,20 @@ onMounted(() => {
                 <h5 class="py-3">{{ member.name }}</h5>
                 <p>{{ member.role }}</p>
                 <p>{{ member.department }}, {{ member.year }}</p>
-                <a
-                  v-if="member.linkedin"
-                  class="stretched-link"
-                  :href="member.linkedin"
-                  target="_blank"
-                ></a>
               </div>
-              <div
-                v-if="member.blurb"
+
+              <component
+                :is="member.linkedin ? 'a' : 'div'"
                 class="member-blurb h-100 text-center px-5 pt-5 pb-3 d-flex flex-column justify-content-center align-items-center"
+                :href="member.linkedin || undefined"
+                :target="member.linkedin ? '_blank' : undefined"
+                :rel="member.linkedin ? 'noopener' : undefined"
               >
-                <p class="pb-3">{{ member.blurb }}</p>
+                <p v-if="member.blurb" class="pb-3">{{ member.blurb }}</p>
                 <h5 class="py-3">{{ member.name }}</h5>
                 <i v-if="member.linkedin" class="bi bi-linkedin fs-1"></i>
-              </div>
+              </component>
+            
             </div>
           </div>
         </div>
@@ -332,7 +334,6 @@ onMounted(() => {
       }
     }
   }
-
   .member-blurb {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), $bgColorDark);
     position: absolute;
@@ -350,6 +351,15 @@ onMounted(() => {
     align-items: center;
     padding: 2rem;
     border-radius: 12px;
+
+    // ↓ new: stops the link underline and blue link color
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
 
     p {
       font-style: italic;
@@ -383,6 +393,58 @@ onMounted(() => {
       margin-top: 1rem;
     }
   }
+
+  // .member-blurb {
+  //   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), $bgColorDark);
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   margin: 0;
+  //   opacity: 0;
+  //   transform: translateY(10px);
+  //   transition: all 0.3s ease;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  //   padding: 2rem;
+  //   border-radius: 12px;
+
+  //   p {
+  //     font-style: italic;
+  //     line-height: 1.6;
+  //     color: rgba(255, 255, 255, 0.9);
+  //     position: relative;
+
+  //     &::before {
+  //       content: '"';
+  //       font-size: 3rem;
+  //       position: absolute;
+  //       top: -1.5rem;
+  //       left: -0.5rem;
+  //       color: rgba($primary, 0.3);
+  //       font-family: serif;
+  //     }
+
+  //     &::after {
+  //       content: '"';
+  //       font-size: 3rem;
+  //       position: absolute;
+  //       bottom: -2.5rem;
+  //       right: -0.5rem;
+  //       color: rgba($primary, 0.3);
+  //       font-family: serif;
+  //     }
+  //   }
+
+  //   i.bi-linkedin {
+  //     color: #0077b5;
+  //     margin-top: 1rem;
+  //   }
+  // }
+  
 
   &:hover .member-blurb {
     opacity: 1;

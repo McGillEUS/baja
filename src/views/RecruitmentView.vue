@@ -3,7 +3,7 @@ import TypingText from "../components/TypingText.vue";
 import { onMounted } from "vue";
 import { anchorLink } from "../assets/utils";
 
-import landingBG from "../assets/images/recruitment-landing.jpg"; // You might want to replace this with a specific recruitment image
+import landingBG from "../assets/images/recruitment-landing.jpg"; 
 
 const props = defineProps({ anchor: String });
 defineEmits(["navigate"]);
