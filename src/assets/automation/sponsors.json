@@ -57,15 +57,15 @@
         "link": "https://www.gmnbt.com/",
         "name": "GMN Bearings",
         "path": "images/sponsors/gold/gmn-bearing-logo.png"
+      },
+      {
+        "link": "https://www.st-hubertmachineshop.com/",
+        "name": "St Hubert Machine Shop",
+        "path": "images/sponsors/gold/st-hubert-machine-shop-logo.png"
       }
     ],
 
     "silver": [
-      {
-        "link": "https://www.st-hubertmachineshop.com/",
-        "name": "St Hubert Machine Shop",
-        "path": "images/sponsors/silver/st-hubert-machine-shop-logo.png"
-      },
       {
         "link": "https://www.fusia-groupe.com/",
         "name": "FusiA Groupe",
@@ -90,6 +90,11 @@
         "link": "https://cvtech-ibc.com/home/",
         "name": "CVTech-IBC",
         "path": "images/sponsors/silver/cvtech-logo.png"
+      },
+      {
+        "link": "https://www.pemnet.com/",
+        "name": "PEM",
+        "path": "images/sponsors/silver/pem-logo.png"
       }
     ],
 
