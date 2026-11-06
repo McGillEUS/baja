@@ -43,7 +43,7 @@ onMounted(() => {
             <div class="container">
                 <p class="fs-5 px-4">
                     Your support funds critical manufacturing upgrades and competition travel as we represent McGill on the international stage.
-                    On March 11, donations will be matched by McGill, doubling the impact of your support. Join our campaign before time runs out.
+                    Donations will be matched by McGill, doubling the impact of your support. Join our campaign on March 11, 2027!
                 </p>
             </div>
             <counter></counter>
