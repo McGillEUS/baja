@@ -122,7 +122,7 @@ const archivedNewsletters = [
           <h2 class="display-3">Our team</h2>
           <div class="title-separator mt-3 mb-5"></div>
           <p class="fs-5 justified-p">
-            We are a group of over 50 McGill University students of various
+            We are a group of over 170 McGill University students of various
             academic levels working together to design and manufacture an
             off-road prototype vehicle. While the team consists mostly of
             engineering students, we have members from all faculties on campus.
@@ -146,7 +146,7 @@ const archivedNewsletters = [
 
     <section class="pt-3 pt-lg-5">
       <div class="text-center py-5">
-        <h2 class="display-3">2026 Competitions</h2>
+        <h2 class="display-3">2027 Competitions</h2>
         <div class="title-separator mt-3 mb-5 mx-auto"></div>
         <div class="container">
           <p class="fs-5 justified-p px-4">
@@ -163,7 +163,7 @@ const archivedNewsletters = [
       <div class="row pt-3 pt-lg-5 justify-content-center">
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/QC.png')"
+          style="background-image: url('images/maps/qc.png')"
         >
           <div class="map-content">
             <h3>Épreuve du Nord</h3>
@@ -174,23 +174,23 @@ const archivedNewsletters = [
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/NY.png')"
+          style="background-image: url('images/maps/penn.png')"
         >
           <div class="map-content">
-            <h3>Baja SAE New York</h3>
-            <p class="text-primary">June 11 - 14</p>
-            <p>Palmyra, NY, USA</p>
+            <h3>Baja SAE Williamsport</h3>
+            <p class="text-primary">May 20 - 23</p>
+            <p>Williamsport, Pennsylvania, USA</p>
           </div>
         </div>
 
         <div
           class="col-md-6 col-lg-3 comp-map full-height-image"
-          style="background-image: url('images/maps/Ohio.png')"
+          style="background-image: url('images/maps/michigan.png')"
         >
           <div class="map-content">
-            <h3>Baja SAE Ohio</h3>
-            <p class="text-primary">Sept 24 - 27</p>
-            <p>Nashport, Ohio, USA</p>
+            <h3>Baja SAE Michigan</h3>
+            <p class="text-primary">Oct 7 - 10</p>
+            <p>Marshall, Michigan, USA</p>
           </div>
         </div>
 
