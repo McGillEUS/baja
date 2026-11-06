@@ -46,7 +46,7 @@ onMounted(() => {
                     Donations will be matched by McGill, doubling the impact of your support. Join our campaign on March 11, 2027!
                 </p>
             </div>
-            <counter></counter>
+            <!-- <counter></counter> -->
         </div>
     </section>
     <section id="video-section" class="p-3 pt-2 pb-5">
@@ -68,13 +68,13 @@ onMounted(() => {
             </iframe>
             </div>
             <div class="py-4">
-            <a
+            <!-- <a
                 href="https://crowdfunding.mcgill.ca/ui/main/p/bajaracing2026"
                 target="_blank"
                 class="donate-btn"
             >
                 Donate Now
-            </a>
+            </a> -->
         </div>
         </div>
 
