@@ -12,7 +12,7 @@ with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
     next(reader)  # Skip header row
 
     for row in reader:
-        timestamp, name, year, department, supersystem, role, linkedin, blurb, picture = row
+        email, name, year, department, supersystem, role, linkedin, blurb = row
         output.append({
             "name": name,
             "year": year,
@@ -23,4 +23,4 @@ with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
             "blurb": blurb
         })
 
-print(json.dumps({"members": output}))
+print(json.dumps({"members": output}, indent=4, ensure_ascii=False))
