@@ -13,27 +13,24 @@ defineEmits(["navigate"]);
 // Define the order of supersystems for display
 const supersystemOrder = [
   "Captains",
-  "Managers",
-  "Drivers",
+  "Vehicle Managers",
+  "Business & Operations",
   "Powertrain",
   "Suspension, Steering and Brakes",
   "Electronics",
   "Pedals, Steering and Brakes",
   "Ergonomics",
-  "Internal Affairs",
-  "Finance",
+  "Drivers",
 ];
 
 // Define descriptions for each supersystem
 const supersystemDescriptions = {
   Captains:
     "Team leaders responsible for overall coordination, strategy, and representing the team at competitions.",
-  Managers:
+  "Vehicle Managers":
     "Engineering leads who oversee technical aspects of the vehicle design and ensure integration across all systems.",
   Drivers:
     "Team members responsible for driving the vehicle during tests and competitions.",
-  "Finance":
-    "Members handling team budget, sponsorships, marketing, and external communications.",
   "Suspension, Steering and Brakes":
     "Engineers designing systems that control vehicle dynamics, handling, and stopping power.",
   Powertrain:
@@ -42,8 +39,8 @@ const supersystemDescriptions = {
     "Specialists in vehicle electrical systems, data acquisition, sensors, and controls integration.",
   Ergonomics:
     "Members focused on driver comfort, safety, and vehicle aesthetics including composites and frame design.",
-  "Internal Affairs":
-    "Members overseeing internal team operations, including recruitment, member engagement, social events, communications, shop management, archives, and race operations.",
+  "Business & Operations":
+    "Lead members overseeing internal team operations, including recruitment, workshop safety, social events, communications, finance, race operations, SAE business presentation, SAE static events, and much more! Many of our technical leads are part of this group as well.",
 };
 
 // Group members by their supersystem
