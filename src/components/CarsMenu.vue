@@ -6,7 +6,7 @@ import { galleries } from "../assets/automation/car_galleries.json";
 const emit = defineEmits(["navigate"]);
 
 const archived = new Set(galleries.map((g) => g.year));
-const hasGallery = (year) => archived.has(year);
+const hasGallery = (year) => archived.has(year) || year === "MB26";
 
 const open = ref(false);
 const activeYear = ref(cars.length ? cars[0].year : "");
@@ -64,7 +64,14 @@ const goTo = (car) => {
   if (!hasGallery(car.year)) return;
   open.value = false;
   if (document.activeElement) document.activeElement.blur();
-  emit("navigate", `car-${car.year}`);
+
+  // If the car is MB26, send it to the gallery view with the mb26 anchor
+  if (car.year === "MB26") {
+    emit("navigate", "gallery#mb26");
+  } else {
+    // Standard routing for all other cars
+    emit("navigate", `car-${car.year}`);
+  }
 };
 </script>
 
