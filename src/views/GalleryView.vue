@@ -2,7 +2,7 @@
 import View360 from "../components/View360.vue";
 import CompareImages from "../components/CompareImages.vue";
 import TypingText from "../components/TypingText.vue";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 import { anchorLink } from "../assets/utils";
 
 import landingBG from "../assets/images/gallery-landing.jpg";
@@ -19,7 +19,7 @@ const column1_images = ref([]);
 const column2_images = ref([]);
 const column3_images = ref([]);
 
-onMounted(() => {
+onMounted(async () => {
   if (props.anchor !== "") anchorLink(props.anchor);
 
   const loadSet = (basePath, count) =>
@@ -59,11 +59,15 @@ onMounted(() => {
     '/images/gallery/general/column-3-pics',
     4
   );
+  await nextTick();
 
   setTimeout(() => {
     document.querySelectorAll('#general-images img').forEach(img => {
       if (img.naturalHeight > img.naturalWidth) {
         img.parentElement.classList.replace('col-12', 'col-md-6');
+      }
+      if (props.anchor) {
+      anchorLink(props.anchor);
       }
     });
   }, 500);
@@ -140,7 +144,7 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="subtitle py-5">
+      <div id="mb26" class="subtitle py-5">
         <h2 class="display-3">MB26</h2>
         <h2 class="display-3">Nicky</h2>
       </div>
