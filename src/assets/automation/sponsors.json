@@ -25,6 +25,11 @@
         "link": "https://genifab.com/en/",
         "name": "Genifab",
         "path": "images/sponsors/diamond/Genifab_Consul Logo.png"
+      },
+      {
+        "link": "https://airtech.com/",
+        "name": "Airtech",
+        "path": "images/sponsors/diamond/Airtech.png"
       }
     ],
     "gold": [
@@ -108,6 +113,11 @@
         "link": "https://www.afcoracing.com/",
         "name": "AFCORacing",
         "path": "images/sponsors/bronze/afco-logo.png"
+      },
+      {
+        "link": "https://www.dremel.com/ca/en",
+        "name": "Dremel",
+        "path": "images/sponsors/bronze/Bosch_dremel.png"
       }
     ],
 
