@@ -25,11 +25,11 @@ const tierLabels = {
   gold: "Gold Sponsors",
   silver: "Silver Sponsors",
   bronze: "Bronze Sponsors",
-  iron: "Iron Sponsors",
+  generous: "Generous Donors",
 };
 
 const logoSizeClass = (tier) => {
-  if (tier === "iron") {
+  if (tier === "generous") {
     return "logo-small";
   } else if (tier === "bronze") {
     return "logo-medium";
