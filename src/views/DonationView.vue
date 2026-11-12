@@ -79,6 +79,77 @@ onMounted(() => {
         </div>
 
     </section>
+    <section class="p-3 py-lg-5 bg-darker text-center">
+      <h2 class="display-3 pt-5">Contact Us</h2>
+      <div class="title-separator mt-3 mb-5 mx-auto"></div>
+      <div class="container">
+        <p class="fs-5 pb-3 pb-lg-5">
+          Feel free to get in touch with us anytime!
+        </p>
+        <div class="row">
+          <div class="col-md-6 col-xl-4 pb-4">
+            <h3 class="pb-2 pb-lg-3">Team Info</h3>
+            <p>
+              Email: <a href="mailto:baja@mcgilleus.ca">baja@mcgilleus.ca</a>
+            </p>
+            <p>
+              Address:
+              <a href="https://goo.gl/maps/UQUaLrjRW4H1KXc56"
+                >McGill University</a
+              >
+            </p>
+            <address>
+              817 Sherbooke Street West, <br />MacDonald Engineering Bldg Rm
+              270, <br />Montreal, QC, H3A 0C3
+            </address>
+          </div>
+          <div class="col-md-6 col-xl-4 pb-4">
+            <h3 class="pb-2 pb-lg-3">Newsletter</h3>
+            <p>
+              Stay up-to-date with our latest events, competition results, and
+              team announcements!
+            </p>
+            <p class="mb-3">
+              Join our mailing list to receive quarterly updates from the McGill
+              Baja Racing team.
+              <a
+                href="https://forms.office.com/r/M7SX5jSRis"
+                target="_blank"
+                class="link-primary"
+                >Sign up here</a
+              >
+            </p>
+          </div>
+          <div class="col-xl-4 pb-4">
+            <h3 class="pb-2 pb-lg-3">Social Media</h3>
+            <p>
+              Follow us on social media to see our regular updates and
+              behind-the-scenes content!
+            </p>
+            <div class="d-flex justify-content-center mt-4">
+              <a
+                href="https://www.facebook.com/mcgillbaja"
+                class="social-link me-3"
+              >
+                <i class="bi bi-facebook fs-3"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/mcgill_baja/"
+                class="social-link me-3"
+              >
+                <i class="bi bi-instagram fs-3"></i>
+              </a>
+              <a
+                href="https://ca.linkedin.com/company/mcgillbajaracing"
+                class="social-link"
+              >
+                <i class="bi bi-linkedin fs-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 </template>
@@ -155,5 +226,70 @@ onMounted(() => {
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   opacity: 0.9;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $primary;
+    transform: translateY(-3px);
+    i {
+      color: white;
+    }
+  }
+
+  i {
+    color: #dc3545; /* Using Bootstrap's red color */
+  }
+}
+#social-links a {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  margin: 0 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $body-bg;
+    border-radius: 50%;
+    z-index: -1;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    background-color: var(--bs-light);
+    transition: background-color 0.2s;
+
+    &::after {
+      transform: scale(0.95);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  .bi {
+    color: var(--bs-light);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 </style>

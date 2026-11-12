@@ -121,31 +121,36 @@
       }
     ],
 
-    "iron": [
+    "generous": [
       {
         "link": "https://daemar.com/",
         "name": "Daemar",
-        "path": "images/sponsors/iron/daemar-logo.png"
+        "path": "images/sponsors/generous/daemar-logo.png"
       },
       {
         "link": "https://www.wilwood.com/",
         "name": "Wilwood",
-        "path": "images/sponsors/iron/wilwood-logo.png"
+        "path": "images/sponsors/generous/wilwood-logo.png"
       },
       {
         "link": "https://s4suspension.com/",
         "name": "S4 Suspension",
-        "path": "images/sponsors/iron/s4-suspension-logo.png"
+        "path": "images/sponsors/generous/s4-suspension-logo.png"
       },
       {
         "link": "https://www.fkrodends.com/",
         "name": "FK Rod Ends",
-        "path": "images/sponsors/iron/fk-logo.png"
+        "path": "images/sponsors/generous/fk-logo.png"
       },
       {
         "link": "https://www.elkasuspension.com/",
         "name": "Elka Suspension",
-        "path": "images/sponsors/iron/elka-logo.png"
+        "path": "images/sponsors/generous/elka-logo.png"
+      },
+      {
+        "link": "https://hakkousa.com/",
+        "name": "Hakko",
+        "path": "images/sponsors/generous/hakko-logo.png"
       }
     ]
   }
